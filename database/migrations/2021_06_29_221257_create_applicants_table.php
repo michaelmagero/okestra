@@ -19,31 +19,31 @@ class CreateApplicantsTable extends Migration
             $table->unsignedBigInteger('vehicle_id')->nullable();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
 
-            $table->string('name');
-            $table->string('middlename');
-            $table->string('surname');
-            $table->string('national_id');
-            $table->string('dob');
-            $table->string('phone');
-            $table->string('id_number');
-            $table->string('kra_pin');
-            $table->string('county');
-            $table->string('locality');
-            $table->string('street');
-            $table->string('apartment');
-            $table->string('employer');
-            $table->string('employment_type');
-            $table->string('net_income');
-            $table->string('expenses');
-            $table->string('bank_statements');
-            $table->string('mpesa_statements');
-            $table->string('business_name');
-            $table->string('gross_business_income');
-            $table->string('cr12_certificate');
-            $table->string('kra_certificate');
-            $table->string('incorporation_certificate');
-            $table->string('email')->unique();
-            $table->string('status')->default(0); //pending - 0 , approved - 1
+            $table->string('name')->nullable();
+            $table->string('middlename')->nullable();
+            $table->string('surname')->nullable();
+            $table->string('national_id')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('id_number')->nullable();
+            $table->string('kra_pin')->nullable();
+            $table->string('county')->nullable();
+            $table->string('locality')->nullable();
+            $table->string('street')->nullable();
+            $table->string('apartment')->nullable();
+            $table->string('employer')->nullable();
+            $table->string('employment_type')->nullable();
+            $table->string('net_income')->nullable();
+            $table->string('expenses')->nullable();
+            $table->string('bank_statements')->nullable();
+            $table->string('mpesa_statements')->nullable();
+            $table->string('business_name')->nullable();
+            $table->string('gross_business_income')->nullable();
+            $table->string('cr12_certificate')->nullable();
+            $table->string('kra_certificate')->nullable();
+            $table->string('incorporation_certificate')->nullable();
+            $table->string('email')->nullable()->unique();
+            $table->string('status')->nullable()->default(0); //pending - 0 , approved - 1
 
             $table->timestamps();
         });

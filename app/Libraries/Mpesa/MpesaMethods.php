@@ -65,10 +65,8 @@ class MpesaMethods
             'TransactionType' => 'CustomerPayBillOnline',
             'Amount' => '1',
             'PartyA' => $phone,
-            //'PartyA' => '254718573435',
             'PartyB' => $shortcode,
             'PhoneNumber' => $phone,
-            //'PhoneNumber' => '254718573435',
             'CallBackURL' => $callBackUrl,
             'AccountReference' => 'KOMMUTE LIMITED',
             'TransactionDesc' => 'RESERVATION'

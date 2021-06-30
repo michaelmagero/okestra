@@ -39,7 +39,7 @@
                     <div class="col-xs-3 col-sm-3 col-md-3">
                         <div>
                             <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                                <img src="{{ asset('../uploads/displayimage/' . Str::lower($vehicle->make . $vehicle->model . $vehicle->year) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="250">
+                                <img src="{{ asset('../uploads/displayimage/' . Str::lower(str_replace(' ', '', $vehicle->make . $vehicle->model . $vehicle->year)) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="250">
 
                                 <div class="card-body">
                                     <h4 class="card-title">{{ $vehicle->make }} {{ $vehicle->model }} {{ $vehicle->year }}</h4>

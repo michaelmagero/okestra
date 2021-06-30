@@ -64,7 +64,7 @@ class VehicleController extends Controller
         if ($files = $request->file('images')) {
             foreach ($files as $file) {
                 $name = $file->getClientOriginalName();
-                $file->move('uploads/cars/' . $request->make . $request->model . $request->year, $name);
+                $file->move('uploads/cars/' . strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name);
                 $images[] = $name;
             }
         }
@@ -74,7 +74,7 @@ class VehicleController extends Controller
         if ($file = $request->hasFile('display_image')) {
             $vehicle_image = $request->file('display_image');
             $filename = $vehicle_image->getClientOriginalName();
-            $vehicle_image->move('uploads/displayimage/' . $request->make . $request->model . $request->year,  $filename);
+            $vehicle_image->move('uploads/displayimage/' . strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)),  $filename);
             $vehicle->display_image = $filename;
         }
 
@@ -145,7 +145,7 @@ class VehicleController extends Controller
         if ($files = $request->file('images')) {
             foreach ($files as $file) {
                 $name = $file->getClientOriginalName();
-                $file->move('uploads/cars/' . $request->make . $request->model . $request->year, $name);
+                $file->move('uploads/cars/' . strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name);
                 $images[] = $name;
             }
         }
@@ -154,7 +154,7 @@ class VehicleController extends Controller
         if ($file = $request->hasFile('display_image')) {
             $vehicle_image = $request->file('display_image');
             $filename = $vehicle_image->getClientOriginalName();
-            $vehicle_image->move('uploads/displayimage/' . $request->make . $request->model . $request->year,  $filename);
+            $vehicle_image->move('uploads/displayimage/' . strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)),  $filename);
             $vehicle->display_image = $filename;
         }
         $vehicle->save();

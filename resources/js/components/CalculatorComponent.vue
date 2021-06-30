@@ -70,11 +70,6 @@
 	export default {
 		data() {
 			return {
-				vehicles: [],
-
-				vehicle_id: "",
-
-				cardmonthly: "",
 
 				calculator: {
 					monthlypayment: "",
@@ -90,17 +85,6 @@
 					{ text: "24 months", value: 24 },
 				],
 			};
-		},
-
-		mounted: function () {
-			axios
-				.get("http://localhost:8000/api/vehicles")
-				.then((res) => {
-					this.vehicles = res.data.data;
-				})
-				.catch((err) => {
-					console.error(err);
-				});
 		},
 
 		methods: {
