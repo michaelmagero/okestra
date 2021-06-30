@@ -19,7 +19,7 @@
                 <div class="card-header text-uppercase font-weight-bold pt-4 pb-4 text-center" style="background-color: #ffce00; font-size: 17px;">{{ __('KOMMUTE CAR RESERVATION FORM') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ url('applicant-register') }}">
+                    <form method="POST" action="{{ url('applicant-register') }}" autocomplete="off" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row">
@@ -117,7 +117,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="kra_pin" class="col-form-label text-md-right font-weight-bold">{{ __('KRA PIN') }}</label>
+                                <label for="kra_pin" class="col-form-label text-md-right font-weight-bold">{{ __('KRA Pin') }}</label>
                                 <input id="kra_pin" name="kra_pin" type="text" class="form-control @error('kra_pin') is-invalid @enderror"  value="{{ old('kra_pin') }}" required autocomplete="kra_pin">
 
                                 @error('kra_pin')
@@ -204,20 +204,6 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="employment_type" class=" col-form-label text-md-right font-weight-bold">{{ __('Employment Type') }}</label>
-                                <select name="employment_type" id="employment_type" class="form-control">
-                                    <option hidden>Employment type</option>
-                                    <option value="private">Private</option>
-                                    <option value="government">Government</option>
-                                </select>
-                                @error('employment_type')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-
-                            <div class="col-md-4">
                                 <label for="net_income" class=" col-form-label text-md-right font-weight-bold">{{ __('Net Income') }}</label>
                                 <input id="net_income" name="net_income" type="text" class="form-control @error('net_income') is-invalid @enderror"  value="{{ old('net_income') }}" autocomplete="net_income">
                                 @error('net_income')
@@ -226,9 +212,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div><br>
 
-                        <div class="form-group row">
                             <div class="col-md-4">
                                 <label for="expenses" class=" col-form-label text-md-right font-weight-bold">{{ __('Expenses') }}</label>
                                 <input id="expenses" name="expenses" type="text" class="form-control @error('expenses') is-invalid @enderror"  value="{{ old('expenses') }}" autocomplete="expenses">
@@ -238,6 +222,9 @@
                                     </span>
                                 @enderror
                             </div>
+                        </div><br>
+
+                        <div class="form-group row">
 
                             <div class="col-md-4">
                                 <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Bank Statement') }} <small>(attach 6 months statement)</small></label>
@@ -256,7 +243,7 @@
 
                         <div class="row mt-5">
                             <div class="col-md-6">
-                                <h5 class="text-muted">Occupation: (self employed applicants)</h5>
+                                <h5 class="text-muted">Occupation: (self employed / Business applicants)</h5>
                             </div>
                         </div>
 
@@ -317,15 +304,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                {{-- @foreach ($car_details as $item)
-                                    <input type="text" name="firstname" id="" value="{{ $item['firstname'] }}" hidden>
-                                    <input type="text" name="lastname" id="" value="{{ $item['lastname'] }}" hidden>
-                                    <input type="text" name="race" id="" value="{{ $item['race'] }}" hidden>
-                                    <input type="text" name="nationality" id="" value="{{ $item['nationality'] }}" hidden>
-                                    <input type="text" name="email" id="" value="{{ $item['email'] }}" hidden>
-                                    <input type="text" name="phone" id="" value="{{ $item['phone'] }}" hidden>
-                                    <input type="text" name="business_status" id="" value="{{ $item['business_status'] }}" hidden>
-                                @endforeach --}}
+                                <input type="text" name="vehicle_id" hidden value="{{ $car_details->id }}">
                             </div>
                         </div><br>
 

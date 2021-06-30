@@ -77,14 +77,14 @@ class FrontendController extends Controller
 
     public function store(Request $request)
     {
-        $phone = Applicant::where('email', $request->email)->value('phone');
 
         $applicant = new Applicant();
+        $applicant->vehicle_id = $request->vehicle_id;
         $applicant->name = $request->name;
         $applicant->middlename = $request->middlename;
         $applicant->surname = $request->surname;
-        $applicant->email = 'admin@email.com';
-        $applicant->status = $request->status;
+        $applicant->email = $request->email;
+        $applicant->status = 0;
 
         //natioanal_id
         if ($file = $request->file('national_id')) {
@@ -102,9 +102,10 @@ class FrontendController extends Controller
         $applicant->street = $request->street;
         $applicant->apartment = $request->apartment;
         $applicant->employer = $request->employer;
-        $applicant->employment_type = $request->employment_type;
-        $applicant->net_income = $request->net_income;
         $applicant->expenses = $request->expenses;
+        $applicant->business_name = $request->business_name;
+        $applicant->gross_business_income = $request->gross_business_income;
+        $applicant->net_income = $request->net_income;
 
         //bank_statements
         if ($file = $request->file('bank_statements')) {
@@ -120,8 +121,6 @@ class FrontendController extends Controller
             $applicant->mpesa_statements = $img;
         }
 
-        $applicant->business_name = $request->business_name;
-        $applicant->gross_business_income = $request->gross_business_income;
 
         //cr12 certificate
         if ($file = $request->file('cr12_certificate')) {
@@ -144,13 +143,15 @@ class FrontendController extends Controller
             $applicant->incorporation_certificate = $img;
         }
 
+        //dd($applicant);
+
         // $password = Str::random(20);
         // $applicant->password = bcrypt($password);
 
 
-        $this->mpesa->STKPushPayment($request);
+        // $this->mpesa->STKPushPayment($request);
 
-        //successful Notification for successful Submission
+        // //successful Notification for successful Submission
         // $applicant = $request->email;
         // $details = [
         //     'greeting' => 'Hello!',
@@ -161,8 +162,7 @@ class FrontendController extends Controller
         // Notification::route('mail', $applicant)->notify(new ReservationConfirmation($details));
 
         $applicant->save();
-        // return redirect('/');
-        // flash('Applicant Added Successfully')->success();
-        // return redirect('all-applicants');
+        $request->session()->flash('success_message', 'Application Added Successfully.');
+        return redirect('/');
     }
 }

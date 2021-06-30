@@ -2,10 +2,12 @@
 
 namespace App\Notifications;
 
+use App\Models\User;
+use App\Models\Applicant;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 
 class ReservationConfirmation extends Notification
 {
@@ -40,10 +42,14 @@ class ReservationConfirmation extends Notification
      */
     public function toMail($notifiable)
     {
+        $applicant = new Applicant();
+        $vehicle = Vehicle::find($id);
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->greeting('Hello!')
+            ->subject('Kommute Reservation')
+            ->from('info@kommute.africa', 'Kommute Financing Ltd')
+            ->line('A new reservation has been made for ' . $vehicle->make . $vehicle->model . $vehicle->year . 'by ' . $applicant->name + $applicant->surname)
+            ->line('Thank you for using our signing up with TIA360!');
     }
 
     /**
