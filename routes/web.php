@@ -16,9 +16,13 @@ Route::get('/about', 'FrontendController@about');
 Route::get('/about', 'FrontendController@about');
 Route::get('/view-car/{id}', 'FrontendController@viewcar');
 
+//car reservation
+Route::get('/applicant-register/{id}', 'FrontendController@create');
+Route::post('/applicant-register', 'FrontendController@store');
 
-Route::get('/applicant-register', 'ApplicantController@create');
-Route::post('/applicant-register', 'ApplicantController@store');
+//MPESA PAYMENT
+Route::get('make-pay', 'MpesaController@STKPushPayment');
+
 
 Route::group(['middleware' => ['auth']], function () {
 

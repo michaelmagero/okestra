@@ -19,7 +19,7 @@
 
                                 @foreach (json_decode($details->images, true) as $img)
                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                        <img src="{{ asset('../uploads/cars/' . $details->make . $details->model . $details->year . '/' . $img) }}" class="card-img-top" alt="{{ $details->make }}" width="550" height="400">
+                                        <img src="{{ asset('../uploads/cars/' . Str::lower($details->make . $details->model . $details->year) . '/' . $img) }}" class="card-img-top" alt="{{ $details->make }}" width="550" height="400">
                                     </div>
                                 @endforeach
                             </div>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="row mt-5 pl-3">
-                            <a href="{{ url('/applicant-register') }}" class="btn font-weight-bold">Reserve & Buy this Car</a>
+                            <a href="{{ url('applicant-register/' . $details->id) }}" class="btn font-weight-bold">Reserve & Buy this Car</a>
                         </div>
                     </div>
                 </div>

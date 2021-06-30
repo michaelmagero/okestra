@@ -42,12 +42,15 @@
                         <li class="nav-item">
                             <a href="{{ url('/about') }}" class="nav-link">About</a>
                         </li>
+                        {{-- <li class="login-btn">
+                            <a href="#" class="btn btn-lg font-weight-bold"><i class="fas fa-phone"></i>  0768825914 / 0790363195</a>
+                        </li> --}}
                         <li class="login-btn">
                             <a href="{{ url('/login') }}" class="btn btn-lg font-weight-bold">Login</a>
                         </li>
-                        <li class="signup-btn">
+                        {{-- <li class="signup-btn">
                             <a href="{{ url('/applicant-register') }}" class="btn btn0lg font-weight-bold">Sign Up</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
                 <router-view></router-view>
