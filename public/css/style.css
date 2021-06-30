@@ -1,0 +1,516 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Nunito', sans-serif;
+}
+.navbar {
+		position: absolute !important;
+	}
+
+	nav ul {
+		margin: 0;
+		float: right;
+	}
+
+	.logo {
+		width: 150px;
+		height: 40px;
+	}
+
+	.nav-item {
+		padding: 0 10px 0 10px;
+	}
+
+	.nav-link {
+		color: #fff;
+	}
+
+	.nav-link:hover {
+		color: #fece00;
+	}
+
+	.login-btn {
+		margin: 0 5px 0 5px;
+		background-color: #fff;
+		color: #262228;
+		border-radius: 20px;
+		padding: 0 10px 0 10px;
+		font-weight: bold;
+	}
+
+	.login-btn:hover {
+		margin: 0 5px 0 5px;
+		background-color: #fece00;
+		border-radius: 20px;
+		padding: 0 10px 0 10px;
+		font-weight: bold;
+	}
+
+	.login-btn a {
+		font-size: 15px;
+	}
+
+	.login-btn a:hover {
+		font-size: 15px;
+		color: #262228;
+	}
+
+	.signup-btn {
+		margin: 0 5px 0 5px;
+		background-color: #fece00;
+		color: #262228;
+		border-radius: 20px;
+		padding: 0 10px 0 10px;
+		font-weight: bold;
+	}
+
+	.signup-btn:hover {
+		margin: 0 5px 0 5px;
+		background-color: #fff;
+		color: #262228;
+		border-radius: 20px;
+		padding: 0 10px 0 10px;
+		font-weight: bold;
+	}
+
+	.signup-btn a {
+		font-size: 15px;
+	}
+
+
+    .jumbotron {
+		height: 700px;
+		background-size: cover;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-webkit-background-size: cover;
+		position: relative;
+        background-image: url('../images/hero1.png');
+	}
+
+	.jumbotron #content {
+		padding: 50px 0 0 0;
+	}
+
+	.jumbotron p {
+		color: #fff;
+	}
+
+	#cta .jumbotron {
+		background: #fece00;
+	}
+
+	#cta .jumbotron {
+		height: 300px;
+	}
+
+	#cta h1 {
+		color: #262228;
+	}
+
+	#cta p {
+		font-weight: bold;
+		color: #262228;
+	}
+
+	#cta .btn {
+		background: #262228;
+		border: none;
+	}
+
+	#cta .btn:hover {
+		background: #fff;
+		border: none;
+		color: #000;
+	}
+
+	.jumbotron .card {
+		border-radius: 0 50px 0 50px;
+		background: #262228;
+		opacity: 0.9;
+	}
+
+	.card .calc {
+		border-radius: 15px;
+		font-weight: bold;
+	}
+
+	.jumbotron .btn {
+		border-radius: 20px;
+		padding: 7px 35px 7px 35px;
+	}
+
+	.jumbotron .landing-btn {
+		background-color: #fece00;
+	}
+
+	.jumbotron .btn:hover {
+		background-color: #262228;
+		color: #ffffff;
+	}
+
+	#kommute-features {
+		padding: 50px 0 50px 0;
+		background-color: #262228;
+	}
+
+	#kommute-features .features {
+		width: 60px;
+		height: 60px;
+	}
+
+	.features-heading {
+		color: #fece00;
+	}
+
+	.features-icons {
+		color: #fece00;
+	}
+
+	#kommute-features h5 {
+		color: #fff;
+	}
+
+	#kommute-why {
+		padding: 70px 0 50px 0;
+		background-color: #262228;
+	}
+
+	#kommute-why .why {
+		widows: 60px;
+		height: 60px;
+	}
+
+	#kommute-why h5 {
+		color: #fff;
+	}
+
+	#cars {
+		padding-bottom: 20px;
+	}
+
+	#cars .card {
+		height: 600px;
+	}
+
+	#cars .btn {
+		background-color: #fece00;
+		border-radius: 20px;
+		padding: 0 30px 0 30px;
+		font-weight: bold;
+	}
+
+	#cars .btn:hover {
+		border-radius: 20px;
+		background: #262228;
+		color: #ffffff;
+		padding: 0 30px 0 30px;
+		border: none;
+	}
+
+	.cash-price {
+		color: #fece00;
+	}
+
+	.carousel-control-prev {
+		background: none;
+		border-width: 0;
+		left: -120px;
+		border-bottom: 0;
+		font-size: 40px;
+		color: #444;
+	}
+
+	.carousel-control-next {
+		background: none;
+		border-width: 0;
+		right: -120px;
+		border-bottom: 0;
+		font-size: 40px;
+		color: #444;
+	}
+
+	#partners {
+		padding: 20px 0 70px 0;
+	}
+
+	.partners {
+		width: 150px;
+		height: 70px;
+	}
+
+    #footer {
+		padding: 100px 0 100px;
+		background: #262228;
+	}
+
+	#footer .footer-logo {
+		width: 150px;
+		height: 40px;
+	}
+
+	#footer a {
+		color: #fece00;
+	}
+
+	#footer a:hover {
+		color: #fff;
+	}
+
+	#footer .fa {
+		font-size: 20px;
+	}
+
+	#footer .icons {
+		background: none;
+		border: none;
+		padding: 0 10px 0 10px;
+	}
+
+	#office-time li {
+		list-style: none;
+		padding: 5px 0 5px 0;
+	}
+
+	#office-time li a {
+		color: #fff;
+	}
+
+	#office-time li a:hover {
+		text-decoration: none;
+	}
+
+    /* PAGES JUMBOTRON */
+    .pages-jumbotron {
+		height: 300px;
+		background-size: cover;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-webkit-background-size: cover;
+		position: relative;
+        background-image: url('../images/vehicles1.jpeg');
+	}
+	.pages-jumbotron #content {
+		padding: 150px 0 0 0;
+	}
+
+	#cta .pages-jumbotron {
+		height: 300px;
+	}
+
+	.pages-jumbotron .btn:hover {
+		background-color: #262228;
+		color: #ffffff;
+	}
+
+    /* PRODUCTS PAGE */
+    #features .financing {
+		width: 250px;
+		height: 200px;
+	}
+
+	#features .btn {
+		border-radius: 20px;
+		padding: 5px 30px 5px 30px;
+	}
+
+	#features .btn:hover {
+		background-color: #262228;
+		color: #ffffff;
+		border: none;
+	}
+
+	.product-buttons {
+		background-color: #fece00;
+		font-weight: bold;
+	}
+
+	@media (max-width: 768px) {
+		#features .card {
+			height: 550px;
+		}
+
+		#features .financing {
+			width: 350px;
+			height: 300px;
+		}
+
+		#features .col-md-6 {
+			padding-left: 50px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		#features .col-md-9 {
+			padding: 30px 0 0 50px;
+		}
+	}
+
+    /* CARS PAGE */
+    #car-search {
+        padding: 50px 0 50px 0;
+    }
+    #car-search .btn {
+		border-radius: 20px;
+		background-color: #fece00;
+		font-weight: bold;
+	}
+
+	#car-search .btn:hover {
+		background-color: #262228;
+		color: #ffffff;
+		border: none;
+	}
+
+	#car-search .card {
+		height: 600px;
+	}
+
+	#car-search .search-bar {
+		border-radius: 20px;
+		border: none;
+		padding: 10px 30px 10px 50px;
+		background-color: #e6e6e6;
+		font-weight: 700;
+	}
+
+	.cash-price {
+		color: #fece00;
+	}
+
+	@media (max-width: 768px) {
+		#car-search .card-img-top {
+			height: 250px;
+		}
+
+		#car-search h3 {
+			padding-left: 20px;
+		}
+
+		#car-search p {
+			padding: 20px;
+		}
+	}
+
+    /* ABOUT PAGE */
+    #about p {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	#about ol li {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.title-backgrounds {
+		background-color: #fece00;
+		font-weight: bold;
+	}
+
+	.core-values {
+		color: #fece00;
+		font-weight: bold;
+	}
+
+    /* VIEW CAR */
+    #car-details .btn {
+		border-radius: 20px;
+		padding: 5px 30px 5px 30px;
+        background-color: #fece00;
+	}
+	#car-details .btn:hover {
+		background-color: #262228;
+		color: #fff;
+		border: none;
+	}
+
+	.titles {
+		color: #fece00;
+		font-weight: bold;
+		font-size: 17px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Responsive design */
+    @media (max-width: 480px) {
+		.jumbotron {
+			height: 1200px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.jumbotron {
+			height: 900px;
+		}
+
+		#cars .card-img-top {
+			height: 250px;
+		}
+
+		#kommute-why h3 {
+			padding-left: 70px;
+		}
+
+		#kommute-why .col-md-4 {
+			padding: 30px 100px 30px 70px;
+		}
+
+		#kommute-features h3 {
+			padding-left: 20px;
+		}
+
+		#kommute-features .col-md-3 {
+			padding: 30px 50px 30px 50px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.jumbotron {
+			height: 900px;
+		}
+
+		#cars .card-img-top {
+			height: 250px;
+		}
+
+		#kommute-why h3 {
+			padding-left: 50px;
+		}
+
+		#kommute-why .col-md-4 {
+			padding: 30px 50px 30px 50px;
+		}
+
+		#kommute-features .col-md-6 {
+			padding: 30px;
+		}
+
+		#kommute-features h3 {
+			padding-left: 20px;
+		}
+
+		#kommute-features .col-md-3 {
+			padding: 30px 50px 30px 50px;
+		}
+	}
