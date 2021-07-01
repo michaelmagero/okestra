@@ -11,7 +11,6 @@ Route::redirect('home', 'admin-dash', 301);
 Route::get('/', 'FrontendController@home');
 Route::get('/products', 'FrontendController@products');
 Route::get('/cars', 'FrontendController@cars');
-Route::get('/search-car', 'FrontendController@search');
 Route::get('/about', 'FrontendController@about');
 Route::get('/about', 'FrontendController@about');
 Route::get('/view-car/{id}', 'FrontendController@viewcar');
