@@ -58,7 +58,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Make
                                                 </label>
@@ -73,7 +73,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Registration
                                                 </label>
@@ -88,7 +88,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Mileage
                                                 </label>
@@ -103,7 +103,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Fuel Type
                                                 </label>
@@ -118,7 +118,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Engine Number
                                                 </label>
@@ -133,7 +133,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Color
                                                 </label>
@@ -141,7 +141,7 @@
                                                     <h5>  {{ $vehicles->color }}  </h5>
                                                 </div>
                                             </div>
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Features
                                                 </label>
@@ -164,11 +164,11 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
-
+                                                    Features
                                                 </label>
-                                                <div class="col-md-4 col-md-offset-2">
+                                                <div class="col-md-4">
                                                     <ul>
                                                         @foreach (json_decode($vehicles->safety_features, true) as $detail)
                                                             <li>
@@ -187,7 +187,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="form-group m-form__group row">
+                                            <div class="form-group m-form__group row pt-0">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Images
                                                 </label>

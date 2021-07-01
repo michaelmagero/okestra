@@ -33,28 +33,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col-sm-3 col-md-3" v-for="vehicle in submit" v-bind:key="vehicle.value">
-                        <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                            <img v-if="vehicle.images" :src="carImage + vehicle.make + vehicle.model + vehicle.year+ '/' + vehicle.display_image" class="card-img-top" :alt="vehicle.make" height="250">
-
-                            <div class="card-body">
-                                <h4 class="card-title">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.year }}</h4>
-
-                                <span class="badge bg-light mr-5">Mileage {{ Number(vehicle.mileage).toLocaleString() }}</span>
-                                <span class="badge bg-light mr-5">Year {{ vehicle.year }} </span>
-                                <span class="badge bg-light mr-5">Location {{ vehicle.location.toUpperCase() }} </span>
-
-                                <h6 class="ml-1 mt-2  font-weight-bold"><strong>Cash Price</strong>: <strong class="cash-price"> Ksh {{ Number(vehicle.price).toLocaleString() }} </strong></h6>
-
-                                <h6 class="mt-3 text-muted">Monthly Payment</h6>
-                                <h5 class="mb-3 font-weight-bold">Ksh {{ Math.round(((0.0208 * (Number(vehicle.price) * 0.5) * 24 + Number(vehicle.price) * 0.5) / 24)).toLocaleString() }}</h5>
-
-                                <router-link class="btn btn-block btn-warning pt-2 pb-2 pr-5 pl-5" :to="{ name: 'viewcar', params: { id: vehicle.id }}">view this car</router-link>                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
 
                 <div class="row">
                     <div class="col-xs-3 col-sm-3 col-md-3" v-for="vehicle in submit" v-bind:key="vehicle.id">

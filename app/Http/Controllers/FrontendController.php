@@ -50,23 +50,6 @@ class FrontendController extends Controller
         return Vehicle::get();
     }
 
-    public function search(Request $request)
-    {
-
-        $key = trim($request->get('q'));
-
-        $vehicles = Vehicle::query()
-            ->where('make', 'like', "%{$key}%")
-            ->orWhere('model', 'like', "%{$key}%")
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-
-        return view('frontend.search', [
-            'vehicles' => $vehicles,
-        ]);
-    }
-
     public function viewcar($id)
     {
         $vehicle_details = Vehicle::find($id);
