@@ -128,18 +128,11 @@
 			Navbar,
 			Jumbotron,
 			Footer,
-			filters: {
-				capitalize: function (value) {
-					if (!value) return "";
-					value = value.toString();
-					return value.charAt(0).toUpperCase() + value.slice(1);
-				},
-			},
 		},
 
 		mounted: function () {
 			axios
-				.get("http://localhost:8000/vehicles")
+				.get("/vehicles")
 				.then((res) => {
 					this.vehicles = res.data;
 				})
