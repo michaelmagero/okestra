@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/show-user/{id}', 'UserController@show');
     Route::get('/edit-user/{id}', 'UserController@edit');
     Route::post('/update-user/{id}', 'UserController@update');
-    Route::post('/delete-user/{id}', 'UserController@destroy');
+    Route::get('/delete-user/{id}', 'UserController@destroy');
 
     Route::get('/admin-applications', 'ApplicantController@index');
     Route::get('/new-application', 'ApplicantController@create');
@@ -46,5 +46,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/show-vehicle/{id}', 'VehicleController@show');
     Route::get('/edit-vehicle/{id}', 'VehicleController@edit');
     Route::post('/update-vehicle/{id}', 'VehicleController@update');
-    Route::post('/delete-vehicle/{id}', 'VehicleController@destroy');
+    Route::get('/delete-vehicle/{id}', 'VehicleController@destroy');
 });

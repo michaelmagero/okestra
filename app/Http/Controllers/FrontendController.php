@@ -39,10 +39,7 @@ class FrontendController extends Controller
 
     public function cars()
     {
-        $vehicles = Vehicle::get();
-
-        return view('frontend.cars')
-            ->with('vehicles', $vehicles);
+        return view('frontend.cars');
     }
 
     public function vehicles()
