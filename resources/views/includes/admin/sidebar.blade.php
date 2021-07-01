@@ -36,7 +36,7 @@
                                 <a  href="{{ url('/admin-applications') }}" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon fa fa-edit"></i>
                                     <span class="m-menu__link-text">
-                                        Reservations
+                                        Applications
                                     </span>
                                 </a>
                             </li>

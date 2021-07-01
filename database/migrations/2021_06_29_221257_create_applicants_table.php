@@ -43,7 +43,8 @@ class CreateApplicantsTable extends Migration
             $table->string('kra_certificate')->nullable();
             $table->string('incorporation_certificate')->nullable();
             $table->string('email')->nullable()->unique();
-            $table->string('status')->nullable()->default(0); //pending - 0 , approved - 1
+            $table->string('application_status')->nullable()->default(0); //pending - 0 , approved - 1, rejected - 2
+            $table->string('loan_status')->nullable()->default(0); //active - 0 , complete - 1, empty if application status is rejected -2
 
             $table->timestamps();
         });

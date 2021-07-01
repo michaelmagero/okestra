@@ -84,12 +84,13 @@ class FrontendController extends Controller
         $applicant->middlename = $request->middlename;
         $applicant->surname = $request->surname;
         $applicant->email = $request->email;
-        $applicant->status = 0;
+        $applicant->application_status = 0;
+        $applicant->loan_status = 2;
 
         //natioanal_id
         if ($file = $request->file('national_id')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . $request->name . $request->middlename . $request->surname, $img);
+            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->national_id = $img;
         }
 
@@ -110,14 +111,14 @@ class FrontendController extends Controller
         //bank_statements
         if ($file = $request->file('bank_statements')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . $request->name . $request->middlename . $request->surname, $img);
+            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->bank_statements = $img;
         }
 
         //mpesa_statements
         if ($file = $request->file('mpesa_statements')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . $request->name . $request->middlename . $request->surname, $img);
+            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->mpesa_statements = $img;
         }
 
@@ -125,21 +126,21 @@ class FrontendController extends Controller
         //cr12 certificate
         if ($file = $request->file('cr12_certificate')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . $request->name . $request->middlename . $request->surname, $img);
+            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->cr12_certificate = $img;
         }
 
         //kra_certificate
         if ($file = $request->file('kra_certificate')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . $request->name . $request->middlename . $request->surname, $img);
+            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->kra_certificate = $img;
         }
 
         //incorporation certificate
         if ($file = $request->file('incorporation_certificate')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . $request->name . $request->middlename . $request->surname, $img);
+            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->incorporation_certificate = $img;
         }
 

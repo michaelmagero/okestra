@@ -196,7 +196,7 @@
 
                                                     @foreach( json_decode($vehicles->images, true) as $img)
                                                         <div class="col-md-5 mr-3 ml-3">
-                                                            <td> <img src="{{ asset('/uploads/cars/'. Str::lower(str_replace(' ', '', $vehicles->make . $vehicles->model . $vehicles->year)) . '/' . $img) }}" class="mt-3 mb-3" alt="" width="450" height="350"></td>
+                                                            <h5> <img src="{{ asset('/uploads/cars/'. Str::lower(str_replace(' ', '', $vehicles->make . $vehicles->model . $vehicles->year)) . '/' . $img) }}" class="mt-3 mb-3" alt="" width="450" height="350"></h5>
                                                         </div>
                                                     @endforeach
                                                 </div>
