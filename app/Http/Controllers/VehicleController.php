@@ -39,8 +39,8 @@ class VehicleController extends Controller
 
         $vehicle = new Vehicle();
         $vehicle->registration = $request->registration;
-        $vehicle->make = $request->make;
-        $vehicle->model = $request->model;
+        $vehicle->make = ucfirst($request->make);
+        $vehicle->model = ucfirst($request->model);
         $vehicle->year = $request->year;
         $vehicle->color = $request->color;
         $vehicle->location = $request->location;

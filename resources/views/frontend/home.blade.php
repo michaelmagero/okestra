@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach ($vehicles as $vehicle)
+                    @foreach ($vehicles->take(4) as $vehicle)
                         <div class="col-xs-3 col-sm-3 col-md-3">
                             <div>
                                 <div class="card mt-5 mb-5 shadow rounded-0 border-0">

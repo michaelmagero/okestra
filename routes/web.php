@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +15,7 @@ Route::get('/search-car', 'FrontendController@search');
 Route::get('/about', 'FrontendController@about');
 Route::get('/about', 'FrontendController@about');
 Route::get('/view-car/{id}', 'FrontendController@viewcar');
+Route::get('/vehicles', 'FrontendController@vehicles');
 
 //car reservation
 Route::get('/applicant-register/{id}', 'FrontendController@create');

@@ -45,6 +45,11 @@ class FrontendController extends Controller
             ->with('vehicles', $vehicles);
     }
 
+    public function vehicles()
+    {
+        return Vehicle::get();
+    }
+
     public function search(Request $request)
     {
 
