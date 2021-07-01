@@ -159,7 +159,8 @@ class FrontendController extends Controller
         //     'body' => 'You have successfully reserved ' . $applicant->make . $applicant->model .  $applicant->model . 'and attached is your invoice',
         //     'thanks' => 'Thank you for working with Kommute!'
         // ];
-        // Notification::route('mail', $applicant)->notify(new ReservationConfirmation($details));
+        // Notification::route('mail', $applicant)->notify(new AdminReservationConfirmation($details));
+        // Notification::route('mail', $applicant)->notify(new ApplicantReservationConfirmation($details));
 
         $applicant->save();
         $request->session()->flash('success_message', 'Application Added Successfully.');

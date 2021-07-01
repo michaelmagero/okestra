@@ -49,6 +49,8 @@ class VehicleController extends Controller
         $vehicle->transmission = $request->transmission;
         $vehicle->engine_capacity = $request->engine_capacity;
         $vehicle->price = $request->price;
+        $vehicle->engine_number = $request->engine_number;
+        $vehicle->chasis_number = $request->chasis_number;
 
         $interior_features = explode(",", $request->interior_features);
         $exterior_features = explode(",", $request->exterior_features);

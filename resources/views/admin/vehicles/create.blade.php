@@ -87,6 +87,19 @@
 
                                 <div class="form-group m-form__group row">
 
+                                    <div class="col-lg-4">
+                                        <label class="">Engine Number:</label>
+                                        <input type="text" name="engine_number" class="form-control m-input" value="{{ old('engine_number') }}" required>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <label class="">Chasis Number:</label>
+                                        <input type="text" name="chasis_number" class="form-control m-input" value="{{ old('chasis_number') }}" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-form__group row">
+
                                     <div class="col-lg-6">
                                         <label>Display Image <small>(main image of the vehicle)</small> </label>
                                         <div class="custom-file">

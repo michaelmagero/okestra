@@ -62,16 +62,13 @@
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Make
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5> {{ $vehicles->make }} </h5>
                                                 </div>
-                                            </div>
-
-                                            <div class="form-group m-form__group row">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Model
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5> {{ $vehicles->model }} </h5>
                                                 </div>
                                             </div>
@@ -80,51 +77,62 @@
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Registration
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5> {{ $vehicles->registration }} </h5>
+                                                </div>
+                                                <label for="example-text-input" class="col-2 text-muted">
+                                                    Year
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <h5>  {{ $vehicles->year }}  </h5>
                                                 </div>
                                             </div>
 
                                             <div class="form-group m-form__group row">
                                                 <label for="example-text-input" class="col-2 text-muted">
-                                                    Year
-                                                </label>
-                                                <div class="col-md-7">
-                                                    <h5>  {{ $vehicles->year }}  </h5>
-                                                </div>
-                                            </div>
-                                            <div class="form-group m-form__group row">
-                                                <label for="example-text-input" class="col-2 text-muted">
                                                     Mileage
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5>  {{ $vehicles->mileage }}  </h5>
                                                 </div>
-                                            </div>
-                                            <div class="form-group m-form__group row">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Transmission
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5>  {{ $vehicles->transmission }}  </h5>
                                                 </div>
                                             </div>
+
                                             <div class="form-group m-form__group row">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Fuel Type
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5>  {{ $vehicles->fuel_type }}  </h5>
                                                 </div>
-                                            </div>
-                                            <div class="form-group m-form__group row">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Engine Capacity
                                                 </label>
-                                                <div class="col-md-7">
+                                                <div class="col-md-4">
                                                     <h5>  {{ $vehicles->engine_capacity }}  </h5>
                                                 </div>
                                             </div>
+
+                                            <div class="form-group m-form__group row">
+                                                <label for="example-text-input" class="col-2 text-muted">
+                                                    Engine Number
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <h5>  {{ $vehicles->engine_number }}  </h5>
+                                                </div>
+                                                <label for="example-text-input" class="col-2 text-muted">
+                                                    Chasis Number
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <h5>  {{ $vehicles->chasis_number }}  </h5>
+                                                </div>
+                                            </div>
+
                                             <div class="form-group m-form__group row">
                                                 <label for="example-text-input" class="col-2 text-muted">
                                                     Color
@@ -157,6 +165,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group m-form__group row">
+                                                <label for="example-text-input" class="col-2 text-muted">
+
+                                                </label>
                                                 <div class="col-md-4 col-md-offset-2">
                                                     <ul>
                                                         @foreach (json_decode($vehicles->safety_features, true) as $detail)
@@ -185,7 +196,7 @@
 
                                                     @foreach( json_decode($vehicles->images, true) as $img)
                                                         <div class="col-md-5 mr-3 ml-3">
-                                                            <td> <img src="{{ asset('/uploads/cars/'. $vehicles->make . $vehicles->model . $vehicles->year . '/' . $img) }}" class="mt-3 mb-3" alt="" width="450" height="350"></td>
+                                                            <td> <img src="{{ asset('/uploads/cars/'. Str::lower(str_replace(' ', '', $vehicles->make . $vehicles->model . $vehicles->year)) . '/' . $img) }}" class="mt-3 mb-3" alt="" width="450" height="350"></td>
                                                         </div>
                                                     @endforeach
                                                 </div>
