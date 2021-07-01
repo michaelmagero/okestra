@@ -21,7 +21,11 @@ Route::get('/applicant-register/{id}', 'FrontendController@create');
 Route::post('/applicant-register', 'FrontendController@store');
 
 //MPESA PAYMENT
+<<<<<<< HEAD
 // Route::get('make-pay', 'MpesaController@STKPushPayment');
+=======
+Route::get('make-pay', 'MpesaController@STKPushPayment');
+>>>>>>> 333c1c6dce7d98ea5dfae11b1954aec808034c92
 
 
 Route::group(['middleware' => ['auth']], function () {

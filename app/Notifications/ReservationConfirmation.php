@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use App\Models\User;
+use App\Models\Vehicle;
 use App\Models\Applicant;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
