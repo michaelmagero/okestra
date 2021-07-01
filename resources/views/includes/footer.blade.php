@@ -5,8 +5,10 @@
                         <img src="../images/logo.jpg" class="footer-logo" alt="">
                         <p class="pt-3">Kenyas Leading Paperless Financing</p>
                         <ul class="list-group list-group-horizontal">
-                            <li class="icons list-group-item"><a href="#"><i class="fa fa-facebook font-weight-bold"></i></a></li>
+                            <li class="icons list-group-item"><a href="https://www.facebook.com/kommuteofficial"><i class="fa fa-facebook font-weight-bold"></i></a></li>
                             <li class="icons list-group-item"><a href="https://www.instagram.com/kommutefinance/" target="_blank"><i class="fa fa-instagram font-weight-bold"></i></a></li>
+                            <li class="icons list-group-item"><a href="https://twitter.com/Kommute_" target="_blank"><i class="fa fa-twitter font-weight-bold"></i></a></li>
+                            <li class="icons list-group-item"><a href="https://www.linkedin.com/company/kommutefinance/" target="_blank"><i class="fa fa-linkedin font-weight-bold"></i></a></li>
                         </ul>
                         <h6 class="mt-3">&copy; {{ date('Y') }} Kommute.</h6>
                     </div>
@@ -34,8 +36,8 @@
                     <div class="col-md-3">
                         <ul id="office-time">
                             <h6 class="text-muted font-weight-bold">Links</h6>
-                            <li><a href="#">Terms and Conditiions</a></li>
-                            <li><a href="https://docs.google.com/document/d/1U8_EWHuhtVRo8ZXI88q5h3HXA4NnGXMVVaRVFuK94Xw/edit?usp=sharing" target="_blank">Privacy Policy</a></li>
+                            <li><a target="_blank" href="../documents/Terms and Conditions.pdf">Terms and Conditiions</a></li>
+                            <li><a target="_blank" href="../documents/Privacy Policy.pdf" target="_blank">Privacy Policy</a></li>
                             <li><a href="#">Support</a></li>
                             <li><a href="#">Calculate Installments</a></li>
                             <li><a href="#">Do not sell my information</a></li>

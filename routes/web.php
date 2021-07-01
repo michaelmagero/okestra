@@ -20,9 +20,6 @@ Route::get('/view-car/{id}', 'FrontendController@viewcar');
 Route::get('/applicant-register/{id}', 'FrontendController@create');
 Route::post('/applicant-register', 'FrontendController@store');
 
-//MPESA PAYMENT
-// Route::get('make-pay', 'MpesaController@STKPushPayment');
-
 
 Route::group(['middleware' => ['auth']], function () {
 

@@ -7,10 +7,6 @@ use App\Models\Vehicle;
 use App\Models\Applicant;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-=======
-use App\Libraries\Mpesa\MpesaMethods;
->>>>>>> 333c1c6dce7d98ea5dfae11b1954aec808034c92
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\ReservationConfirmation;
 

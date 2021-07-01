@@ -35,36 +35,36 @@
                 </div>
             </div>
             <div class="row">
-                @foreach ($vehicles as $vehicle)
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <div>
-                            <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                                <img src="{{ asset('../uploads/displayimage/' . Str::lower(str_replace(' ', '', $vehicle->make . $vehicle->model . $vehicle->year)) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="250">
+                    @foreach ($vehicles as $vehicle)
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <div>
+                                <div class="card mt-5 mb-5 shadow rounded-0 border-0">
+                                    <img src="{{ asset('../uploads/displayimage/' . Str::lower(str_replace(' ', '', $vehicle->make . $vehicle->model . $vehicle->year)) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="200">
 
-                                <div class="card-body">
-                                    <h4 class="card-title">{{ $vehicle->make }} {{ $vehicle->model }} {{ $vehicle->year }}</h4>
+                                    <div class="card-body">
+                                        <h6 class="card-title font-weight-bold">{{ ucfirst(trans( $vehicle->make . " " . $vehicle->model . " " . $vehicle->year)) }}</h6>
 
-                                    @if ($vehicle->mileage == 0)
-                                        <span class="badge bg-light mr-5 mt-1">Mileage </span><br>
-                                    @else
-                                        <span class="badge bg-light mr-5 mt-1">Mileage {{ $vehicle->mileage }}</span><br>
-                                    @endif
+                                        @if ($vehicle->mileage == 0)
+                                            <span class="badge bg-light mr-5 mt-1">Mileage </span><br>
+                                        @else
+                                            <span class="badge bg-light mr-5 mt-1">Mileage {{ $vehicle->mileage }}</span><br>
+                                        @endif
 
-                                    <span class="badge bg-light mr-5 mt-1">Year  {{ " " }}  {{ $vehicle->year }} </span>
-                                    <span class="badge bg-light mr-5 mt-1">Location {{ Str::upper($vehicle->location) }} </span>
-                                    <h6 class="mt-2  font-weight-bold"><strong>Cash Price</strong>: <strong class="cash-price"> KES {{ number_format($vehicle->price) }} </strong></h6>
+                                        <span class="badge bg-light mr-5 mt-1">Year  {{ " " }}  {{ $vehicle->year }} </span>
+                                        <span class="badge bg-light mr-5 mt-1">Location {{ Str::upper($vehicle->location) }} </span>
+                                        <h6 class="mt-2  font-weight-bold"><strong>Cash Price</strong>: <strong class="text-muted"> KES {{ number_format($vehicle->price) }} </strong></h6>
 
-                                    <h6 class="mt-3 text-muted">Monthly Payment</h6>
-                                    <h5 class="mb-3 font-weight-bold">KES {{ number_format((0.0208 * ($vehicle->price * 0.5) * 24 + $vehicle->price * 0.5) / 24) }}</h5>
+                                        <h6 class="mt-3 text-muted">Monthly Payment</h6>
+                                        <h5 class="mb-3 font-weight-bold">KES {{ number_format((0.0208 * ($vehicle->price * 0.5) * 24 + $vehicle->price * 0.5) / 24) }}</h5>
 
-                                    <a href="{{ url('view-car/' . $vehicle->id) }}" class="btn btn-block btn-warning pt-2 pb-2 pr-5 pl-5">view this car</a>
+                                        <a href="{{ url('view-car/' . $vehicle->id) }}" class="btn btn-block btn-warning pt-2 pb-2 pr-5 pl-5">View this car</a>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
+                    @endforeach
+                </div>
         </div>
     </div>
 @endsection

@@ -40,17 +40,14 @@
                             <a href="{{ url('/cars') }}" class="nav-link">Cars</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('/about') }}" class="nav-link">About</a>
+                            <a href="{{ url('/about') }}" class="nav-link">About Us</a>
                         </li>
-                        {{-- <li class="login-btn">
-                            <a href="#" class="btn btn-lg font-weight-bold"><i class="fas fa-phone"></i>  0768825914 / 0790363195</a>
-                        </li> --}}
                         <li class="login-btn">
                             <a href="{{ url('/login') }}" class="btn btn-lg font-weight-bold">Login</a>
                         </li>
-                        {{-- <li class="signup-btn">
-                            <a href="{{ url('/applicant-register') }}" class="btn btn0lg font-weight-bold">Sign Up</a>
-                        </li> --}}
+                        <li class="signup-btn">
+                            <a href="#" class="btn btn-lg font-weight-bold"><i class="fas fa-phone"></i>  0768825914 / 0790363195</a>
+                        </li>
                     </ul>
                 </div>
                 <router-view></router-view>
@@ -59,16 +56,16 @@
 
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/60c854ae7f4b000ac037a696/1f878lj58';
-                s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
-            })();
-            </script>
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/60ddc1857f4b000ac03a88bd/1f9h3nsog';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
         <!--End of Tawk.to Script-->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

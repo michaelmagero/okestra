@@ -4,9 +4,7 @@ body,html {
     overflow-x: hidden;
     font-family: 'Nunito', sans-serif;
 }
-.navbar {
-		position: absolute !important;
-	}
+
 
 	nav ul {
 		margin: 0;
@@ -161,7 +159,7 @@ body,html {
 	}
 
 	.features-heading {
-		color: #fece00;
+		color: #fff;
 	}
 
 	.features-icons {
@@ -191,7 +189,7 @@ body,html {
 	}
 
 	#cars .card {
-		height: 600px;
+		height: 500px;
 	}
 
 	#cars .btn {
@@ -326,26 +324,6 @@ body,html {
 		font-weight: bold;
 	}
 
-	@media (max-width: 768px) {
-		#features .card {
-			height: 550px;
-		}
-
-		#features .financing {
-			width: 350px;
-			height: 300px;
-		}
-
-		#features .col-md-6 {
-			padding-left: 50px;
-		}
-	}
-
-	@media (max-width: 1024px) {
-		#features .col-md-9 {
-			padding: 30px 0 0 50px;
-		}
-	}
 
     /* CARS PAGE */
     #car-search {
@@ -379,19 +357,6 @@ body,html {
 		color: #fece00;
 	}
 
-	@media (max-width: 768px) {
-		#car-search .card-img-top {
-			height: 250px;
-		}
-
-		#car-search h3 {
-			padding-left: 20px;
-		}
-
-		#car-search p {
-			padding: 20px;
-		}
-	}
 
     /* ABOUT PAGE */
     #about p {
@@ -415,32 +380,81 @@ body,html {
 	}
 
     /* VIEW CAR */
+    #car-details {
+        background-color: #262228;
+        padding: 20px 0 20px 0;
+    }
+
+
     #car-details .btn {
 		border-radius: 20px;
 		padding: 5px 30px 5px 30px;
         background-color: #fece00;
 	}
 	#car-details .btn:hover {
-		background-color: #262228;
-		color: #fff;
+		background-color: #fff;
+		color: #262228;
 		border: none;
 	}
+
+    #car-details img {
+        border: 1px solid #fece00;
+    }
 
 	.titles {
 		color: #fece00;
 		font-weight: bold;
-		font-size: 17px;
+		font-size: 14px;
 	}
 
+    #car-details h5 {
+        color: #fff;
+    }
 
+    #car-details p {
+        color: #fff;
+    }
 
+    #car-details hr {
+        border-color: #fff;
+    }
 
+    #car-details .location {
+        color: #fff;
+    }
 
+    #car-details .reserve-btn {
+        font-weight: 800;
+    }
 
+    #viewcar-cta .jumbotron {
+		background: #fff;
+	}
 
+	#viewcar-cta .jumbotron {
+		height: 300px;
+	}
 
+	#viewcar-cta h3 {
+		color: #262228;
+	}
 
+	#viewcar-cta p {
+		font-weight: bold;
+		color: #262228;
+	}
 
+	#viewcar-cta .btn {
+		background: #262228;
+		border: none;
+        color: #fff;
+	}
+
+	#viewcar-cta .btn:hover {
+		background: #fece00;
+		border: none;
+		color: #000;
+	}
 
 
 
@@ -460,6 +474,58 @@ body,html {
 	}
 
 	@media (max-width: 768px) {
+        /* PAGES JUMBOTRON */
+        .pages-jumbotron {
+            height: 400px;
+            background-size: cover;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-webkit-background-size: cover;
+            position: relative;
+            background-image: url('../images/vehicles1.jpeg');
+        }
+        .pages-jumbotron #content {
+            padding: 150px 0 0 0;
+        }
+
+        #cta .pages-jumbotron {
+            height: 300px;
+        }
+
+        .pages-jumbotron .btn:hover {
+            background-color: #262228;
+            color: #ffffff;
+        }
+        /* HOMEPAGE */
+        .navbar {
+            background-color: #262228;
+            opacity: 1;
+        }
+
+        .navbar-nav {
+            margin: 0 230px 0 0;
+        }
+
+        .navbar-nav .nav-item {
+            padding: 10px 0 10px 0;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .signup-btn {
+            display: none;
+        }
+
+        .navbar-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        .custom-toggler.navbar-toggler {
+            border-color: rgb(255,102,203);
+        }
+
 		.jumbotron {
 			height: 900px;
 		}
@@ -483,6 +549,46 @@ body,html {
 		#kommute-features .col-md-3 {
 			padding: 30px 50px 30px 50px;
 		}
+
+
+        /* PRODUCTS */
+        #features .financing {
+            width: 345px;
+            height: 300px;
+        }
+
+        #features .card {
+            height: 550px;
+        }
+
+        #features .content {
+            margin: 10px 20px 10px 20px;
+        }
+
+        #features .btn {
+            border-radius: 20px;
+            padding: 5px 30px 5px 30px;
+        }
+
+        #features .btn:hover {
+            background-color: #262228;
+            color: #ffffff;
+            border: none;
+        }
+
+        .product-buttons {
+            background-color: #fece00 !important;
+            font-weight: bold;
+        }
+
+        /* CARS */
+        #car-search {
+            padding: 20px;
+        }
+
+        #car-search .card {
+            height: 450px;
+        }
 	}
 
 	@media (max-width: 1024px) {
@@ -514,3 +620,7 @@ body,html {
 			padding: 30px 50px 30px 50px;
 		}
 	}
+
+
+
+

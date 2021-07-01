@@ -25,7 +25,7 @@
                                 <div class="col-sm-4 col-md-4 img d-flex">
                                     <img src="../images/carfinancing.jpeg" class="financing" alt="duty imports">
                                 </div>
-                                <div class="col-sm-6 col-md-6">
+                                <div class="col-sm-6 col-md-6 content">
                                     <h4 class="text-secondary font-weight-bold pt-3">Car Finance</h4>
                                     <p class="pr-5">Apply for car financing all online and get approved within 6 hours. Repay your loan at attractive rates of as low as 2% p.m on reducing balance.</p>
 
@@ -44,7 +44,7 @@
                                 <div class="col-sm-4 col-md-4 img d-flex">
                                     <img src="../images/logbookloans.jpeg" class="financing" alt="duty imports">
                                 </div>
-                                <div class="col-sm-6 col-md-6">
+                                <div class="col-sm-6 col-md-6 content">
                                     <h4 class="text-secondary font-weight-bold pt-3">Logbook loans</h4>
                                     <p class="pr-5">Need Cash urgently. Kommute offers emergency loans at competitive rates with the security as your car logbook. Financing up to 50% value of car.</p>
 
@@ -63,7 +63,7 @@
                                 <div class="col-sm-4 col-md-4 img d-flex">
                                     <img src="../images/dutyimports.jpeg" class="financing" alt="duty imports">
                                 </div>
-                                <div class="col-sm-6 col-md-6">
+                                <div class="col-sm-6 col-md-6 content">
                                     <h4 class="text-secondary font-weight-bold pt-3">Duty Import Financing</h4>
                                     <p class="pr-5">Importing your car? Stress no more, Kommute will take all the burden, we got you</p>
 

@@ -28,7 +28,7 @@
 
                 <h4 class="text-black title-backgrounds pt-2 pb-2 pl-3 mb-3">Our core values</h4>
                 <ol>
-                    <li><span class="core-values font-weight-bold text-lowercase"> INTEGRITY </span> guides our business every day.</li>
+                    <li><span class="core-values font-weight-bold text-uppercase"> INTEGRITY </span> guides our business every day.</li>
                     <li>We believe in creating <span class="core-values font-weight-bold text-lowercase"> LONG TERM CUSTOMER LOYALTY. </span></li>
                     <li>Work should be <span class="core-values font-weight-bold text-lowercase"> ENJOYABLE, ACCOUNTABLE and CONSISTENT </span> every day.</li>
                     <li>We exist because we are <span class="core-values font-weight-bold text-lowercase"> PASSIONATE </span> about what we do.</li>

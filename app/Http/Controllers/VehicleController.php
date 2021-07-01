@@ -38,9 +38,9 @@ class VehicleController extends Controller
     {
 
         $vehicle = new Vehicle();
-        $vehicle->registration = str_replace(' ', '', strtoupper($request->registration));
-        $vehicle->make = strtoupper($request->make);
-        $vehicle->model = strtoupper($request->model);
+        $vehicle->registration = $request->registration;
+        $vehicle->make = $request->make;
+        $vehicle->model = $request->model;
         $vehicle->year = $request->year;
         $vehicle->color = $request->color;
         $vehicle->location = $request->location;
