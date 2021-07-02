@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
         body{
-            font-family: 'Nunito', sans-serif;
             letter-spacing: -0.3px;
         }
 
@@ -43,7 +42,7 @@
     </style>
 </head>
 <body>
-    <div class="row invoice-wrapper">
+    <div class="row invoice-wrapper mb-3">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-12">
@@ -52,7 +51,7 @@
                             <td>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <img src="../images/logo.jpg" alt="" class="mt-2 ml-5" width="150" height="40">
+                                        <img src="../images/logo.jpg" alt="" class="mt-5 ml-4" width="150" height="40">
                                     </div>
                                 </div>
                             </td>
@@ -135,7 +134,7 @@
                             </td>
                             <td>
                                 <div class="row d-flex">
-                                    <div class="col-md-3">
+                                    <div class="col-md-5">
                                         <span class="font-weight-bold">Phone</span>
                                     </div>
                                     <div class="col-md-6">
@@ -183,11 +182,7 @@
                                 <td colspan="3" class="text-right">Handling Fees</td>
                                 <td class="text-right"><strong>KES 5,000</td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="3" class="text-right">Sub Total</td>
-                                <td class="text-right"><strong>KES 3550000</td>
-                            </tr>
+
                             <tr class="total-section">
                                 <td></td>
                                 <td colspan="3" class="text-right">Total Payable</td>
@@ -200,7 +195,8 @@
             </div>
             <br><br><br>
             <div>
-                <small><small>NOTE: This is system generate invoice no need of signature</small></small>
+                <small class="font-weight-bold">NOTE: This is system generate invoice no need of signature.</small><br>
+                <small>This finance quote is prepared for use on Kommute Sales Agreement and Car Financing clients only. Finance is available subject to credit acceptance in Kenya. Terms and Conditions apply. Please ensure the finance quotation meets your needs making sure you can afford the repayments without causing undue hardship.</small>
             </div>
         </div>
     </div>

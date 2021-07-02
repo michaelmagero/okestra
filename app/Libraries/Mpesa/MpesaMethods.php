@@ -68,7 +68,7 @@ class MpesaMethods
             'PartyB' => $shortcode,
             'PhoneNumber' => $phone,
             'CallBackURL' => $callBackUrl,
-            'AccountReference' => 'KOMMUTE LIMITED',
+            'AccountReference' => 'KOMMUTE FINANCE LIMITED',
             'TransactionDesc' => 'RESERVATION'
         );
         $data_string = json_encode($curl_post_data);

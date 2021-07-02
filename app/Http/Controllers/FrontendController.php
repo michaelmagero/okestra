@@ -135,7 +135,7 @@ class FrontendController extends Controller
         // $applicant->password = bcrypt($password);
 
 
-        // $this->mpesa->STKPushPayment($request);
+        $this->mpesa->STKPushPayment($request);
 
         // //successful Notification for successful Submission
         // $applicant = $request->email;
