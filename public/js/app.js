@@ -2006,7 +2006,7 @@ __webpack_require__.r(__webpack_exports__);
       this.calculator.carprice.toLocaleString();
     },
     calculateInstallments: function calculateInstallments() {
-      //deposit payable (50% car value + tracking fees + instance + handling fees)
+      //deposit payable (50% car value + tracking fees + insurance + handling fees)
       this.calculator.deposit = "KES" + " " + (Number(this.calculator.carprice) * 0.5).toLocaleString(); //loan principle
 
       var loan_principle = this.calculator.carprice - this.calculator.deposit; //interest (25 percent divided by 12months)
@@ -2037,6 +2037,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _includes_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../includes/Header.vue */ "./resources/js/components/includes/Header.vue");
 /* harmony import */ var _includes_PagesJumbtron_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../includes/PagesJumbtron.vue */ "./resources/js/components/includes/PagesJumbtron.vue");
 /* harmony import */ var _includes_Footer_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../includes/Footer.vue */ "./resources/js/components/includes/Footer.vue");
+//
+//
+//
 //
 //
 //
@@ -39335,8 +39338,10 @@ var render = function() {
                                 ).toLocaleString()
                               )
                           )
-                        ]),
-                        _vm._v(" "),
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-footer" }, [
                         _c(
                           "a",
                           {

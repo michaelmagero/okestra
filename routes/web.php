@@ -15,6 +15,7 @@ Route::get('/about', 'FrontendController@about');
 Route::get('/about', 'FrontendController@about');
 Route::get('/view-car/{id}', 'FrontendController@viewcar');
 Route::get('/vehicles', 'FrontendController@vehicles');
+Route::get('/invoices', 'FrontendController@invoice');
 
 //car reservation
 Route::get('/applicant-register/{id}', 'FrontendController@create');

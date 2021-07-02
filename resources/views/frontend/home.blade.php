@@ -49,8 +49,9 @@
                                         <h6 class="mt-3 text-muted">Monthly Payment</h6>
                                         <h5 class="mb-3 font-weight-bold">KES {{ number_format((0.0208 * ($vehicle->price * 0.5) * 24 + $vehicle->price * 0.5) / 24) }}</h5>
 
+                                    </div>
+                                    <div class="card-footer">
                                         <a href="{{ url('view-car/' . $vehicle->id) }}" class="btn btn-block btn-warning pt-2 pb-2 pr-5 pl-5">View this car</a>
-
                                     </div>
                                 </div>
                             </div>

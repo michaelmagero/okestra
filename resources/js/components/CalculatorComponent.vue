@@ -70,7 +70,6 @@
 	export default {
 		data() {
 			return {
-
 				calculator: {
 					monthlypayment: "",
 					carprice: "",
@@ -93,7 +92,7 @@
 			},
 
 			calculateInstallments() {
-				//deposit payable (50% car value + tracking fees + instance + handling fees)
+				//deposit payable (50% car value + tracking fees + insurance + handling fees)
 				this.calculator.deposit =
 					"KES" + " " + (Number(this.calculator.carprice) * 0.5).toLocaleString();
 

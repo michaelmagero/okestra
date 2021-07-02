@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Some Random Title</title>
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
         body{
-            font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace !important;
+            font-family: 'Nunito', sans-serif;
             letter-spacing: -0.3px;
         }
+
         .invoice-wrapper{ width: 700px; margin: auto; }
         .nav-sidebar .nav-header:not(:first-of-type){ padding: 1.7rem 0rem .5rem; }
         .logo{ font-size: 50px; }
@@ -27,6 +31,15 @@
         .table-hover thead tr{ background: #eee; }
         .table-hover tbody tr:nth-child(even){ background: #fbf9f9; }
         address{ font-style: normal; }
+
+        .body-header {
+            background-color: #262228;
+            color: #fff;
+        }
+
+        .total-section {
+            background: #fece00;
+        }
     </style>
 </head>
 <body>
@@ -35,50 +48,99 @@
             <div class="row">
                 <div class="col-md-12">
                     <table class="table">
-                        <tr>
+                        <tr style="background-color: #262228; color: #fff;">
                             <td>
-                                <h4>
-                                    <span class="">StackCoder</span>
-                                </h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="../images/logo.jpg" alt="" class="mt-2 ml-5" width="150" height="40">
+                                    </div>
+                                </div>
                             </td>
-                            <td class="text-right">
-                                <strong>Date: 28 April 2020</strong>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <address>
+                                            <h1 class="pt-0 mt-0">Kommute Finance Ltd</h1>
+                                            <span class="pt-0 mt-0">Rosslyn Riviera Mall, Limuru Rd, Nairobi.</span><br>
+                                            <span class="pt-0 mt-0">Contact No.- 0717 350122</span><br>
+                                            <span class="pt-0 mt-0">Email <a href="#">  info@kommute.africa </a> | <a href="#"> www.kommute.africa </a></span>
+                                        </address>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     </table>
                 </div>
-            </div>
-            <br><br>
+            </div><hr>
             <div class="row invoice-info">
                 <div class="col-md-12">
                     <table class="table">
                         <tr>
+                            <h3>Proforma Invoice</h3>
+                        </tr>
+                        <tr>
                             <td>
-                                <div class="">
-                                    From
-                                    <address>
-                                        <strong>StackCoder</strong><br>
-                                        HSR Layout Sector 6, Bnagalore<br>
-                                        Email: stackcoder.in@gmail.com
-                                    </address>
+                                <div class="row d-flex">
+                                    <div class="col-md-3">
+                                        <span class="font-weight-bold">Bill To</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span class="">Mike Magero</span>
+                                    </div>
                                 </div>
                             </td>
                             <td>
-                                <div class="">
-                                    To
-                                    <address>
-                                        <strong class="billing_name">Balaji Hakari</strong><br>
-                                        <span class="billing_address">#32, Madhura Chetana Colony, Hubli</span><br>
-                                        <span class="billing_gst">#TAXNUMBER</span><br>
-                                        Phone: +91-7019101234<br>
-                                        Email: customer@gmail.com
-                                    </address>
+                                <div class="row d-flex">
+                                    <div class="col-md-5">
+                                        <span class="font-weight-bold">Invoice No</span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="">1</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="row d-flex">
+                                    <div class="col-md-3">
+                                        <span class="font-weight-bold">Name</span>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <span>Hot car Deals Ltd</span>
+                                    </div>
                                 </div>
                             </td>
                             <td>
-                                <div class="text-right">
-                                    <b>Invoice #1001</b><br>
-                                    Paid for REASON
+                                <div class="row d-flex">
+                                    <div class="col-md-5">
+                                        <span class="font-weight-bold">Invoice Date</span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span>2-July-07</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="row d-flex">
+                                    <div class="col-md-3">
+                                        <span class="font-weight-bold">Address</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>Rosslyn Riviera Mall</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row d-flex">
+                                    <div class="col-md-3">
+                                        <span class="font-weight-bold">Phone</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>254-718-573-435</span>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -88,33 +150,48 @@
             <br><br>
             <div class="row">
                 <div class="col-md-12 table-responsive">
-                    <table class="table table-condensed table-hover">
-                        <thead>
+                    <table class="table table-condensed">
+                        <thead class="body-header">
                             <tr>
-                                <th>Qty</th>
-                                <th>Product</th>
+                                <th>#</th>
                                 <th>Description</th>
-                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Rate</th>
+                                <th>Amount</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Product Name</td>
-                                <td>Amount paid for Product Name</td>
-                                <td class="text-right">&#8377; 1000</td>
+                                <td>2015 Toyota Harrier Premium Package</td>
+                                <td>1</td>
+                                <td class="text-right">KES 3,550,000</td>
+                                <td class="text-right">KES 3,550,000</td>
                             </tr>
                             <tr>
+                                <td></td>
+                                <td colspan="3" class="text-right">Tracking Fees</td>
+                                <td class="text-right"><strong>KES 20,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="3" class="text-right">Insurance</td>
+                                <td class="text-right"><strong>KES 30,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="3" class="text-right">Handling Fees</td>
+                                <td class="text-right"><strong>KES 5,000</td>
+                            </tr>
+                            <tr>
+                                <td></td>
                                 <td colspan="3" class="text-right">Sub Total</td>
-                                <td class="text-right"><strong>&#8377; 1000</td>
+                                <td class="text-right"><strong>KES 3550000</td>
                             </tr>
-                            <tr>
-                                <td colspan="3" class="text-right">TAX (18%)</td>
-                                <td class="text-right"><strong>&#8377; 180</strong></td>
-                            </tr>
-                            <tr>
+                            <tr class="total-section">
+                                <td></td>
                                 <td colspan="3" class="text-right">Total Payable</td>
-                                <td class="text-right"><strong>&#8377; 1180</strong></td>
+                                <td class="text-right"><strong>KES 1180</strong></td>
                             </tr>
                         </tbody>
                     </table>

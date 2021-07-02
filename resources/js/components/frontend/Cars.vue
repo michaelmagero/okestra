@@ -54,6 +54,9 @@
                                     <h6 class="mt-3 text-muted">Monthly Payment</h6>
                                     <h5 class="mb-3 font-weight-bold">KES {{ Math.round(((0.0208 * (Number(vehicle.price) * 0.5) * 24 + Number(vehicle.price) * 0.5) / 24)).toLocaleString() }}</h5>
 
+                                </div>
+
+                                <div class="card-footer">
                                     <a :href="'view-car/' + vehicle.id" class="btn btn-block pt-2 pb-2 pr-5 pl-5">View this car</a>
                                 </div>
 

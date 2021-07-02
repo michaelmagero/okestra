@@ -22,7 +22,7 @@ class FrontendController extends Controller
 
     public function home()
     {
-        $vehicles = Vehicle::get();
+        $vehicles = Vehicle::orderBy('created_at', 'desc')->get();
         return view('frontend.home')
             ->with('vehicles', $vehicles);
     }
@@ -44,7 +44,7 @@ class FrontendController extends Controller
 
     public function vehicles()
     {
-        return Vehicle::get();
+        return Vehicle::orderBy('created_at', 'desc')->get();
     }
 
     public function viewcar($id)
@@ -151,5 +151,10 @@ class FrontendController extends Controller
         $applicant->save();
         $request->session()->flash('success_message', 'Application Added Successfully.');
         return redirect('/');
+    }
+
+    public function invoice()
+    {
+        return view('frontend.invoice');
     }
 }
