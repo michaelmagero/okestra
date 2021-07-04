@@ -19,7 +19,7 @@
                 <div class="card-header text-uppercase font-weight-bold pt-4 pb-4 text-center" style="background-color: #ffce00; font-size: 17px;">{{ __('KOMMUTE CAR RESERVATION FORM') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ url('applicant-register') }}"  enctype="multipart/form-data">
+                    <form method="GET" action="{{ url('applicant-register') }}"  enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
                         <div class="row">
@@ -31,7 +31,7 @@
                         <div class="form-group row">
                             <div class="col-md-4">
                                 <label for="name" class="col-form-label text-md-right font-weight-bold">{{ __('Firstname') }}</label>
-                                <input id="name" name="name" type="text" class="form-control @error('name') is-invalid @enderror"  value="{{ old('name') }}" required  autofocus>
+                                <input id="name" name="name" type="text" class="form-control @error('name') is-invalid @enderror"  value="{{ old('name') }}" required autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
 
                             <div class="col-md-4">
                                 <label for="national_id" class=" col-form-label text-md-right font-weight-bold">{{ __('National ID') }} <small>(upload both Front and Back)</small></label>
-                                <input type="file" id="myFile" name="national_id">
+                                <input type="file" id="myFile" name="national_id" multiple>
                             </div>
 
                             <div class="col-md-4">
@@ -203,6 +203,7 @@
                                 @enderror
                             </div>
 
+
                             <div class="col-md-4">
                                 <label for="net_income" class=" col-form-label text-md-right font-weight-bold">{{ __('Net Income') }}</label>
                                 <input id="net_income" name="net_income" type="text" class="form-control @error('net_income') is-invalid @enderror"  value="{{ old('net_income') }}">
@@ -212,6 +213,7 @@
                                     </span>
                                 @enderror
                             </div>
+
 
                             <div class="col-md-4">
                                 <label for="expenses" class=" col-form-label text-md-right font-weight-bold">{{ __('Expenses') }}</label>
@@ -232,7 +234,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Mpesa Statement') }} <small>(attach 6 months statement)</small></label>
+                                <label for="mpesa_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Mpesa Statement') }} <small>(attach 6 months statement)</small></label>
                                 <input type="file" id="myFile" name="mpesa_statements">
                             </div>
                         </div><br>
@@ -282,17 +284,17 @@
 
                         <div class="form-group row">
                             <div class="col-md-4">
-                                <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('CR12 Certificate') }} </label>
+                                <label for="cr12_certificate" class=" col-form-label text-md-right font-weight-bold">{{ __('CR12 Certificate') }} </label>
                                 <input type="file" id="myFile" name="cr12_certificate">
                             </div>
 
                             <div class="col-md-4">
-                                <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('KRA Certificate') }} </label>
+                                <label for="kra_certificate" class=" col-form-label text-md-right font-weight-bold">{{ __('KRA Certificate') }} </label>
                                 <input type="file" id="myFile" name="kra_certificate">
                             </div>
 
                             <div class="col-md-4">
-                                <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Incorporation Certificate') }} </label>
+                                <label for="incorporation_certificate" class=" col-form-label text-md-right font-weight-bold">{{ __('Incorporation Certificate') }} </label>
                                 <input type="file" id="myFile" name="incorporation_certificate">
                             </div>
                         </div><br>

@@ -74,6 +74,7 @@
             <div class="row invoice-info">
                 <div class="col-md-12">
                     <table class="table">
+
                         <tr>
                             <h3>Proforma Invoice</h3>
                         </tr>
@@ -84,7 +85,7 @@
                                         <span class="font-weight-bold">Bill To</span>
                                     </div>
                                     <div class="col-md-6">
-                                        <span class="">Mike Magero</span>
+                                        <span class="">{{ $applicant_details }}</span>
                                     </div>
                                 </div>
                             </td>

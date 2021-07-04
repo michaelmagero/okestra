@@ -19,18 +19,19 @@ class CreateApplicantsTable extends Migration
             $table->unsignedBigInteger('vehicle_id')->nullable();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
 
-            $table->string('name')->nullable();
-            $table->string('middlename')->nullable();
-            $table->string('surname')->nullable();
-            $table->string('national_id')->nullable();
-            $table->string('dob')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('id_number')->nullable();
-            $table->string('kra_pin')->nullable();
-            $table->string('county')->nullable();
-            $table->string('locality')->nullable();
-            $table->string('street')->nullable();
-            $table->string('apartment')->nullable();
+            $table->string('name');
+            $table->string('middlename');
+            $table->string('surname');
+            $table->string('national_id');
+            $table->string('dob');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('id_number');
+            $table->string('kra_pin');
+            $table->string('county');
+            $table->string('locality');
+            $table->string('street');
+            $table->string('apartment');
             $table->string('employer')->nullable();
             $table->string('employment_type')->nullable();
             $table->string('net_income')->nullable();
@@ -42,9 +43,8 @@ class CreateApplicantsTable extends Migration
             $table->string('cr12_certificate')->nullable();
             $table->string('kra_certificate')->nullable();
             $table->string('incorporation_certificate')->nullable();
-            $table->string('email')->nullable()->unique();
-            $table->string('application_status')->nullable()->default(0); //pending - 0 , approved - 1, rejected - 2
-            $table->string('loan_status')->nullable()->default(0); //active - 0 , complete - 1, empty if application status is rejected -2
+            $table->string('application_status')->default(0); //pending - 0 , approved - 1, rejected - 2
+            $table->string('loan_status')->default(0); //active - 0 , complete - 1, empty if application status is rejected -2
 
             $table->timestamps();
         });

@@ -54,14 +54,16 @@ class FrontendController extends Controller
             ->with('details', $vehicle_details);
     }
 
-    public function create($id)
+    public function get_registration_form($id)
     {
         $car_details = Vehicle::find($id);
         return view('auth.register')->with('car_details', $car_details);
     }
 
-    public function store(Request $request)
+    public function submit_registration_form(Request $request)
     {
+        $applicant_details = array($request->all());
+
 
         $applicant = new Applicant();
         $applicant->vehicle_id = $request->vehicle_id;
@@ -129,13 +131,12 @@ class FrontendController extends Controller
             $applicant->incorporation_certificate = $img;
         }
 
-        //dd($applicant);
-
         // $password = Str::random(20);
         // $applicant->password = bcrypt($password);
 
-
         $this->mpesa->STKPushPayment($request);
+
+        return view('frontend.payment')->with('applicant_details', $applicant_details);
 
         // //successful Notification for successful Submission
         // $applicant = $request->email;
@@ -148,13 +149,74 @@ class FrontendController extends Controller
         // Notification::route('mail', $applicant)->notify(new AdminReservationConfirmation($details));
         // Notification::route('mail', $applicant)->notify(new ApplicantReservationConfirmation($details));
 
-        $applicant->save();
-        $request->session()->flash('success_message', 'Application Added Successfully.');
-        return redirect('/');
+        // $applicant->save();
+        // $request->session()->flash('success_message', 'Application Added Successfully.');
+        // return redirect('/');
     }
 
-    public function invoice()
+    public function confirm_payment()
     {
-        return view('frontend.invoice');
+        return view('frontend.payment');
+    }
+
+    public function submit_payment(Request $request)
+    {
+        //$this->mpesa->confirm_payment();
+        $mobile_number = "254" . substr($request->mobile_number, 1);
+        $transaction_id = $request->transaction_id;
+
+        $callback_file_contents =  file_get_contents('https://kommute.africa/safdaraja/stkCallbackResponse.json');
+        $payments = json_decode($callback_file_contents, TRUE);
+
+        dump($payments);
+
+        // foreach ($payments as $payment) {
+        //     if ($payment['stkCallback']['ResultCode'] == 0) {
+        //         if (count($payment['stkCallback']['CallbackMetadata']['Item']) == (int) 4) {
+        //             $callback_phone = $payment['stkCallback']['CallbackMetadata']['Item'][3]['Value'];
+        //             $callback_transaction = $payment['stkCallback']['CallbackMetadata']['Item'][1]['Value'];
+
+        //             if ($mobile_number == $callback_phone && $transaction_id == $callback_transaction) {
+        //                 $applicant = new Applicant();
+        //                 $applicant->name = $request['name'];
+        //                 $applicant->middlename = $request['middlename'];
+        //                 $applicant->surname = $request['surname'];
+        //                 $applicant->national_id = $request['national_id'];
+        //                 $applicant->dob = $request['dob'];
+        //                 $applicant->phone = $request['phone'];
+        //                 $applicant->email = $request['email'];
+        //                 $applicant->id_number = $request['id_number'];
+        //                 $applicant->kra_pin = $request['kra_pin'];
+        //                 $applicant->county = $request['county'];
+        //                 $applicant->locality = $request['locality'];
+        //                 $applicant->street = $request['street'];
+        //                 $applicant->apartment = $request['apartment'];
+        //                 $applicant->employer = $request['employer'];
+        //                 $applicant->net_income = $request['net_income'];
+        //                 $applicant->expenses = $request['expenses'];
+        //                 $applicant->bank_statements = $request['bank_statements'];
+        //                 $applicant->mpesa_statements = $request['mpesa_statements'];
+        //                 $applicant->business_name = $request['business_name'];
+        //                 $applicant->gross_business_income = $request['gross_business_income'];
+        //                 $applicant->cr12_certificate = $request['cr12_certificate'];
+        //                 $applicant->kra_certificate = $request['kra_certificate'];
+        //                 $applicant->incorporation_certificate = $request['incorporation_certificate'];
+        //                 $applicant->vehicle_id = $request['vehicle_id'];
+        //                 $applicant->save();
+        //                 session()->flash('success_message', 'Reservation Successful! We will get in touch with you with more details.');
+        //                 return redirect('/cars');
+        //             } else {
+        //                 session()->flash('error_message', 'Payment confirmation failed! Check if the transaction code is properly entered and try again');
+        //                 return back();
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    public function invoice(Request $request)
+    {
+        $applicant_details = $request->get($request);
+        return view('frontend.invoice')->with('applicant_details', $applicant_details);
     }
 }

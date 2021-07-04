@@ -1981,10 +1981,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       calculator: {
-        monthlypayment: "",
         carprice: "",
+        deposit: "",
         paymentperiod: "",
-        deposit: ""
+        monthlypayment: ""
       },
       paymentperiod: [{
         text: "6 months",
@@ -2002,8 +2002,23 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    formatInput: function formatInput() {
-      this.calculator.carprice.toLocaleString();
+    formatInput: function formatInput(event) {
+      var val = event.target.value.trim();
+
+      if (/^[1-9]\d*$|^$/.test(val)) {
+        "KES" + " " + Number(this.calculator.carprice).toLocaleString();
+      } else {
+        event.target.value = Number(this.calculator.carprice);
+      }
+    },
+    change: function change(event) {
+      var val = event.target.value.trim(); // It can only be positive integer or empty, and the rule can be modified according to the requirement.
+
+      if (/^[1-9]\d*$|^$/.test(val)) {
+        this.calculator.carprice = "KES" + " " + Number(val).toLocaleString();
+      } else {
+        event.target.value = this.calculator.carprice;
+      }
     },
     calculateInstallments: function calculateInstallments() {
       //deposit payable (50% car value + tracking fees + insurance + handling fees)
@@ -39011,7 +39026,6 @@ var render = function() {
                     }
                   ],
                   staticClass: "calc form-control",
-                  attrs: { type: "text" },
                   domProps: { value: _vm.calculator.carprice },
                   on: {
                     input: [
@@ -39027,9 +39041,7 @@ var render = function() {
                       },
                       _vm.calculateInstallments
                     ],
-                    change: function($event) {
-                      return this.calculator.carprice.toLocaleString()
-                    }
+                    change: _vm.formatInput
                   }
                 })
               ]),

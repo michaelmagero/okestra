@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <label for="" class="form-label font-weight-bold">Car Value</label>
-                                <input v-model="calculator.carprice" type="text" class="calc form-control" @input="calculateInstallments" @change="this.calculator.carprice.toLocaleString();" >
+                                <input v-model="calculator.carprice" class="calc form-control" @input="calculateInstallments" @change="formatInput" >
                             </div>
 
                             <div class="col-md-3">
@@ -71,10 +71,10 @@
 		data() {
 			return {
 				calculator: {
-					monthlypayment: "",
 					carprice: "",
-					paymentperiod: "",
 					deposit: "",
+					paymentperiod: "",
+					monthlypayment: "",
 				},
 
 				paymentperiod: [
@@ -87,8 +87,24 @@
 		},
 
 		methods: {
-			formatInput() {
-				this.calculator.carprice.toLocaleString();
+			formatInput(event) {
+				let val = event.target.value.trim();
+
+				if (/^[1-9]\d*$|^$/.test(val)) {
+					"KES" + " " + Number(this.calculator.carprice).toLocaleString();
+				} else {
+					event.target.value = Number(this.calculator.carprice);
+				}
+			},
+
+			change(event) {
+				let val = event.target.value.trim();
+				// It can only be positive integer or empty, and the rule can be modified according to the requirement.
+				if (/^[1-9]\d*$|^$/.test(val)) {
+					this.calculator.carprice = "KES" + " " + Number(val).toLocaleString();
+				} else {
+					event.target.value = this.calculator.carprice;
+				}
 			},
 
 			calculateInstallments() {

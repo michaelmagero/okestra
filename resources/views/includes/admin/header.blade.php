@@ -20,7 +20,9 @@
           });
 		</script>
 
-        <script src="//code.jquery.com/jquery-1.12.3.js"></script>
+        {{-- <script src="//code.jquery.com/jquery-1.12.3.js"></script> --}}
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 		<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 

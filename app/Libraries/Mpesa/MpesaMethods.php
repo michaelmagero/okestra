@@ -46,7 +46,7 @@ class MpesaMethods
     {
         $phone = "254" . substr($request->phone, 1);
         $amount = $request->amount;
-        $callBackUrl = 'https://mydomain.com/path';
+        $callBackUrl = 'https://kommute.africa/safdaraja/stkcallback.php';
         $token = $this->generateAccessToken();
         $password = $this->password();
         $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
