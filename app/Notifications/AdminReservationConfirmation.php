@@ -40,16 +40,16 @@ class AdminReservationConfirmation extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable, $id)
+    public function toMail($notifiable)
     {
-        $applicant = Applicant::find($id);
-        $vehicle = Vehicle::find($id);
+        // $applicant = Applicant::find($id);
+        // $vehicle = Vehicle::find($id);
         return (new MailMessage)
-            ->greeting('Hello!')
+            ->greeting('Congratulations!')
             ->subject('Kommute Reservation')
             ->from('info@kommute.africa', 'Kommute Financing Ltd')
-            ->line('A new reservation has been made for ' . $vehicle->make . $vehicle->model . $vehicle->year . 'by ' . $applicant->name + $applicant->surname)
-            ->line('Thank you for using our signing up with TIA360!');
+            ->line('A new reservation has been made for ' . '' . 'by ' . '')
+            ->line('Thank you for choosing Kommute');
     }
 
     /**

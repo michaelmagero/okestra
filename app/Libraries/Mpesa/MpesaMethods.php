@@ -78,4 +78,70 @@ class MpesaMethods
         $curl_response = curl_exec($curl);
         return back();
     }
+
+    public function confirm_payment($request)
+    {
+        $mobile_number = "254" . substr($request->mobile_number, 1);
+        $transaction_id = $request->transaction_id;
+
+        $callback_file_contents =  file_get_contents('https://kommute.africa/safdaraja/stkCallbackResponse.json');
+        $payments = json_decode($callback_file_contents, TRUE);
+
+        if ($payments['stkCallback']['ResultCode'] == 0) {
+            session()->flash('success_message', 'Reservation Successful! We will get in touch with you with more details.');
+            return redirect('/cars');
+        } elseif ($payments['stkCallback']['ResultCode'] == 1032) {
+            session()->flash('info_message', 'The transaction was cancelled by the user');
+            return back();
+        } else {
+            session()->flash('error_message', 'The transaction was not processed check payment and try reserving again');
+            return back();
+        }
+
+
+        //     // $url_success = "" //Put the link to redirect if the payment was made successfully.
+        //     // $url_cancel = "" //Put the link to redirect if the payment was cancelled.
+        //     // $url_error = "" //Put the link to redirect if there was an error encountered.
+
+        //     $endpoint = ($configuration->config->env == "live")
+        //         ? "https://api.safaricom.co.ke/mpesa/stkpushquery/v1/query"
+        //         : "https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query";
+
+        //     $timestamp = date("YmdHis");
+        //     $password = base64_encode($configuration->config->shortcode . $configuration->config->passkey . $timestamp);
+
+        //     $curl = curl_init();
+        //     curl_setopt($curl, CURLOPT_URL, $url2);
+        //     curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Basic " . $password));
+        //     curl_setopt($curl, CURLOPT_HEADER, false);
+        //     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        //     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        //     $curl_response = curl_exec($curl);
+        //     $access_token = json_decode($curl_response);
+
+        //     $curl_post_data = array(
+        //         'BusinessShortCode' => $configuration->config->headoffice,,
+        //         'Password' => $lipa_na_mpesa_password,
+        //         'Timestamp' => $timestamp,
+        //         'CheckoutRequestID' => $_SESSION['CheckoutRequestID']
+        //     );
+
+        //     $response = $configuration->process_getRequest($endpoint, $access_token);
+
+        //     if ($res['ResultCode'] == 0) {
+        //         //If the transaction was a success
+        //         header('Location:' . $url_success . '');
+        //         exit();
+        //     } elseif ($res['ResultCode'] == 1032) {
+        //         //If the transaction was a Cancelled
+        //         header('Location:' . $url_cancel . '');
+        //         exit();
+        //     } else {
+        //         //Flag any other response as an error
+        //         header('Location:' . $url_error . '');
+        //         exit();
+        //     }
+        // }
+
+    }
 }

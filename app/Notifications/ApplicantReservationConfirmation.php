@@ -2,10 +2,12 @@
 
 namespace App\Notifications;
 
+use App\Models\Vehicle;
+use App\Models\Applicant;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 
 class ApplicantReservationConfirmation extends Notification
 {
@@ -40,15 +42,19 @@ class ApplicantReservationConfirmation extends Notification
      */
     public function toMail($notifiable)
     {
-        $applicant = Applicant::find($id);
-        $vehicle = Vehicle::find($id);
+        // $applicant = Applicant::find($id);
+        // $vehicle = Vehicle::find($id);
         return (new MailMessage)
-            ->greeting('Hello!')
+            ->greeting('Congratulations!')
             ->subject('Kommute Reservation')
             ->from('info@kommute.africa', 'Kommute Financing Ltd')
-            ->line('You have successfully reserved ' . $vehicle->make . $vehicle->model . $vehicle->year . 'of Engine No ' . $applicant->engine_number .
-                ' and Chasis No ' .  $applicant->chasis_number . '. Your total deposit will be KES ' . $deposit . ' and your monthly fees will be ' . $monthly . '.')
-            ->line('Thank you for using our signing up with TIA360!');
+            ->line('You have successfully reserved ' . '' . 'of Engine No ' . '' .
+                ' and Chasis No ' .  '')
+            ->line('Thank you for choosing Kommute');
+        // ->attach('/path/to/file', [
+        //     'as' => 'name.pdf',
+        //     'mime' => 'application/pdf',
+        // ]);
     }
 
     /**

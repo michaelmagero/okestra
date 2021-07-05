@@ -27,7 +27,7 @@ class CreateVehiclesTable extends Migration
             $table->string('registration');
             $table->string('engine_number');
             $table->string('chasis_number');
-            $table->text('images')->nullable();
+            $table->text('images');
             $table->string('display_image');
             $table->decimal('price', 10, 2);
             $table->text('interior_features');

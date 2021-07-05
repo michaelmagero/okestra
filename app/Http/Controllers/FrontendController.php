@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Libraries\Mpesa\MpesaMethods;
 use App\Models\Vehicle;
 use App\Models\Applicant;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Libraries\Mpesa\MpesaMethods;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\ReservationConfirmation;
+use App\Notifications\AdminReservationConfirmation;
+use App\Notifications\ApplicantReservationConfirmation;
 
 class FrontendController extends Controller
 {
@@ -135,19 +137,8 @@ class FrontendController extends Controller
         // $applicant->password = bcrypt($password);
 
         $this->mpesa->STKPushPayment($request);
-
         return view('frontend.payment')->with('applicant_details', $applicant_details);
 
-        // //successful Notification for successful Submission
-        // $applicant = $request->email;
-        // $details = [
-        //     'greeting' => 'Hello!',
-        //     'subject' > 'Kommute Car Reservation',
-        //     'body' => 'You have successfully reserved ' . $applicant->make . $applicant->model .  $applicant->model . 'and attached is your invoice',
-        //     'thanks' => 'Thank you for working with Kommute!'
-        // ];
-        // Notification::route('mail', $applicant)->notify(new AdminReservationConfirmation($details));
-        // Notification::route('mail', $applicant)->notify(new ApplicantReservationConfirmation($details));
 
         // $applicant->save();
         // $request->session()->flash('success_message', 'Application Added Successfully.');
@@ -161,57 +152,54 @@ class FrontendController extends Controller
 
     public function submit_payment(Request $request)
     {
-        //$this->mpesa->confirm_payment();
-        $mobile_number = "254" . substr($request->mobile_number, 1);
-        $transaction_id = $request->transaction_id;
+        $this->mpesa->confirm_payment($request);
+        $applicant = new Applicant();
+        $applicant->name = $request['name'];
+        $applicant->middlename = $request['middlename'];
+        $applicant->surname = $request['surname'];
+        $applicant->national_id = $request['national_id'];
+        $applicant->dob = $request['dob'];
+        $applicant->phone = $request['phone'];
+        $applicant->email = $request['email'];
+        $applicant->id_number = $request['id_number'];
+        $applicant->kra_pin = $request['kra_pin'];
+        $applicant->county = $request['county'];
+        $applicant->locality = $request['locality'];
+        $applicant->street = $request['street'];
+        $applicant->apartment = $request['apartment'];
+        $applicant->employer = $request['employer'];
+        $applicant->net_income = $request['net_income'];
+        $applicant->expenses = $request['expenses'];
+        $applicant->bank_statements = $request['bank_statements'];
+        $applicant->mpesa_statements = $request['mpesa_statements'];
+        $applicant->business_name = $request['business_name'];
+        $applicant->gross_business_income = $request['gross_business_income'];
+        $applicant->cr12_certificate = $request['cr12_certificate'];
+        $applicant->kra_certificate = $request['kra_certificate'];
+        $applicant->incorporation_certificate = $request['incorporation_certificate'];
+        $applicant->vehicle_id = $request['vehicle_id'];
+        $applicant->save();
+        //successful Notification for successful Submission
+        $applicant = $request->email;
+        $admin = 'info@kommute.africa';
+        $sales = 'sales@kommute.africa';
+        $accounts = 'finance@kommute.africa';
+        $robert = 'robert@kommute.africa';
+        $details = [
+            'greeting' => 'Congratulations!',
+            'subject' > 'Kommute Car Reservation',
+            'body' => 'You have successfully reserved ' . $request['vehicle_id'] . 'and attached is your invoice',
+            'thanks' => 'Thank you for choosing Kommute!'
+        ];
+        Notification::route('mail', $admin)->notify(new AdminReservationConfirmation($details));
+        Notification::route('mail', $sales)->notify(new AdminReservationConfirmation($details));
+        Notification::route('mail', $admin)->notify(new AdminReservationConfirmation($details));
+        Notification::route('mail', $accounts)->notify(new AdminReservationConfirmation($details));
+        Notification::route('mail', $robert)->notify(new AdminReservationConfirmation($details));
+        Notification::route('mail', $applicant)->notify(new ApplicantReservationConfirmation($details));
 
-        $callback_file_contents =  file_get_contents('https://kommute.africa/safdaraja/stkCallbackResponse.json');
-        $payments = json_decode($callback_file_contents, TRUE);
-
-        dump($payments);
-
-        // foreach ($payments as $payment) {
-        //     if ($payment['stkCallback']['ResultCode'] == 0) {
-        //         if (count($payment['stkCallback']['CallbackMetadata']['Item']) == (int) 4) {
-        //             $callback_phone = $payment['stkCallback']['CallbackMetadata']['Item'][3]['Value'];
-        //             $callback_transaction = $payment['stkCallback']['CallbackMetadata']['Item'][1]['Value'];
-
-        //             if ($mobile_number == $callback_phone && $transaction_id == $callback_transaction) {
-        //                 $applicant = new Applicant();
-        //                 $applicant->name = $request['name'];
-        //                 $applicant->middlename = $request['middlename'];
-        //                 $applicant->surname = $request['surname'];
-        //                 $applicant->national_id = $request['national_id'];
-        //                 $applicant->dob = $request['dob'];
-        //                 $applicant->phone = $request['phone'];
-        //                 $applicant->email = $request['email'];
-        //                 $applicant->id_number = $request['id_number'];
-        //                 $applicant->kra_pin = $request['kra_pin'];
-        //                 $applicant->county = $request['county'];
-        //                 $applicant->locality = $request['locality'];
-        //                 $applicant->street = $request['street'];
-        //                 $applicant->apartment = $request['apartment'];
-        //                 $applicant->employer = $request['employer'];
-        //                 $applicant->net_income = $request['net_income'];
-        //                 $applicant->expenses = $request['expenses'];
-        //                 $applicant->bank_statements = $request['bank_statements'];
-        //                 $applicant->mpesa_statements = $request['mpesa_statements'];
-        //                 $applicant->business_name = $request['business_name'];
-        //                 $applicant->gross_business_income = $request['gross_business_income'];
-        //                 $applicant->cr12_certificate = $request['cr12_certificate'];
-        //                 $applicant->kra_certificate = $request['kra_certificate'];
-        //                 $applicant->incorporation_certificate = $request['incorporation_certificate'];
-        //                 $applicant->vehicle_id = $request['vehicle_id'];
-        //                 $applicant->save();
-        //                 session()->flash('success_message', 'Reservation Successful! We will get in touch with you with more details.');
-        //                 return redirect('/cars');
-        //             } else {
-        //                 session()->flash('error_message', 'Payment confirmation failed! Check if the transaction code is properly entered and try again');
-        //                 return back();
-        //             }
-        //         }
-        //     }
-        // }
+        session()->flash('success_message', 'Reservation Successful! We will get in touch with you with more details.');
+        return redirect('/cars');
     }
 
     public function invoice(Request $request)

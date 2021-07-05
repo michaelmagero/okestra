@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Applicant;
+use App\Models\Vehicle;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,10 @@ class ApplicantController extends Controller
     public function show($id)
     {
         $applications = Applicant::findOrFail($id);
-        return view('admin.applications.show')->with('applications', $applications);
+        $vehicles = Vehicle::get();
+        return view('admin.applications.show')
+            ->with('vehicles', $vehicles)
+            ->with('applications', $applications);
     }
 
     /**
