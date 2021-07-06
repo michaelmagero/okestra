@@ -31,7 +31,7 @@
                                         </h4>
                                         <br>
                                         <span class="m-widget24__stats m--font-brand">
-                                            {{-- {{ $reservations->count() }} --}}
+                                            {{ $applications->count() }}
                                         </span>
                                         <div class="m--space-10"></div>
                                         <div class="progress m-progress--sm">

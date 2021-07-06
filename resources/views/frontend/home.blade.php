@@ -2,19 +2,18 @@
 
 @section('content')
 
-    <div class="jumbotron rounded-0 text-white">
-                <div id="content" class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 mt-5">
-                            <h1 class="display-5">Kenya's Leading Paperless Car Financing</h1>
-                            <p class="lead">Search, Reserve and Buy your Dream Car All on one platform</p><br>
-                            <a class="btn btn-warning btn-lg landing-btn" href="{{ url('/products') }}">Discover Kommute <span><i class="fa fa-arrow-right"></i></span> </a>
-                        </div>
+        <div class="jumbotron rounded-0 text-white">
+            <div id="content" class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mt-5">
+                        <h1 class="display-5">Kenya's Leading Paperless Car Financing</h1>
+                        <p class="lead">Search, Reserve and Buy your Dream Car All on one platform</p><br>
+                        <a class="btn btn-warning btn-lg landing-btn" href="{{ url('/products') }}">Discover Kommute <span><i class="fa fa-arrow-right"></i></span> </a>
                     </div>
+                </div>
 
-                    <div id="app">
-                        <Calculator />
-                    </div>
+                <div id="app">
+                    <Calculator />
                 </div>
             </div>
         </div>
@@ -28,7 +27,7 @@
                 </div>
                 <div class="row">
                     @foreach ($vehicles->take(4) as $vehicle)
-                        <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="col-xs-6 col-md-3">
                             <div>
                                 <div class="card mt-5 mb-5 shadow rounded-0 border-0">
                                     <img src="{{ asset('../uploads/displayimage/' . Str::lower(str_replace(' ', '', $vehicle->make . $vehicle->model . $vehicle->year)) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="200">
@@ -51,7 +50,7 @@
 
                                     </div>
                                     <div class="card-footer">
-                                        <a href="{{ url('view-car/' . $vehicle->id) }}" class="btn btn-block btn-warning pt-2 pb-2 pr-5 pl-5">View this car</a>
+                                        <a href="{{ url('view-car/' . $vehicle->id) }}" class="btn btn-warning pt-2 pb-2 pr-5 pl-5">View this car</a>
                                     </div>
                                 </div>
                             </div>

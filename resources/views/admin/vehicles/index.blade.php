@@ -17,7 +17,7 @@
                             <li class="m-portlet__nav-item">
                                 <a href="{{ url('new-vehicle') }}" class="btn btn-warning font-weight-bold m-btn  m-btn--custom m-btn--icon m-btn--air">
                                     <span>
-                                        <i class="la la-car"></i>
+                                        <i class="la la-car font-weight-bold"></i>
                                         <span>New Vehicle</span>
                                     </span>
                                 </a>

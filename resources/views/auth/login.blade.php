@@ -4,6 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+            <div class="row mt-5 mb-5">
+                <div class="col-md-12 text-center">
+                    <img src="../images/logo.jpg" class="img-responsive" alt="" width="150" height="50">
+                </div>
+            </div>
+
             @if (session('error_message'))
                 <div class="alert alert-danger font-weight-bold">{{ session('error_message') }}</div>
             @elseif (session('warning_message'))
@@ -13,13 +20,6 @@
             @elseif (session('success_message'))
                 <div class="alert alert-success font-weight-bold">{{ session('success_message') }}</div>
             @endif
-
-            <div class="row mt-5 mb-5">
-                <div class="col-md-12 text-center">
-                    <img src="../images/logo.jpg" class="img-responsive" alt="" width="150" height="50">
-                </div>
-            </div>
-
 
             <div class="card rounded-0 shadow-sm border-0">
                 <div class="card-header text-uppercase font-weight-bold pt-4 pb-4 text-center" style="background-color: #ffce00;">{{ __('Login to dashboard') }}</div>

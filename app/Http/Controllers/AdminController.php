@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Applicant;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 
@@ -22,11 +23,13 @@ class AdminController extends Controller
         switch ($user) {
             case 0:
                 return view('admin.index')
-                    ->with('vehicles', Vehicle::get());
+                    ->with('vehicles', Vehicle::get())
+                    ->with('applications', Applicant::get());
                 break;
             case 1:
                 return view('admin.vehicles.index')
-                    ->with('vehicles', Vehicle::get());
+                    ->with('vehicles', Vehicle::get())
+                    ->with('applications', Applicant::get());
                 break;
             default:
                 break;

@@ -39,15 +39,15 @@
                     <h3 class="text-white">{{ ucfirst(trans( $details->make . " " . $details->model . " " . $details->year)) }}</h3>
                     <hr>
                     <div class="row mt-5 text-center">
-                        <div class="col-md-4 border-right mb-3">
+                        <div class="col-xs-6 col-sm-6 col-md-4 border-right mb-3">
                             <small class="titles font-weight-bold">CASH PRICE</small>
                             <h5>KES {{ number_format($details->price) }}</h5>
                         </div>
-                        <div class="col-md-4 border-right mb-3">
+                        <div class="col-xs-6 col-sm-6 col-md-4 border-right mb-3">
                             <small class="titles font-weight-bold">MONTHLY</small>
                             <h5 class="font-weight-bold">KES {{ number_format((0.0208 * ($details->price * 0.5) * 24 + $details->price * 0.5) / 24) }} </h5>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-6 col-sm-6 col-md-4">
                             <small class="titles font-weight-bold">DEPOSIT</small>
                             <h5>KES {{ number_format($details->price * 0.5) }}</h5>
                         </div>
@@ -155,7 +155,7 @@
         <div class="jumbotron text-center text-white rounded-0">
             <div class="">
                 <div class="row">
-                    <div class="col-md-8 offset-2">
+                    <div class="col-xs-12 col-md-8 offset-2">
                         <h3 class="display-4 font-weight-bold">Enquire about this offer</h3>
                         <p class="lead">For more information about this offer contact us to submit your request and Kommute will
                             be in touch to finalize your quote.

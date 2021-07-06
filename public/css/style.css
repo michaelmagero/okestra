@@ -281,6 +281,18 @@ body,html {
 		text-decoration: none;
 	}
 
+    .copyright-tag {
+        padding: 100px 0 0 0;
+    }
+
+    #footer-socials {
+        padding: 0 0 50px 50px;
+    }
+
+    #footer-socials ul{
+        padding: 20px 0 0 0;
+    }
+
     /* PAGES JUMBOTRON */
     .pages-jumbotron {
 		height: 300px;
@@ -471,11 +483,11 @@ body,html {
     /* Responsive design */
     @media (max-width: 480px) {
 		.jumbotron {
-			height: 1200px;
+			height: 900px;
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (min-width: 480px) and (max-width: 768px) {
         /* PAGES JUMBOTRON */
         .pages-jumbotron {
             height: 400px;
@@ -533,9 +545,17 @@ body,html {
 			height: 900px;
 		}
 
+        #cars .card {
+            height: 550px;
+        }
+
 		#cars .card-img-top {
-			height: 250px;
+			height: 150px !important;
 		}
+
+        #cars .card-footer a {
+            padding: 9px 20px 9px 20px;
+        }
 
 		#kommute-why h3 {
 			padding-left: 70px;
@@ -554,7 +574,7 @@ body,html {
 		}
 
 
-        /* PRODUCTS */
+        /* PRODUCTS PAGE */
         #features .financing {
             width: 345px;
             height: 300px;
@@ -584,7 +604,7 @@ body,html {
             font-weight: bold;
         }
 
-        /* CARS */
+        /* CARS PAGE */
         #car-search {
             padding: 20px;
         }
@@ -592,16 +612,40 @@ body,html {
         #car-search .card {
             height: 450px;
         }
+
+        /* VIEWCAR CTA PAGE*/
+        .card-img-top {
+            height: 280px ;
+        }
+
+        #viewcar-cta {
+            height: 500px;
+            padding-left: 0 ;
+            offset: unset;
+        }
+
+        #car-details h3 {
+            padding: 20px 0 0 0;
+        }
+
 	}
 
-	@media (max-width: 1024px) {
+	@media (min-width: 768px) and (max-width: 1024px) {
 		.jumbotron {
-			height: 900px;
+			height: 700px;
 		}
 
+        #cars .card {
+            height: 550px;
+        }
+
 		#cars .card-img-top {
-			height: 250px;
+			height: 200px;
 		}
+
+        #cars .card-footer a {
+            padding: 9px 25px 9px 25px !important;
+        }
 
 		#kommute-why h3 {
 			padding-left: 50px;
