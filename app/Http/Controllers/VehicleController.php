@@ -66,7 +66,11 @@ class VehicleController extends Controller
         if ($files = $request->file('images')) {
             foreach ($files as $file) {
                 $name = $file->getClientOriginalName();
-                $file->move('uploads/cars/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name));
+                $lowercase_string = strtolower($request->make . $request->model . $request->year);
+                $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
+
+                $file->move('uploads/cars/' . $string_without_characters, $name);
+                // $file->move('uploads/cars/' . strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name);
                 $images[] = $name;
             }
         }
@@ -76,7 +80,12 @@ class VehicleController extends Controller
         if ($file = $request->hasFile('display_image')) {
             $vehicle_image = $request->file('display_image');
             $filename = $vehicle_image->getClientOriginalName();
-            $vehicle_image->move('uploads/displayimage/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)),  $filename));
+            // $vehicle_image->move('uploads/displayimage/' . str_replace(' ', '', strtolower(preg_replace('/[0-9\@\.\;\" "]+/', '', $request->make . $request->model . $request->year)),  $filename));
+
+            $lowercase_string = strtolower($request->make . $request->model . $request->year);
+            $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
+
+            $vehicle_image->move('uploads/displayimage/' . $string_without_characters,  $filename);
             $vehicle->display_image = $filename;
         }
 

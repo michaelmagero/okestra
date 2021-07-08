@@ -67,7 +67,7 @@
 
                             <div class="col-md-4">
                                 <label for="national_id" class=" col-form-label text-md-right font-weight-bold">{{ __('National ID') }} <small>(upload both Front and Back)</small></label>
-                                <input type="file" id="myFile" name="national_id" multiple>
+                                <input type="file" id="myFile" name="national_id[]" multiple>
                             </div>
 
                             <div class="col-md-4">

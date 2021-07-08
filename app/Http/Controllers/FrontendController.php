@@ -64,7 +64,7 @@ class FrontendController extends Controller
 
     public function submit_registration_form(Request $request)
     {
-        $applicant_details = array($request->all());
+        //$applicant_details = array($request->all());
 
 
         $applicant = new Applicant();
@@ -76,12 +76,16 @@ class FrontendController extends Controller
         $applicant->application_status = 0;
         $applicant->loan_status = 2;
 
-        //natioanal_id
-        if ($file = $request->file('national_id')) {
-            $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
-            $applicant->national_id = $img;
+        //national_id
+        $images = array();
+        if ($files = $request->file('natioanal_id')) {
+            foreach ($files as $file) {
+                $img = $file->getClientOriginalName();
+                $file->move('uploads/applications/nationalid/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img));
+                $images[] = $img;
+            }
         }
+        $applicant->national_id = json_encode($images);
 
         $applicant->dob = $request->dob;
         $applicant->phone = $request->phone;
@@ -99,15 +103,15 @@ class FrontendController extends Controller
 
         //bank_statements
         if ($file = $request->file('bank_statements')) {
-            $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
-            $applicant->bank_statements = $img;
+            $bankstatements = $file->getClientOriginalName();
+            $file->move('uploads/applications/bankstatements/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $bankstatements);
+            $applicant->bank_statements = $bankstatements;
         }
 
         //mpesa_statements
         if ($file = $request->file('mpesa_statements')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
+            $file->move('uploads/applications/mpesastatements/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->mpesa_statements = $img;
         }
 
@@ -115,34 +119,32 @@ class FrontendController extends Controller
         //cr12 certificate
         if ($file = $request->file('cr12_certificate')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
+            $file->move('uploads/applications/cr12certificate/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->cr12_certificate = $img;
         }
 
         //kra_certificate
         if ($file = $request->file('kra_certificate')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
+            $file->move('uploads/applications/kracertificate/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->kra_certificate = $img;
         }
 
         //incorporation certificate
         if ($file = $request->file('incorporation_certificate')) {
             $img = $file->getClientOriginalName();
-            $file->move('uploads/applications/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
+            $file->move('uploads/applications/incorporationcertificate/' . strtolower(str_replace(' ', '', $request->name . $request->middlename . $request->surname)), $img);
             $applicant->incorporation_certificate = $img;
         }
 
         // $password = Str::random(20);
         // $applicant->password = bcrypt($password);
 
-        $this->mpesa->STKPushPayment($request);
-        return view('frontend.payment')->with('applicant_details', $applicant_details);
+        dump($applicant);
+        dump($applicant_details);
 
-
-        // $applicant->save();
-        // $request->session()->flash('success_message', 'Application Added Successfully.');
-        // return redirect('/');
+        // $this->mpesa->STKPushPayment($request);
+        // return view('frontend.payment')->with('applicant_details', $applicant_details);
     }
 
     public function confirm_payment()

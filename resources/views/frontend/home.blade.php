@@ -30,7 +30,7 @@
                         <div class="col-xs-6 col-md-3">
                             <div>
                                 <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                                    <img src="{{ asset('../uploads/displayimage/' . Str::lower(str_replace(' ', '', $vehicle->make . $vehicle->model . $vehicle->year)) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="200">
+                                    <img src="{{ asset('../uploads/displayimage/' . Str::lower(preg_replace('/[@\.\;\'\`\" "]+/', '', $vehicle->make . $vehicle->model . $vehicle->year)) . '/' . $vehicle->display_image) }}" class="card-img-top" alt="{{ $vehicle->make }}" height="200">
 
                                     <div class="card-body">
                                         <h6 class="card-title font-weight-bold">{{ ucfirst(trans( $vehicle->make . " " . $vehicle->model . " " . $vehicle->year)) }}</h6>
