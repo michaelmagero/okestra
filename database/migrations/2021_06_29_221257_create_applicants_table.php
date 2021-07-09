@@ -34,14 +34,16 @@ class CreateApplicantsTable extends Migration
             $table->string('apartment');
             $table->string('employer')->nullable();
             $table->string('employment_type')->nullable();
-            $table->string('net_income')->nullable();
+            $table->string('employed_net_income')->nullable();
+            $table->string('self_net_income')->nullable();
             $table->string('expenses')->nullable();
-            $table->string('bank_statements')->nullable();
-            $table->string('mpesa_statements')->nullable();
+            $table->string('employed_bank_statements')->nullable();
+            $table->string('employed_mpesa_statements')->nullable();
             $table->string('business_name')->nullable();
             $table->string('gross_business_income')->nullable();
             $table->string('cr12_certificate')->nullable();
             $table->string('kra_certificate')->nullable();
+            $table->string('self_bank_statements')->nullable();
             $table->string('incorporation_certificate')->nullable();
             $table->string('application_status')->default(0); //pending - 0 , approved - 1, rejected - 2
             $table->string('loan_status')->default(0); //active - 0 , complete - 1, empty if application status is rejected -2

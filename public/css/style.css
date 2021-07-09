@@ -338,6 +338,11 @@ body,html {
 		font-weight: bold;
 	}
 
+    .products-section {
+        background-color: #262228;
+        color: #fff;
+    }
+
 
     /* CARS PAGE */
     #car-search {

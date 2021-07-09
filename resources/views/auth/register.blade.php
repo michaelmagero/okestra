@@ -205,9 +205,9 @@
 
 
                             <div class="col-md-4">
-                                <label for="net_income" class=" col-form-label text-md-right font-weight-bold">{{ __('Net Income') }}</label>
-                                <input id="net_income" name="net_income" type="text" class="form-control @error('net_income') is-invalid @enderror"  value="{{ old('net_income') }}">
-                                @error('net_income')
+                                <label for="employed_net_income" class=" col-form-label text-md-right font-weight-bold">{{ __('Net Income') }}</label>
+                                <input id="employed_net_income" name="employed_net_income" type="text" class="form-control @error('employed_net_income') is-invalid @enderror"  value="{{ old('employed_net_income') }}">
+                                @error('employed_net_income')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -229,18 +229,15 @@
                         <div class="form-group row">
 
                             <div class="col-md-4">
-                                <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Bank Statement') }} <small>(attach 6 months statement)</small></label>
-                                <input type="file" id="myFile" name="bank_statements">
+                                <label for="employed_bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Bank Statement') }} <small>(attach 6 months statement)</small></label>
+                                <input type="file" id="myFile" name="employed_bank_statements">
                             </div>
 
                             <div class="col-md-4">
-                                <label for="mpesa_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Mpesa Statement') }} <small>(attach 6 months statement)</small></label>
-                                <input type="file" id="myFile" name="mpesa_statements">
+                                <label for="employed_mpesa_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Mpesa Statement') }} <small>(attach 6 months statement)</small></label>
+                                <input type="file" id="myFile" name="employed_mpesa_statements">
                             </div>
                         </div><br>
-
-
-
 
 
                         <div class="row mt-5">
@@ -272,9 +269,9 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="net_income" class=" col-form-label text-md-right font-weight-bold">{{ __('Net Income') }}</label>
-                                <input id="net_income" name="net_income" type="text" class="form-control @error('net_income') is-invalid @enderror"  value="{{ old('net_income') }}">
-                                @error('net_income')
+                                <label for="self_net_income" class=" col-form-label text-md-right font-weight-bold">{{ __('Net Income') }}</label>
+                                <input id="self_net_income" name="self_net_income" type="text" class="form-control @error('self_net_income') is-invalid @enderror"  value="{{ old('self_net_income') }}">
+                                @error('self_net_income')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -301,7 +298,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-4">
-                                <label for="bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Bank Statement') }} <small>(6 months statement)</small></label>
+                                <label for="self_bank_statements" class=" col-form-label text-md-right font-weight-bold">{{ __('Bank Statement') }} <small>(6 months statement)</small></label>
                                 <input type="file" id="myFile" name="bank_statements">
                             </div>
 

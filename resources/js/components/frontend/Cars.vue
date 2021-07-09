@@ -4,13 +4,7 @@
 
             <Navbar />
 
-            <div class="pages-jumbotron rounded-0 text-white">
-                <div id="content" class="container">
-                    <div class="col-md-8">
-                        <h1 class="display-5">Kenya's Leading Paperless Car Financing</h1>
-                    </div>
-                </div>
-            </div>
+            <Jumbotron />
         </div>
 
         <div id="car-search">
@@ -49,7 +43,7 @@
 
                                     <span class="badge bg-light mr-5 mt-1">Year  {{ " " }}  {{ vehicle.year }} </span>
                                     <span class="badge bg-light mr-5 mt-1">Location {{ (vehicle.location).toUpperCase() }} </span>
-                                    <h6 class="mt-2  font-weight-bold"><strong>Cash Price</strong>: <strong class="text-muted"> KES {{ Number(vehicle.price).toLocaleString() }} </strong></h6>
+                                    <h6 class="mt-2  font-weight-bold"><strong>Car Value</strong>: <strong class="text-muted"> KES {{ Number(vehicle.price).toLocaleString() }} </strong></h6>
 
                                     <h6 class="mt-3 text-muted">Monthly Payment</h6>
                                     <h5 class="mb-3 font-weight-bold">KES {{ Math.round(((0.0208 * (Number(vehicle.price) * 0.5) * 24 + Number(vehicle.price) * 0.5) / 24)).toLocaleString() }}</h5>
@@ -66,52 +60,12 @@
                     </div>
                 </div>
         </div>
+
+        <Footer />
     </div>
 </template>
 
-<style scoped>
-	#car-search .btn {
-		border-radius: 20px;
-		background-color: #fece00;
-		font-weight: bold;
-	}
 
-	#car-search .btn:hover {
-		background-color: #262228;
-		color: #ffffff;
-		border: none;
-	}
-
-	#car-search .card {
-		height: 500px;
-	}
-
-	#car-search .search-bar {
-		border-radius: 20px;
-		border: none;
-		padding: 10px 30px 10px 50px;
-		background-color: #e6e6e6;
-		font-weight: 700;
-	}
-
-	.cash-price {
-		color: #fece00;
-	}
-
-	@media (max-width: 768px) {
-		#car-search .card-img-top {
-			height: 250px;
-		}
-
-		#car-search h3 {
-			padding-left: 20px;
-		}
-
-		#car-search p {
-			padding: 20px;
-		}
-	}
-</style>
 
 <script>
 	import Navbar from "../includes/Header.vue";

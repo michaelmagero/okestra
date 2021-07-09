@@ -24,7 +24,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ url('confirm-pay') }}">
+                    <form method="POST" action="{{ url('confirm-pay') }}" autocomplete="off">
                         @csrf
 
                         <div class="form-group row">
@@ -47,7 +47,6 @@
                                 <label for="transaction_id" class="col-form-label text-md-right font-weight-bold">{{ __('MPESA Transaction ID') }}</label>
                                 <input id="transaction_id" type="text" class="form-control @error('transaction_id') is-invalid @enderror" name="transaction_id" value="{{ old('transaction_id') }}" required autofocus placeholder="e.g KOM12L44TE">
 
-
                                 @error('transaction_id')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -56,7 +55,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                @foreach ($applicant_details as $details)
+                                {{-- @foreach ($applicant_details as $details)
                                     <input type="text" name="name"  value="{{ $details['name'] }}" hidden>
                                     <input type="text" name="middlename"  value="{{ $details['middlename'] }}" hidden>
                                     <input type="text" name="surname"  value="{{ $details['surname'] }}" hidden>
@@ -71,17 +70,19 @@
                                     <input type="text" name="street"  value="{{ $details['street'] }}" hidden>
                                     <input type="text" name="apartment"  value="{{ $details['apartment'] }}" hidden>
                                     <input type="text" name="employer"  value="{{ $details['employer'] }}" hidden>
-                                    <input type="text" name="net_income"  value="{{ $details['net_income'] }}" hidden>
+                                    <input type="text" name="employed_net_income"  value="{{ $details['employed_net_income'] }}" hidden>
+                                    <input type="text" name="self_net_income"  value="{{ $details['self_net_income'] }}" hidden>
                                     <input type="text" name="expenses"  value="{{ $details['expenses'] }}" hidden>
-                                    <input type="text" name="bank_statements"  value="{{ $details['bank_statements'] }}" hidden>
-                                    <input type="text" name="mpesa_statements"  value="{{ $details['mpesa_statements'] }}" hidden>
+                                    <input type="text" name="self_bank_statements"  value="{{ $details['self_bank_statements'] }}" hidden>
+                                    <input type="text" name="employed_bank_statements"  value="{{ $details['employed_bank_statements'] }}" hidden>
+                                    <input type="text" name="employed_mpesa_statements"  value="{{ $details['emloyed_mpesa_statements'] }}" hidden>
                                     <input type="text" name="business_name"  value="{{ $details['business_name'] }}" hidden>
                                     <input type="text" name="gross_business_income"  value="{{ $details['gross_business_income'] }}" hidden>
                                     <input type="text" name="cr12_certificate"  value="{{ $details['cr12_certificate'] }}" hidden>
                                     <input type="text" name="kra_certificate"  value="{{ $details['kra_certificate'] }}" hidden>
                                     <input type="text" name="incorporation_certificate"  value="{{ $details['incorporation_certificate'] }}" hidden>
                                     <input type="text" name="vehicle_id"  value="{{ $details['vehicle_id'] }}" hidden>
-                                @endforeach
+                                @endforeach --}}
 
                             </div>
                         </div>

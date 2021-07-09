@@ -15,6 +15,7 @@ Route::get('/about', 'FrontendController@about');
 Route::get('/about', 'FrontendController@about');
 Route::get('/view-car/{id}', 'FrontendController@viewcar');
 Route::get('/vehicles', 'FrontendController@vehicles');
+Route::get('/viewvehicle/{id}', 'FrontendController@viewvehicle');
 Route::get('/invoice', 'FrontendController@invoice');
 Route::get('/payment-confirmation', 'FrontendController@confirm_payment');
 
@@ -24,9 +25,6 @@ Route::get('/applicant-register/{id}', 'FrontendController@get_registration_form
 
 //submit registration form to confirm payment
 Route::get('applicant-register', 'FrontendController@submit_registration_form');
-
-//confirm payment
-//Route::get('confirm-pay', 'FrontendController@confirm_payment');
 
 //submit application with payment
 Route::post('confirm-pay', 'FrontendController@submit_payment');

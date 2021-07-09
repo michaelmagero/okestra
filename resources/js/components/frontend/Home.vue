@@ -9,7 +9,8 @@
                         <div class="col-sm-12 col-md-6 mt-5">
                             <h1 class="display-5">Kenya's Leading Paperless Car Financing</h1>
                             <p class="lead">Search, Reserve and Buy your Dream Car All on one platform</p><br>
-                            <a class="btn btn-warning btn-lg landing-btn" href="financing">Discover Kommute <span><i class="fa fa-arrow-right"></i></span> </a>
+                            <a class="btn btn-warning btn-lg landing-btn" href="/products">Discover Kommute <span><i class="fa fa-arrow-right"></i></span> </a>
+                            <!-- <router-link to="/products" class="btn btn-warning btn-lg landing-btn">Discover Kommute <span><i class="fa fa-arrow-right"></i></span></router-link> -->
                         </div>
                     </div>
 
@@ -22,7 +23,7 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <label for="" class="form-label font-weight-bold">Car Value</label>
-                                            <input v-model="calculator.carprice" type="text" class="calc form-control" @input="calculateInstallments" @change="this.calculator.carprice.toLocaleString();" >
+                                            <input v-model="calculator.carprice" class="calc form-control" @input="calculateInstallments" @change="formatInput" >
                                         </div>
 
                                         <div class="col-md-3">
@@ -58,24 +59,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-3 col-sm-3 col-md-3" v-for="(vehicle, index) in vehicles" v-bind:key="vehicle.value">
+                    <div class="col-xs-3 col-sm-3 col-md-3" v-for="(vehicle, index) in vehicles" v-bind:key="vehicle.id">
                         <template v-if="index <= 3">
                             <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                                <img v-if="vehicle.images" :src="carImage + vehicle.make + vehicle.model + vehicle.year+ '/' + vehicle.display_image" class="card-img-top" :alt="vehicle.make" height="250">
+                                <img :src="carImage + (vehicle.make + vehicle.model + vehicle.year).toLowerCase().split(' ').join('') + '/' + vehicle.display_image" class="card-img-top" :alt="vehicle.make" height="200">
 
                                 <div class="card-body">
-                                    <h4 class="card-title">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.year }}</h4>
 
-                                    <span class="badge bg-light mr-5">Mileage {{ Number(vehicle.mileage).toLocaleString() }}</span>
-                                    <span class="badge bg-light mr-5">Year {{ vehicle.year }} </span>
-                                    <span class="badge bg-light mr-5">Location {{ vehicle.location.toUpperCase() }} </span>
-                                    <h6 class="ml-1 mt-2  font-weight-bold"><strong>Cash Price</strong>: <strong class="cash-price"> Ksh {{ Number(vehicle.price).toLocaleString() }} </strong></h6>
+                                    <h6 class="card-title font-weight-bold">{{ vehicle.make + " " + vehicle.model + " " + vehicle.year }}</h6>
+
+                                    <span class="badge bg-light mr-5 mt-1">Mileage {{ Number(vehicle.mileage).toLocaleString() }}</span>
+
+                                    <span class="badge bg-light mr-5 mt-1">Year  {{ " " }}  {{ vehicle.year }} </span>
+                                    <span class="badge bg-light mr-5 mt-1">Location {{ (vehicle.location).toUpperCase() }} </span>
+                                    <h6 class="mt-2  font-weight-bold"><strong>Car Value</strong>: <strong class="text-muted"> KES {{ Number(vehicle.price).toLocaleString() }} </strong></h6>
 
                                     <h6 class="mt-3 text-muted">Monthly Payment</h6>
-                                    <h5 class="mb-3 font-weight-bold">Ksh {{ Math.round(((0.0208 * (Number(vehicle.price) * 0.5) * 24 + Number(vehicle.price) * 0.5) / 24)).toLocaleString() }}</h5>
+                                    <h5 class="mb-3 font-weight-bold">KES {{ Math.round(((0.0208 * (Number(vehicle.price) * 0.5) * 24 + Number(vehicle.price) * 0.5) / 24)).toLocaleString() }}</h5>
 
-                                    <router-link class="btn btn-block btn-warning pt-2 pb-2 pr-5 pl-5" :to="{ name: 'viewcar', params: { id: vehicle.id }}">view this car</router-link>
+                                </div>
 
+                                <div class="card-footer">
+                                    <a :href="'view-car/' + vehicle.id" class="btn btn-block pt-2 pb-2 pr-5 pl-5">View this car</a>
                                 </div>
                             </div>
                         </template>
@@ -84,6 +89,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <a href="/cars" class="btn btn-warning pt-2 pb-2 pr-5 pl-5">View More Cars</a>
+                        <!-- <router-link to="/cars" class="btn btn-warning pt-2 pb-2 pr-5 pl-5">View more cars</router-link> -->
                     </div>
                 </div>
             </div>
@@ -161,7 +167,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="display-4">In need of financing?</h1>
+                            <h1 class="display-4 font-weight-bold">In need of financing?</h1>
                             <p class="lead">Discover how much you will pay monthly to get your dream car</p>
                             <a href="/cars" class="btn btn-primary font-weight-bold">Search for Cars</a>
                         </div>
@@ -181,234 +187,11 @@
             </div>
         </div>
 
+
         <Footer />
     </div>
 </template>
 
-<style scoped>
-	.jumbotron {
-		height: 700px;
-		background-size: cover;
-		-moz-background-size: cover;
-		-webkit-background-size: cover;
-		-o-webkit-background-size: cover;
-		position: relative;
-		background: linear-gradient(rgba(29, 19, 43, 1.2), rgba(29, 19, 43, 1.2));
-	}
-
-	.jumbotron #content {
-		padding: 50px 0 0 0;
-	}
-
-	.jumbotron p {
-		color: #fff;
-	}
-
-	#cta .jumbotron {
-		background: #fece00;
-	}
-
-	#cta .jumbotron {
-		height: 300px;
-	}
-
-	#cta h1 {
-		color: #262228;
-	}
-
-	#cta p {
-		font-weight: bold;
-		color: #262228;
-	}
-
-	#cta .btn {
-		background: #262228;
-		border: none;
-	}
-
-	#cta .btn:hover {
-		background: #fff;
-		border: none;
-		color: #000;
-	}
-
-	.jumbotron .card {
-		border-radius: 0 50px 0 50px;
-		background: #262228;
-		opacity: 0.9;
-	}
-
-	.card .calc {
-		border-radius: 15px;
-		font-weight: bold;
-	}
-
-	.jumbotron .btn {
-		border-radius: 20px;
-		padding: 7px 35px 7px 35px;
-	}
-
-	.jumbotron .landing-btn {
-		background-color: #fece00;
-	}
-
-	.jumbotron .btn:hover {
-		background-color: #262228;
-		color: #ffffff;
-	}
-
-	#kommute-features {
-		padding: 50px 0 50px 0;
-		background-color: #262228;
-	}
-
-	#kommute-features .features {
-		width: 60px;
-		height: 60px;
-	}
-
-	.features-heading {
-		color: #fece00;
-	}
-
-	.features-icons {
-		color: #fece00;
-	}
-
-	#kommute-features h5 {
-		color: #fff;
-	}
-
-	#kommute-why {
-		padding: 70px 0 50px 0;
-		background-color: #262228;
-	}
-
-	#kommute-why .why {
-		widows: 60px;
-		height: 60px;
-	}
-
-	#kommute-why h5 {
-		color: #fff;
-	}
-
-	#cars {
-		padding-bottom: 20px;
-	}
-
-	#cars .card {
-		height: 600px;
-	}
-
-	#cars .btn {
-		background-color: #fece00;
-		border-radius: 20px;
-		padding: 0 30px 0 30px;
-		font-weight: bold;
-	}
-
-	#cars .btn:hover {
-		border-radius: 20px;
-		background: #262228;
-		color: #ffffff;
-		padding: 0 30px 0 30px;
-		border: none;
-	}
-
-	.cash-price {
-		color: #fece00;
-	}
-
-	.carousel-control-prev {
-		background: none;
-		border-width: 0;
-		left: -120px;
-		border-bottom: 0;
-		font-size: 40px;
-		color: #444;
-	}
-
-	.carousel-control-next {
-		background: none;
-		border-width: 0;
-		right: -120px;
-		border-bottom: 0;
-		font-size: 40px;
-		color: #444;
-	}
-
-	#partners {
-		padding: 20px 0 70px 0;
-	}
-
-	.partners {
-		width: 150px;
-		height: 70px;
-	}
-
-	@media (max-width: 480px) {
-		.jumbotron {
-			height: 1200px;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.jumbotron {
-			height: 900px;
-		}
-
-		#cars .card-img-top {
-			height: 250px;
-		}
-
-		#kommute-why h3 {
-			padding-left: 70px;
-		}
-
-		#kommute-why .col-md-4 {
-			padding: 30px 100px 30px 70px;
-		}
-
-		#kommute-features h3 {
-			padding-left: 20px;
-		}
-
-		#kommute-features .col-md-3 {
-			padding: 30px 50px 30px 50px;
-		}
-	}
-
-	@media (max-width: 1024px) {
-		.jumbotron {
-			height: 900px;
-		}
-
-		#cars .card-img-top {
-			height: 250px;
-		}
-
-		#kommute-why h3 {
-			padding-left: 50px;
-		}
-
-		#kommute-why .col-md-4 {
-			padding: 30px 50px 30px 50px;
-		}
-
-		#kommute-features .col-md-6 {
-			padding: 30px;
-		}
-
-		#kommute-features h3 {
-			padding-left: 20px;
-		}
-
-		#kommute-features .col-md-3 {
-			padding: 30px 50px 30px 50px;
-		}
-	}
-</style>
 
 <script>
 	import Navbar from "../includes/Header.vue";
@@ -420,10 +203,6 @@
 		data() {
 			return {
 				vehicles: [],
-
-				vehicle_id: "",
-
-				cardmonthly: "",
 
 				calculator: {
 					monthlypayment: "",
@@ -518,9 +297,9 @@
 
 		mounted: function () {
 			axios
-				.get("http://localhost:8000/api/vehicles")
+				.get("/vehicles")
 				.then((res) => {
-					this.vehicles = res.data.data;
+					this.vehicles = res.data;
 				})
 				.catch((err) => {
 					console.error(err);
@@ -528,12 +307,28 @@
 		},
 
 		methods: {
-			formatInput() {
-				this.calculator.carprice.toLocaleString();
+			formatInput(event) {
+				let val = event.target.value.trim();
+
+				if (/^[1-9]\d*$|^$/.test(val)) {
+					"KES" + " " + Number(this.calculator.carprice).toLocaleString();
+				} else {
+					event.target.value = Number(this.calculator.carprice);
+				}
+			},
+
+			change(event) {
+				let val = event.target.value.trim();
+				// It can only be positive integer or empty, and the rule can be modified according to the requirement.
+				if (/^[1-9]\d*$|^$/.test(val)) {
+					this.calculator.carprice = "KES" + " " + Number(val).toLocaleString();
+				} else {
+					event.target.value = this.calculator.carprice;
+				}
 			},
 
 			calculateInstallments() {
-				//deposit payable (50% car value + tracking fees + instance + handling fees)
+				//deposit payable (50% car value + tracking fees + insurance + handling fees)
 				this.calculator.deposit =
 					"KES" + " " + (Number(this.calculator.carprice) * 0.5).toLocaleString();
 

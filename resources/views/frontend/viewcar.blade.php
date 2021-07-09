@@ -19,7 +19,7 @@
 
                             @foreach (json_decode($details->images, true) as $img)
                                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                    <img src="{{ asset('../uploads/cars/' . Str::lower(preg_replace('/[@\.\;\'\`\" "]+/', '', $details->make . $details->model . $details->year)) . '/' . $img) }}" class="card-img-top" alt="{{ $details->make }}" width="500" height="400">
+                                    <img src="{{ asset('../uploads/cars/' . Str::lower(str_replace(' ', '', $details->make . $details->model . $details->year)) . '/' . $img) }}" class="card-img-top" alt="{{ $details->make }}" width="500" height="400">
                                 </div>
                             @endforeach
                         </div>
