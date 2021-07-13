@@ -14,7 +14,7 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        $vehicles = Vehicle::orderBy('created_at', 'desc')->paginate(30);
+        $vehicles = Vehicle::orderBy('id', 'desc')->get();
         return view('admin.vehicles.index')->with('vehicles', $vehicles);
     }
 
@@ -62,29 +62,26 @@ class VehicleController extends Controller
         $vehicle->safety_features = json_encode($safety_features);
         $vehicle->performance_features = json_encode($performance_features);
 
-        $images = array();
-        if ($files = $request->file('images')) {
-            foreach ($files as $file) {
-                $name = $file->getClientOriginalName();
-                $lowercase_string = strtolower($request->make . $request->model . $request->year);
-                $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
-
-                $file->move('uploads/cars/' . $string_without_characters, $name);
-                // $file->move('uploads/cars/' . strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name);
-                $images[] = $name;
+        if ($request->hasFile('images')) {
+            $images = array();
+            if ($files = $request->file('images')) {
+                foreach ($files as $file) {
+                    $name = $file->getClientOriginalName();
+                    $lowercase_string = strtolower($request->make . $request->model . $request->year);
+                    $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
+                    $file->move('uploads/cars/' . $string_without_characters, $name);
+                    $images[] = $name;
+                }
             }
+            $vehicle->images = json_encode($images);
         }
-        $vehicle->images = json_encode($images);
 
 
         if ($file = $request->hasFile('display_image')) {
             $vehicle_image = $request->file('display_image');
             $filename = $vehicle_image->getClientOriginalName();
-            // $vehicle_image->move('uploads/displayimage/' . str_replace(' ', '', strtolower(preg_replace('/[0-9\@\.\;\" "]+/', '', $request->make . $request->model . $request->year)),  $filename));
-
             $lowercase_string = strtolower($request->make . $request->model . $request->year);
             $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
-
             $vehicle_image->move('uploads/displayimage/' . $string_without_characters,  $filename);
             $vehicle->display_image = $filename;
         }
@@ -154,24 +151,29 @@ class VehicleController extends Controller
         $vehicle->safety_features = json_encode($safety_features);
         $vehicle->performance_features = json_encode($performance_features);
 
-        if ($file = $request->hasFile('display_image')) {
+        if ($request->hasFile('images')) {
             $images = array();
             if ($files = $request->file('images')) {
                 foreach ($files as $file) {
                     $name = $file->getClientOriginalName();
-                    $file->move('uploads/cars/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name));
+                    $lowercase_string = strtolower($request->make . $request->model . $request->year);
+                    $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
+                    $file->move('uploads/cars/' . $string_without_characters, $name);
                     $images[] = $name;
                 }
             }
             $vehicle->images = json_encode($images);
         }
 
-        if ($file = $request->hasFile('display_image')) {
+        if ($request->hasFile('display_image')) {
             $vehicle_image = $request->file('display_image');
             $filename = $vehicle_image->getClientOriginalName();
-            $vehicle_image->move('uploads/displayimage/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)),  $filename));
+            $lowercase_string = strtolower($request->make . $request->model . $request->year);
+            $string_without_characters = preg_replace('/[@\.\;\'\`\" "]+/', '', $lowercase_string);
+            $vehicle_image->move('uploads/displayimage/' . $string_without_characters,  $filename);
             $vehicle->display_image = $filename;
         }
+
         $vehicle->save();
         flash('Update Successful')->success();
         return redirect('admin-vehicles');

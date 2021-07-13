@@ -20,21 +20,25 @@
 			$(document).ready(function() {
 				$('#table').DataTable({
 					responsive: true,
+                    "lengthChange": true,
 
-					dom:
-					"<'row'<'col-sm-6'B><'col-sm-6'f>>" +
-					"<'row'<'col-sm-12'tr>>" +
-					"<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                    // "dom": 'Bfrtip',
+
+					// dom:
+					// "<'row'<'col-sm-6'B><'col-sm-6'f>>" +
+					// "<'row'<'col-sm-12'tr>>" +
+					// "<'row'<'col-sm-5'i><'col-sm-7'p>>",
 
 					buttons: [],
 				});
 			});
 		</script>
 
-		<script>
+		{{-- <script>
 			$(document).ready(function() {
 				$('#view').DataTable({
 					responsive: true,
+                    colReorder: true,
 
 					dom:
 					"<'row'<'col-sm-6'B><'col-sm-6'f>>" +
@@ -42,9 +46,9 @@
 					"<'row'<'col-sm-5'i><'col-sm-7'p>>",
 				});
 			});
-        </script>
+        </script> --}}
 
-		<script>
+		{{-- <script>
 			$(document).ready(function (){
 				var table = $('#example').DataTable({
 					'responsive': true
@@ -62,7 +66,7 @@
 					table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
 				});
 			});
-        </script>
+        </script> --}}
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="../admin/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>

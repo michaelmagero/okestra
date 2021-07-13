@@ -64,8 +64,6 @@
     </div>
 </template>
 
-
-
 <script>
 	import Navbar from "../includes/Header.vue";
 	import Jumbotron from "../includes/PagesJumbtron.vue";

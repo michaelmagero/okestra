@@ -104,7 +104,7 @@
                                     <div class="col-lg-6">
                                         <label>Display Image</label>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFile" name="display_image" multiple value="{{ $vehicles->display_image }}">
+                                            <input type="file" class="custom-file-input" id="customFile" name="display_image" value="{{ $vehicles->display_image }}">
                                             <label class="custom-file-label" for="customFile">
                                                 {{ $vehicles->display_image }}
                                             </label>
@@ -114,7 +114,7 @@
                                     <div class="col-lg-6">
                                         <label>Images</label>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFile" name="images[]" multiple value="{{ $vehicles->images }}" multiple>
+                                            <input type="file" class="custom-file-input" id="customFile" name="images[]" value="{{ $vehicles->images }}" multiple>
                                             <label class="custom-file-label" for="customFile">
                                                 {{ $vehicles->images }}
                                             </label>
@@ -132,12 +132,12 @@
 
                                     <div class="col-lg-6">
                                         <label>Interior <small class="font-weight-bold">(add features separated by commas e.g leather-seats, airbags)</small> </label>
-                                        <textarea class="form-control" name="interior_features" id=""  rows="10">{{ $vehicles->interior_features }}</textarea>
+                                        <textarea class="form-control" name="interior_features" id=""  rows="10">{!! implode(', ', json_decode($vehicles->interior_features)) !!}</textarea>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <label>Exterior <small class="font-weight-bold">(add features separated by commas e.g rear spoiler, fog lights)</small> </label>
-                                        <textarea class="form-control" name="exterior_features" id=""  rows="10">{{ $vehicles->exterior_features }}</textarea>
+                                        <textarea class="form-control" name="exterior_features" id=""  rows="10">{!! implode(', ', json_decode($vehicles->exterior_features)) !!}</textarea>
                                     </div>
                                 </div>
 
@@ -145,13 +145,13 @@
                                 <div class="form-group m-form__group row">
 
                                     <div class="col-lg-6">
-                                        <label>Safety & Technology <small class="font-weight-bold">(add features separated by commas e.g leather-seats, airbags)</small> </label>
-                                        <textarea class="form-control" name="safety_features" id=""  rows="10">{{ $vehicles->safety_features }}</textarea>
+                                        <label>Safety & Technology <small class="font-weight-bold">(add separated by commas e.g leather-seats, airbags)</small> </label>
+                                        <textarea class="form-control" name="safety_features" id=""  rows="10">{!! implode(', ', json_decode($vehicles->safety_features)) !!}</textarea>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <label>Performance <small class="font-weight-bold">(add features separated by commas e.g leather-seats, airbags)</small> </label>
-                                        <textarea class="form-control" name="performance_features" id=""  rows="10">{{ $vehicles->performance_features }}</textarea>
+                                        <textarea class="form-control" name="performance_features" id=""  rows="10">{!! implode(', ', json_decode($vehicles->performance_features)) !!}</textarea>
                                     </div>
                                 </div>
 
