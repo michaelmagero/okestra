@@ -19,7 +19,7 @@
                 <div class="card-header text-uppercase font-weight-bold pt-4 pb-4 text-center" style="background-color: #ffce00; font-size: 17px;">{{ __('KOMMUTE CAR RESERVATION FORM') }}</div>
 
                 <div class="card-body">
-                    <form method="GET" action="{{ url('applicant-register') }}"  enctype="multipart/form-data" autocomplete="off">
+                    <form method="POST" action="{{ url('applicant-register') }}"  enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
                         <div class="row">

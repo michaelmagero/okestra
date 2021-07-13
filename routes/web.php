@@ -24,7 +24,7 @@ Route::get('/payment-confirmation', 'FrontendController@confirm_payment');
 Route::get('/applicant-register/{id}', 'FrontendController@get_registration_form');
 
 //submit registration form to confirm payment
-Route::get('applicant-register', 'FrontendController@submit_registration_form');
+Route::post('applicant-register', 'FrontendController@submit_registration_form');
 
 //submit application with payment
 Route::post('confirm-pay', 'FrontendController@submit_payment');

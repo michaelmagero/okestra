@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="col-md-2">
-                                {{-- @foreach ($applicant_details as $details)
+                                @foreach ($applicant_details as $details)
                                     <input type="text" name="name"  value="{{ $details['name'] }}" hidden>
                                     <input type="text" name="middlename"  value="{{ $details['middlename'] }}" hidden>
                                     <input type="text" name="surname"  value="{{ $details['surname'] }}" hidden>
@@ -82,7 +82,7 @@
                                     <input type="text" name="kra_certificate"  value="{{ $details['kra_certificate'] }}" hidden>
                                     <input type="text" name="incorporation_certificate"  value="{{ $details['incorporation_certificate'] }}" hidden>
                                     <input type="text" name="vehicle_id"  value="{{ $details['vehicle_id'] }}" hidden>
-                                @endforeach --}}
+                                @endforeach
 
                             </div>
                         </div>

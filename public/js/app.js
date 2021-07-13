@@ -2070,7 +2070,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -2808,11 +2807,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 
@@ -2848,13 +2842,17 @@ __webpack_require__.r(__webpack_exports__);
     Jumbotron: _includes_PagesJumbtron_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     Footer: _includes_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  mounted: function mounted(id) {
-    axios.get("/viewvehicle/" + this.vehicles.id).then(function (ress) {// ress.data.data.forEach((element) => {
-      // 	if (element.id == this.$route.params.id) {
-      // 		this.vehicles = element;
-      // 		this.vehicle_images = JSON.parse(element.images);
-      // 	}
-      // });
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("/viewvehicle/" + this.vehicles.id).then(function (ress) {
+      console.log(ress.data);
+      ress.data.forEach(function (element) {
+        if (element.id == _this.$route.params.id) {
+          _this.vehicles = element;
+          _this.vehicle_images = JSON.parse(element.images);
+        }
+      });
     })["catch"](function (err) {});
   },
   computed: {
@@ -39628,7 +39626,8 @@ var render = function() {
                               (vehicle.make + vehicle.model + vehicle.year)
                                 .toLowerCase()
                                 .split(" ")
-                                .join("") +
+                                .join("")
+                                .replace(/\W/g, "") +
                               "/" +
                               vehicle.display_image,
                             alt: vehicle.make,
@@ -40047,7 +40046,8 @@ var render = function() {
                                   (vehicle.make + vehicle.model + vehicle.year)
                                     .toLowerCase()
                                     .split(" ")
-                                    .join("") +
+                                    .join("")
+                                    .replace(/\W/g, "") +
                                   "/" +
                                   vehicle.display_image,
                                 alt: vehicle.make,
@@ -40691,134 +40691,48 @@ var render = function() {
       _vm._v(" "),
       _c("Jumbotron"),
       _vm._v(" "),
-      _c("div", { attrs: { id: "car-details" } }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row mt-5 mb-5" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-6" }, [
-              _c("h3", { staticClass: "text-white" }, [
-                _vm._v(
-                  _vm._s(
-                    _vm.vehicles.make + _vm.vehicles.model + _vm.vehicles.year
-                  )
-                )
-              ]),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _c("div", { staticClass: "row mt-5 text-center" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-xs-6 col-sm-6 col-md-4 border-right mb-3"
-                  },
-                  [
-                    _c("small", { staticClass: "titles font-weight-bold" }, [
-                      _vm._v("CASH PRICE")
-                    ]),
-                    _vm._v(" "),
-                    _c("h5", [_vm._v("KES " + _vm._s(_vm.vehicles.price))])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-xs-6 col-sm-6 col-md-4 border-right mb-3"
-                  },
-                  [
-                    _c("small", { staticClass: "titles font-weight-bold" }, [
-                      _vm._v("MONTHLY")
-                    ]),
-                    _vm._v(" "),
-                    _c("h5", { staticClass: "font-weight-bold" }, [
-                      _vm._v(
-                        "KES " +
-                          _vm._s(
-                            (0.0208 * (_vm.vehicles.price * 0.5) * 24 +
-                              _vm.vehicles.price * 0.5) /
-                              24
-                          ) +
-                          " "
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-xs-6 col-sm-6 col-md-4" }, [
-                  _c("small", { staticClass: "titles font-weight-bold" }, [
-                    _vm._v("DEPOSIT")
-                  ]),
-                  _vm._v(" "),
-                  _c("h5", [_vm._v("KES " + _vm._s(_vm.vehicles.price * 0.5))])
-                ])
-              ]),
-              _c("hr"),
-              _vm._v(" "),
-              _c("div", { staticClass: "row text-center" }, [
-                _c("div", { staticClass: "col-md-4 border-right mb-1" }, [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c("h6", { staticClass: "location" }, [
-                    _vm._v(" " + _vm._s(_vm.vehicles.location))
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-6" }, [
-                  _c("p", [
-                    _c("strong", { staticClass: "titles" }, [
-                      _vm._v("Fuel Type: ")
-                    ]),
-                    _vm._v(" " + _vm._s(_vm.vehicles.fuel_type) + " ")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("strong", { staticClass: "titles" }, [
-                      _vm._v("Color: ")
-                    ]),
-                    _vm._v(" " + _vm._s(_vm.vehicles.color) + " ")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-6" }, [
-                  _c("p", [
-                    _c("strong", { staticClass: "titles" }, [
-                      _vm._v("Transmission: ")
-                    ]),
-                    _vm._v(" " + _vm._s(_vm.vehicles.transmission) + " ")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("strong", { staticClass: "titles" }, [
-                      _vm._v("Engine Capacity: ")
-                    ]),
-                    _vm._v(" " + _vm._s(_vm.vehicles.engine_capacity) + " ")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _c("strong", { staticClass: "titles" }, [
-                      _vm._v("Registration: ")
-                    ]),
-                    _vm._v(" " + _vm._s(_vm.vehicles.registration) + " ")
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row mt-5 pl-3" })
-            ])
-          ]),
-          _c("br"),
-          _vm._v(" "),
-          _vm._m(2)
-        ])
-      ]),
+      _vm._m(0),
       _vm._v(" "),
-      _vm._m(3),
+      _c("div", { attrs: { id: "viewcar-cta" } }, [
+        _c(
+          "div",
+          { staticClass: "jumbotron text-center text-white rounded-0" },
+          [
+            _c("div", {}, [
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-xs-12 col-md-8 offset-2" },
+                  [
+                    _c("h3", { staticClass: "display-4 font-weight-bold" }, [
+                      _vm._v("Enquire about this offer")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "lead" }, [
+                      _vm._v(
+                        "For more information about this offer contact us to submit your request and Kommute will\n                        be in touch to finalize your quote.\n                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _vm._l(_vm.vehicles, function(vehicle) {
+                      return _c("div", { key: vehicle.id }, [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(vehicle.make) +
+                            "\n                "
+                        )
+                      ])
+                    })
+                  ],
+                  2
+                )
+              ])
+            ])
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c("Footer")
     ],
@@ -40830,207 +40744,133 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c(
-        "div",
-        {
-          staticClass: "carousel slide",
-          attrs: { id: "carouselExampleSlidesOnly", "data-ride": "carousel" }
-        },
-        [
-          _c("div", { staticClass: "carousel-inner" }),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "carousel-control-prev",
-              attrs: {
-                href: "#carouselExampleSlidesOnly",
-                role: "button",
-                "data-slide": "prev"
-              }
-            },
-            [
-              _c("span", {
-                staticClass: "carousel-control-prev-icon",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "carousel-control-next",
-              attrs: {
-                href: "#carouselExampleSlidesOnly",
-                role: "button",
-                "data-slide": "next"
-              }
-            },
-            [
-              _c("span", {
-                staticClass: "carousel-control-next-icon",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-            ]
-          )
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("small", { staticClass: "titles font-weight-bold pr-3" }, [
-      _c("i", { staticClass: "fas fa-map-marker-alt" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-3 mb-5 pl-3" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c(
-          "h3",
-          { staticClass: "text-white text-uppercase font-weight-bold" },
-          [_vm._v("Features")]
-        ),
-        _c("br"),
-        _vm._v(" "),
-        _c("div", { staticClass: "row mt-2 pl-2 text-white" }, [
-          _c(
-            "ul",
-            {
-              staticClass: "nav nav-tabs rounded-0 text-dark",
-              attrs: { role: "tablist" }
-            },
-            [
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "pt-3 pb-3 nav-link active text-uppercase font-weight-bold pl-5 pr-5",
-                    attrs: { "data-toggle": "tab", href: "#home" }
-                  },
-                  [_vm._v("Interior")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5",
-                    attrs: { "data-toggle": "tab", href: "#menu1" }
-                  },
-                  [_vm._v("Exterior")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5",
-                    attrs: { "data-toggle": "tab", href: "#menu2" }
-                  },
-                  [_vm._v("Safety and Technology")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass:
-                      "pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5",
-                    attrs: { "data-toggle": "tab", href: "#menu3" }
-                  },
-                  [_vm._v("Performance")]
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "tab-content" }, [
+    return _c("div", { attrs: { id: "car-details" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row mt-5 mb-5" }, [
+          _c("div", { staticClass: "col-md-6" }, [
             _c(
               "div",
               {
-                staticClass: "container tab-pane active mt-5 mb-5",
-                attrs: { id: "home" }
+                staticClass: "carousel slide",
+                attrs: {
+                  id: "carouselExampleSlidesOnly",
+                  "data-ride": "carousel"
+                }
               },
-              [_c("br"), _vm._v(" "), _c("div", { staticClass: "row mb-5" })]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "container tab-pane fade mt-5 mb-5",
-                attrs: { id: "menu1" }
-              },
-              [_c("br"), _vm._v(" "), _c("div", { staticClass: "row mb-5" })]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "container tab-pane fade mt-5 mb-5",
-                attrs: { id: "menu2" }
-              },
-              [_c("br"), _vm._v(" "), _c("div", { staticClass: "row mb-5" })]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "container tab-pane fade mt-5 mb-5",
-                attrs: { id: "menu3" }
-              },
-              [_c("br"), _vm._v(" "), _c("div", { staticClass: "row mb-5" })]
+              [
+                _c("div", { staticClass: "carousel-inner" }, [
+                  _c("div", { staticClass: "carousel-item" })
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "carousel-control-prev",
+                    attrs: {
+                      href: "#carouselExampleSlidesOnly",
+                      role: "button",
+                      "data-slide": "prev"
+                    }
+                  },
+                  [
+                    _c("span", {
+                      staticClass: "carousel-control-prev-icon",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "carousel-control-next",
+                    attrs: {
+                      href: "#carouselExampleSlidesOnly",
+                      role: "button",
+                      "data-slide": "next"
+                    }
+                  },
+                  [
+                    _c("span", {
+                      staticClass: "carousel-control-next-icon",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+                  ]
+                )
+              ]
             )
           ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "viewcar-cta" } }, [
-      _c("div", { staticClass: "jumbotron text-center text-white rounded-0" }, [
-        _c("div", {}, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-xs-12 col-md-8 offset-2" }, [
-              _c("h3", { staticClass: "display-4 font-weight-bold" }, [
-                _vm._v("Enquire about this offer")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "lead" }, [
-                _vm._v(
-                  "For more information about this offer contact us to submit your request and Kommute will\n                            be in touch to finalize your quote.\n                        "
-                )
-              ]),
-              _vm._v(" "),
+        ]),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-3 mb-5 pl-3" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c(
+              "h3",
+              { staticClass: "text-white text-uppercase font-weight-bold" },
+              [_vm._v("Features")]
+            ),
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "row mt-2 pl-2 text-white" }, [
               _c(
-                "a",
+                "ul",
                 {
-                  staticClass: "btn btn-lg font-weight-bold",
-                  attrs: { href: "#" }
+                  staticClass: "nav nav-tabs rounded-0 text-dark",
+                  attrs: { role: "tablist" }
                 },
                 [
-                  _c("i", { staticClass: "fas fa-phone" }),
-                  _vm._v("  0768825914 / 0790363195")
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "pt-3 pb-3 nav-link active text-uppercase font-weight-bold pl-5 pr-5",
+                        attrs: { "data-toggle": "tab", href: "#home" }
+                      },
+                      [_vm._v("Interior")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5",
+                        attrs: { "data-toggle": "tab", href: "#menu1" }
+                      },
+                      [_vm._v("Exterior")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5",
+                        attrs: { "data-toggle": "tab", href: "#menu2" }
+                      },
+                      [_vm._v("Safety and Technology")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5",
+                        attrs: { "data-toggle": "tab", href: "#menu3" }
+                      },
+                      [_vm._v("Performance")]
+                    )
+                  ])
                 ]
               )
             ])
@@ -41038,6 +40878,19 @@ var staticRenderFns = [
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "btn btn-lg font-weight-bold", attrs: { href: "#" } },
+      [
+        _c("i", { staticClass: "fas fa-phone" }),
+        _vm._v("  0768825914 / 0790363195")
+      ]
+    )
   }
 ]
 render._withStripped = true

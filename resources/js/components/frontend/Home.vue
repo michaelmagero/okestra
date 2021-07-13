@@ -62,7 +62,7 @@
                     <div class="col-xs-3 col-sm-3 col-md-3" v-for="(vehicle, index) in vehicles" v-bind:key="vehicle.id">
                         <template v-if="index <= 3">
                             <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                                <img :src="carImage + (vehicle.make + vehicle.model + vehicle.year).toLowerCase().split(' ').join('') + '/' + vehicle.display_image" class="card-img-top" :alt="vehicle.make" height="200">
+                                <img :src="carImage + (vehicle.make + vehicle.model + vehicle.year).toLowerCase().split(' ').join('').replace(/\W/g, '') + '/' + vehicle.display_image" class="card-img-top" :alt="vehicle.make" height="200">
 
                                 <div class="card-body">
 

@@ -154,15 +154,17 @@ class VehicleController extends Controller
         $vehicle->safety_features = json_encode($safety_features);
         $vehicle->performance_features = json_encode($performance_features);
 
-        $images = array();
-        if ($files = $request->file('images')) {
-            foreach ($files as $file) {
-                $name = $file->getClientOriginalName();
-                $file->move('uploads/cars/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name));
-                $images[] = $name;
+        if ($file = $request->hasFile('display_image')) {
+            $images = array();
+            if ($files = $request->file('images')) {
+                foreach ($files as $file) {
+                    $name = $file->getClientOriginalName();
+                    $file->move('uploads/cars/' . preg_replace('/[^a-zA-Z0-9\s]/', '', strtolower(str_replace(' ', '', $request->make . $request->model . $request->year)), $name));
+                    $images[] = $name;
+                }
             }
+            $vehicle->images = json_encode($images);
         }
-        $vehicle->images = json_encode($images);
 
         if ($file = $request->hasFile('display_image')) {
             $vehicle_image = $request->file('display_image');
