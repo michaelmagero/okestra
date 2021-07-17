@@ -42,6 +42,7 @@
     </style>
 </head>
 <body>
+
     <div class="row invoice-wrapper mb-3">
         <div class="col-md-12">
             <div class="row">
@@ -73,6 +74,7 @@
             </div><hr>
             <div class="row invoice-info">
                 <div class="col-md-12">
+
                     <table class="table">
 
                         <tr>
@@ -84,9 +86,11 @@
                                     <div class="col-md-3">
                                         <span class="font-weight-bold">Bill To</span>
                                     </div>
-                                    <div class="col-md-6">
-                                        <span class="">{{ $applicant_details }}</span>
-                                    </div>
+                                    @foreach ($reservation_details as $reservation)
+                                        <div class="col-md-6">
+                                            <span class="">{{ $reservation->name }}</span>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </td>
                             <td>

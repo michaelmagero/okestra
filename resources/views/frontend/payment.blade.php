@@ -24,7 +24,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ url('confirm-pay') }}" autocomplete="off">
+                    <form method="POST" action="{{ url('confirm-pay') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -56,32 +56,60 @@
 
                             <div class="col-md-2">
                                 @foreach ($applicant_details as $details)
-                                    <input type="text" name="name"  value="{{ $details['name'] }}" hidden>
-                                    <input type="text" name="middlename"  value="{{ $details['middlename'] }}" hidden>
-                                    <input type="text" name="surname"  value="{{ $details['surname'] }}" hidden>
-                                    <input type="text" name="national_id" value="{{ $details['national_id'] }}" hidden>
-                                    <input type="text" name="dob"  value="{{ $details['dob'] }}" hidden>
-                                    <input type="text" name="phone"  value="{{ $details['phone'] }}" hidden>
-                                    <input type="text" name="email"  value="{{ $details['email'] }}" hidden>
-                                    <input type="text" name="id_number"  value="{{ $details['id_number'] }}" hidden>
-                                    <input type="text" name="kra_pin"  value="{{ $details['kra_pin'] }}" hidden>
-                                    <input type="text" name="county"  value="{{ $details['county'] }}" hidden>
-                                    <input type="text" name="locality"  value="{{ $details['locality'] }}" hidden>
-                                    <input type="text" name="street"  value="{{ $details['street'] }}" hidden>
-                                    <input type="text" name="apartment"  value="{{ $details['apartment'] }}" hidden>
-                                    <input type="text" name="employer"  value="{{ $details['employer'] }}" hidden>
-                                    <input type="text" name="employed_net_income"  value="{{ $details['employed_net_income'] }}" hidden>
-                                    <input type="text" name="self_net_income"  value="{{ $details['self_net_income'] }}" hidden>
-                                    <input type="text" name="expenses"  value="{{ $details['expenses'] }}" hidden>
-                                    <input type="text" name="self_bank_statements"  value="{{ $details['self_bank_statements'] }}" hidden>
-                                    <input type="text" name="employed_bank_statements"  value="{{ $details['employed_bank_statements'] }}" hidden>
-                                    <input type="text" name="employed_mpesa_statements"  value="{{ $details['emloyed_mpesa_statements'] }}" hidden>
-                                    <input type="text" name="business_name"  value="{{ $details['business_name'] }}" hidden>
-                                    <input type="text" name="gross_business_income"  value="{{ $details['gross_business_income'] }}" hidden>
-                                    <input type="text" name="cr12_certificate"  value="{{ $details['cr12_certificate'] }}" hidden>
-                                    <input type="text" name="kra_certificate"  value="{{ $details['kra_certificate'] }}" hidden>
-                                    <input type="text" name="incorporation_certificate"  value="{{ $details['incorporation_certificate'] }}" hidden>
-                                    <input type="text" name="vehicle_id"  value="{{ $details['vehicle_id'] }}" hidden>
+                                    @if (!empty($details['employer']))
+                                        <input type="text" name="name"  value="{{ $details['name'] }}" hidden>
+                                        <input type="text" name="middlename"  value="{{ $details['middlename'] }}" hidden>
+                                        <input type="text" name="surname"  value="{{ $details['surname'] }}" hidden>
+
+                                        @foreach ($details['national_id'] as $id)
+                                            <input type="text" name="national_id[]" value="{{ $id }}" hidden>
+                                        @endforeach
+
+                                        <input type="text" name="dob"  value="{{ $details['dob'] }}" hidden>
+                                        <input type="text" name="phone"  value="{{ $details['phone'] }}" hidden>
+                                        <input type="text" name="email"  value="{{ $details['email'] }}" hidden>
+                                        <input type="text" name="id_number"  value="{{ $details['id_number'] }}" hidden>
+                                        <input type="text" name="kra_pin"  value="{{ $details['kra_pin'] }}" hidden>
+                                        <input type="text" name="county"  value="{{ $details['county'] }}" hidden>
+                                        <input type="text" name="locality"  value="{{ $details['locality'] }}" hidden>
+                                        <input type="text" name="street"  value="{{ $details['street'] }}" hidden>
+                                        <input type="text" name="apartment"  value="{{ $details['apartment'] }}" hidden>
+                                        <input type="text" name="employer"  value="{{ $details['employer'] }}" hidden>
+                                        <input type="text" name="employed_net_income"  value="{{ $details['employed_net_income'] }}" hidden>
+                                        <input type="text" name="expenses"  value="{{ $details['expenses'] }}" hidden>
+                                        <input type="text" name="employed_bank_statements"  value="{{ $details['employed_bank_statements'] }}" hidden>
+                                        <input type="text" name="employed_mpesa_statements"  value="{{ $details['employed_mpesa_statements'] }}" hidden>
+                                    @endif
+
+
+
+                                    @if (!empty($details['business_name']))
+                                        <input type="text" name="name"  value="{{ $details['name'] }}" hidden>
+                                        <input type="text" name="middlename"  value="{{ $details['middlename'] }}" hidden>
+                                        <input type="text" name="surname"  value="{{ $details['surname'] }}" hidden>
+
+                                        @foreach ($details['national_id'] as $id)
+                                            <input type="text" name="national_id[]" value="{{ $id }}" hidden>
+                                        @endforeach
+
+                                        <input type="text" name="dob"  value="{{ $details['dob'] }}" hidden>
+                                        <input type="text" name="phone"  value="{{ $details['phone'] }}" hidden>
+                                        <input type="text" name="email"  value="{{ $details['email'] }}" hidden>
+                                        <input type="text" name="id_number"  value="{{ $details['id_number'] }}" hidden>
+                                        <input type="text" name="kra_pin"  value="{{ $details['kra_pin'] }}" hidden>
+                                        <input type="text" name="county"  value="{{ $details['county'] }}" hidden>
+                                        <input type="text" name="locality"  value="{{ $details['locality'] }}" hidden>
+                                        <input type="text" name="street"  value="{{ $details['street'] }}" hidden>
+                                        <input type="text" name="apartment"  value="{{ $details['apartment'] }}" hidden>
+                                        <input type="text" name="business_name"  value="{{ $details['business_name'] }}" hidden>
+                                        <input type="text" name="gross_business_income"  value="{{ $details['gross_business_income'] }}" hidden>
+                                        <input type="text" name="self_net_income"  value="{{ $details['self_net_income'] }}" hidden>
+                                        <input type="text" name="cr12_certificate"  value="{{ $details['cr12_certificate'] }}" hidden>
+                                        <input type="text" name="kra_certificate"  value="{{ $details['kra_certificate'] }}" hidden>
+                                        <input type="text" name="incorporation_certificate"  value="{{ $details['incorporation_certificate'] }}" hidden>
+                                        <input type="text" name="self_bank_statements"  value="{{ $details['self_bank_statements'] }}" hidden>
+                                        <input type="text" name="vehicle_id"  value="{{ $details['vehicle_id'] }}" hidden>
+                                    @endif
                                 @endforeach
 
                             </div>

@@ -27,7 +27,7 @@ class MpesaMethods
 
     // public function security_credentials()
     // {
-    //     $publicKey = file_get_contents("https://corpcab.co.ke/safdaraja/cert.cer");
+    //     $publicKey = file_get_contents("https://kommute.africa/safdaraja/cert.cer");
     //     $plaintext = "0701P991";
     //     openssl_public_encrypt($plaintext, $encrypted, $publicKey, OPENSSL_PKCS1_PADDING);
     //     return base64_encode($encrypted);
@@ -45,7 +45,7 @@ class MpesaMethods
     public function STKPushPayment($request)
     {
         $phone = "254" . substr($request->phone, 1);
-        $amount = $request->amount;
+        $amount = '1';
         $callBackUrl = 'https://kommute.africa/safdaraja/stkcallback.php';
         $token = $this->generateAccessToken();
         $password = $this->password();
@@ -55,28 +55,28 @@ class MpesaMethods
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Authorization:Bearer ' . $token)); //setting custom header
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Authorization:Bearer ' . $token));
 
-        $curl_post_data = array(
-            //Fill in the request parameters with valid values
+        $curl_post_data = [
             'BusinessShortCode' => $shortcode,
             'Password' => $password,
             'Timestamp' => $timestamp,
             'TransactionType' => 'CustomerPayBillOnline',
-            'Amount' => '1',
+            'Amount' => $amount,
             'PartyA' => $phone,
             'PartyB' => $shortcode,
             'PhoneNumber' => $phone,
             'CallBackURL' => $callBackUrl,
-            'AccountReference' => 'KOMMUTE FINANCE LIMITED',
-            'TransactionDesc' => 'RESERVATION'
-        );
+            'AccountReference' => 'KOMMUTE FINANCE',
+            'TransactionDesc' => 'RESERVATION FEES'
+        ];
         $data_string = json_encode($curl_post_data);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
         $curl_response = curl_exec($curl);
-        return back();
+        $request->session()->put('transaction_response', $curl_response);
+        return $curl_response;
     }
 
     public function confirm_payment($request)
@@ -84,64 +84,54 @@ class MpesaMethods
         $mobile_number = "254" . substr($request->mobile_number, 1);
         $transaction_id = $request->transaction_id;
 
-        $callback_file_contents =  file_get_contents('https://kommute.africa/safdaraja/stkCallbackResponse.json');
-        $payments = json_decode($callback_file_contents, TRUE);
+        // $transactions_callback = file_get_contents('https://kommute.africa/safdaraja/stkCallbackResponse.json');
+        // var_dump($transactions_callback);
+        $response = $request->session()->get('transaction_response');
+        $decoded_response = json_decode($response, true);
 
-        if ($payments['stkCallback']['ResultCode'] == 0) {
-            session()->flash('success_message', 'Reservation Successful! We will get in touch with you with more details.');
-            return redirect('/cars');
-        } elseif ($payments['stkCallback']['ResultCode'] == 1032) {
-            session()->flash('info_message', 'The transaction was cancelled by the user');
+
+        $token = $this->generateAccessToken();
+        $password = $this->password();
+        $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query';
+        $timestamp = Carbon::now()->format('YmdHis');
+        $shortcode = '174379';
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json', 'Authorization:Bearer ' . $token)); //setting custom header
+
+
+        $curl_post_data = [
+            'BusinessShortCode' => $shortcode,
+            'Password' => $password,
+            'Timestamp' => $timestamp,
+            'CheckoutRequestID' => $decoded_response['CheckoutRequestID'],
+        ];
+
+        $data_string = json_encode($curl_post_data);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+        $curl_response = curl_exec($curl);
+
+
+        $decoded_curl_response = json_decode($curl_response, true);
+        if ($decoded_curl_response['ResultCode'] == 0) {
+            $request->session()->flash('success_message', 'The service request is processed successfully');
             return back();
+            $request->session()->flash('transaction_response');
+        } elseif ($decoded_curl_response['ResultCode'] == 1) {
+            $request->session()->flash('error_message', 'The balance is insufficient for the transaction');
+            return back();
+            $request->session()->flash('transaction_response');
+        } elseif ($decoded_curl_response['ResultCode'] == 1032) {
+            $request->session()->flash('error_message', 'Request Cancelled by user');
+            return back();
+            $request->session()->flash('transaction_response');
         } else {
-            session()->flash('error_message', 'The transaction was not processed check payment and try reserving again');
+            $request->session()->flash('error_message', 'The transaction could not be processed check your balance and try again');
             return back();
+            $request->session()->flash('transaction_response');
         }
-
-
-        //     // $url_success = "" //Put the link to redirect if the payment was made successfully.
-        //     // $url_cancel = "" //Put the link to redirect if the payment was cancelled.
-        //     // $url_error = "" //Put the link to redirect if there was an error encountered.
-
-        //     $endpoint = ($configuration->config->env == "live")
-        //         ? "https://api.safaricom.co.ke/mpesa/stkpushquery/v1/query"
-        //         : "https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query";
-
-        //     $timestamp = date("YmdHis");
-        //     $password = base64_encode($configuration->config->shortcode . $configuration->config->passkey . $timestamp);
-
-        //     $curl = curl_init();
-        //     curl_setopt($curl, CURLOPT_URL, $url2);
-        //     curl_setopt($curl, CURLOPT_HTTPHEADER, array("Authorization: Basic " . $password));
-        //     curl_setopt($curl, CURLOPT_HEADER, false);
-        //     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        //     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        //     $curl_response = curl_exec($curl);
-        //     $access_token = json_decode($curl_response);
-
-        //     $curl_post_data = array(
-        //         'BusinessShortCode' => $configuration->config->headoffice,,
-        //         'Password' => $lipa_na_mpesa_password,
-        //         'Timestamp' => $timestamp,
-        //         'CheckoutRequestID' => $_SESSION['CheckoutRequestID']
-        //     );
-
-        //     $response = $configuration->process_getRequest($endpoint, $access_token);
-
-        //     if ($res['ResultCode'] == 0) {
-        //         //If the transaction was a success
-        //         header('Location:' . $url_success . '');
-        //         exit();
-        //     } elseif ($res['ResultCode'] == 1032) {
-        //         //If the transaction was a Cancelled
-        //         header('Location:' . $url_cancel . '');
-        //         exit();
-        //     } else {
-        //         //Flag any other response as an error
-        //         header('Location:' . $url_error . '');
-        //         exit();
-        //     }
-        // }
-
     }
 }

@@ -19,8 +19,8 @@
                                 <div class="col-sm-4 col-md-4 img d-flex">
                                     <img :src="carfinance" class="financing" alt="duty imports">
                                 </div>
-                                <div class="col-sm-6 col-md-6 content">
-                                    <h4 class="text-secondary font-weight-bold pt-3">Car Finance</h4>
+                                <div class="col-sm-6 col-md-6 mt-3 content">
+                                    <h4 class=" font-weight-bold pt-3">Car Finance</h4>
                                     <p class="pr-5">Apply for car financing all online and get approved within 6 hours. Repay your loan at attractive rates of as low as 2% p.m on reducing balance.</p>
 
                                     <a href="/cars" class="btn product-buttons font-weight-bold" style="background-color: #fecf00">Apply Now</a>
@@ -39,8 +39,8 @@
                                 <div class="col-sm-4 col-md-4 img d-flex">
                                     <img :src="logbook" class="financing" alt="duty imports">
                                 </div>
-                                <div class="col-sm-6 col-md-6 content">
-                                    <h4 class="text-secondary font-weight-bold pt-3">Logbook loans</h4>
+                                <div class="col-sm-6 col-md-6 mt-3 content">
+                                    <h4 class=" font-weight-bold pt-3">Logbook loans</h4>
                                     <p class="pr-5">Need Cash urgently. Kommute offers emergency loans at competitive rates with the security as your car logbook. Financing up to 50% value of car.</p>
 
                                     <a href="#" class="btn product-buttons font-weight-bold" data-toggle="modal" data-target="#exampleModal" style="background-color: #fecf00">Apply Now</a>
@@ -58,8 +58,8 @@
                                 <div class="col-sm-4 col-md-4 img d-flex">
                                     <img :src="dutyimport" class="financing" alt="duty imports">
                                 </div>
-                                <div class="col-sm-6 col-md-6 content">
-                                    <h4 class="text-secondary font-weight-bold pt-3">Duty Import Financing</h4>
+                                <div class="col-sm-6 col-md-6 mt-3 content">
+                                    <h4 class=" font-weight-bold pt-3">Duty Import Financing</h4>
                                     <p class="pr-5">Importing your car? Stress no more, Kommute will take all the burden, we got you</p>
 
                                     <a href="#" class="btn product-buttons font-weight-bold" data-toggle="modal" data-target="#exampleModal" style="background-color: #fecf00">Apply Now</a>

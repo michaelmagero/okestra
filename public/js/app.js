@@ -40522,8 +40522,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-6 col-md-6 content" }, [
-      _c("h4", { staticClass: "text-secondary font-weight-bold pt-3" }, [
+    return _c("div", { staticClass: "col-sm-6 col-md-6 mt-3 content" }, [
+      _c("h4", { staticClass: " font-weight-bold pt-3" }, [
         _vm._v("Car Finance")
       ]),
       _vm._v(" "),
@@ -40548,8 +40548,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-6 col-md-6 content" }, [
-      _c("h4", { staticClass: "text-secondary font-weight-bold pt-3" }, [
+    return _c("div", { staticClass: "col-sm-6 col-md-6 mt-3 content" }, [
+      _c("h4", { staticClass: " font-weight-bold pt-3" }, [
         _vm._v("Logbook loans")
       ]),
       _vm._v(" "),
@@ -40578,8 +40578,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-6 col-md-6 content" }, [
-      _c("h4", { staticClass: "text-secondary font-weight-bold pt-3" }, [
+    return _c("div", { staticClass: "col-sm-6 col-md-6 mt-3 content" }, [
+      _c("h4", { staticClass: " font-weight-bold pt-3" }, [
         _vm._v("Duty Import Financing")
       ]),
       _vm._v(" "),
