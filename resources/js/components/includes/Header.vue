@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar fixed-top navbar-expand-lg pt-4">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
 
                 <a class="navbar-brand" href="/">
@@ -20,16 +20,16 @@
                             <a href="/products" class="nav-link">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/cars" class="nav-link">Cars</a>
+                            <a href="/about" class="nav-link">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/about" class="nav-link">About Us</a>
+                            <a href="/support" class="nav-link">Support</a>
                         </li>
-                        <li class="login-btn">
-                            <a href="/login" class="btn btn-lg font-weight-bold">Login</a>
+                        <li class="nav-item">
+                            <a href="/login" class="btn font-weight-bold login-btn">Our Portal</a>
                         </li>
-                        <li class="signup-btn">
-                            <a href="#" class="btn btn-lg font-weight-bold"><i class="fas fa-phone"></i>  0768825914 / 0790363195</a>
+                        <li class="nav-item">
+                            <a href="#" class="btn font-weight-bold signup-btn">Signup</a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +47,7 @@
 
 		computed: {
 			logo() {
-				let logo = "../images/logo.jpg";
+				let logo = "./images/logo.png";
 				return logo;
 			},
 			toggler() {

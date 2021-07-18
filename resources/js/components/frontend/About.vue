@@ -2,53 +2,159 @@
     <div>
         <Navbar />
 
-        <Jumbotron />
-
-        <div id="about">
+        <div id="okestra-intro">
             <div class="container">
-                <div class="row mt-5 mb-5">
+                <div class="row">
+                    <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <h4 class="text-black title-backgrounds pt-2 pb-2 pl-3 mb-3 ">Who Are We</h4>
-                        <p>We are building Kenya's and Africa's first paperless car-financing platform that empowers our customers to conveniently buy and own cars
-                            with simple and affordable monthly plans.
+                        <img src="/images/carfinancing.jpeg" alt="">
+                        <h3>who are we?</h3>
+                        <p>At Okestra, we pride ourselves on the variety and depth of talent our team represents, ranging from
+                        financial space to the world of crypto. At Okestra, we pride ourselves on the variety and depth of talent
+                        our team represents, ranging from financial space to the world of crypto. At Okestra, we pride ourselves on
+                        the variety and depth of talent our team represents, ranging from financial space to the world of crypto.
                         </p>
-                    </div>
-                </div>
 
-
-                <div class="row mt-5 mb-5">
-                    <div class="col-md-10">
-                        <h4 class="text-black title-backgrounds pt-2 pb-2 pl-3 mb-3 ">Our Story</h4>
-                        <p>Established to help aspiring car owners have a seamless and hussle free experience to shop for cars, consent to agreements and have their cars collected or delivered, all online and on one platform.
+                        <p>At Okestra, we pride ourselves on the variety and depth of talent our team represents, ranging from
+                        financial space to the world of crypto. At Okestra, we pride ourselves on the variety and depth of talent
+                        our team represents, ranging from financial space to the world of crypto. At Okestra, we pride ourselves on
+                        the variety and depth of talent our team represents, ranging from financial space to the world of crypto.
                         </p>
+
+                        <a href="#" class="btn btn-primary">Get Started</a>
+
                     </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="okestra-team">
+            <div class="container">
+                <div id="row">
+                    <h1>Leadership team</h1>
+                    <p>At Okestra, we pride ourselves on the variety and depth of talent
+                    our team represents, ranging from financial space to the world of crypto</p>
                 </div>
 
-                <div class="row mt-5 mb-5">
-                    <div class="col-md-10">
-                        <h4 class="text-black title-backgrounds pt-2 pb-2 pl-3 mb-3 ">Our Mission</h4>
-                        <p>Our mission is to treat both customers and employees like guests in our home and make certain our home is a place people want to be. We ensure that every transaction is guided by the principals of honesty, integrity and loyalty.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="/images/carfinancing.jpeg" alt="">
+                                <h3>John Doe</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="/images/carfinancing.jpeg" alt="">
+                                <h3>John Doe</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="/images/carfinancing.jpeg" alt="">
+                                <h3>John Doe</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row mt-5 mb-5">
-                    <div class="col-md-10">
-                        <h4 class="text-black title-backgrounds pt-2 pb-2 pl-3 mb-3">Our Vision</h4>
-                        <p>Serve people everywhere with the "joy of expanding their life's potential" through affordable financial products.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="/images/carfinancing.jpeg" alt="">
+                                <h3>John Doe</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="/images/carfinancing.jpeg" alt="">
+                                <h3>John Doe</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="/images/carfinancing.jpeg" alt="">
+                                <h3>John Doe</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="row mt-5 mb-5">
-                    <div class="col-md-10">
+        <div id="okestra-contact">
+            <div class="container">
+                <div class="row">
+                    <h2>Get in touch with us</h2>
+                    <p>Complete the form below and we will be in touch</p>
+                </div>
 
-                    <h4 class="text-black title-backgrounds pt-2 pb-2 pl-3 mb-3">Our core values</h4>
-                    <ol>
-                        <li><span class="core-values font-weight-bold text-uppercase"> INTEGRITY </span> guides our business every day.</li>
-                        <li>We believe in creating <span class="core-values font-weight-bold text-lowercase"> LONG TERM CUSTOMER LOYALTY. </span></li>
-                        <li>Work should be <span class="core-values font-weight-bold text-lowercase"> ENJOYABLE, ACCOUNTABLE and CONSISTENT </span> every day.</li>
-                        <li>We exist because we are <span class="core-values font-weight-bold text-lowercase"> PASSIONATE </span> about what we do.</li>
-                    </ol>
+                <div class="row">
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row">
+                    <a href="" class="btn btn-primary">Send Message</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="newsletter-signup-cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h1>Use Okestra</h1>
+                        <p>Keep ownership of your crypto and get cash at your convenience.</p>
+                        <div class="row">
+                            <form class="form-inline">
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <label for="inputPassword2" class="sr-only">Password</label>
+                                    <input type="email" class="form-control" id="inputPassword2" placeholder="Email">
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-2">Sign up Today</button>
+                            </form>
+                        </div>
                     </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
         </div>
@@ -57,24 +163,18 @@
     </div>
 </template>
 
-
 <script>
 	import Navbar from "../includes/Header.vue";
-	import Jumbotron from "../includes/PagesJumbtron.vue";
 	import Footer from "../includes/Footer.vue";
 
 	export default {
-		components: {
-			Navbar,
-			Jumbotron,
-			Footer,
+		data() {
+			return {};
 		},
 
-		computed: {
-			hero() {
-				let hero = "../images/hero.png";
-				return hero;
-			},
+		components: {
+			Navbar,
+			Footer,
 		},
 	};
 </script>

@@ -3,46 +3,19 @@
         <div id="header">
             <Navbar />
 
-            <div class="jumbotron rounded-0 text-white" v-bind:style="{ 'background-image': 'url(' + hero + ')' }">
+            <div class="jumbotron rounded-0 text-white">
                 <div id="content" class="container">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 mt-5">
-                            <h1 class="display-5">Kenya's Leading Paperless Car Financing</h1>
-                            <p class="lead">Search, Reserve and Buy your Dream Car All on one platform</p><br>
-                            <a class="btn btn-warning btn-lg landing-btn" href="/products">Discover Kommute <span><i class="fa fa-arrow-right"></i></span> </a>
-                            <!-- <router-link to="/products" class="btn btn-warning btn-lg landing-btn">Discover Kommute <span><i class="fa fa-arrow-right"></i></span></router-link> -->
+                        <div class="col-sm-12 col-md-6">
+                            <h1 class="display-5">Hassle free crypto cash loans at your comfort</h1>
+                            <p class="lead">With Okestra you can get instant cash loans using your crypto with seamless payout and competitive
+                                market rates. Its easy as signup, send crypto and get cash.</p><br>
+                            <a class="btn btn-lg landing-btn" href="/">See Our Rates <span><i class="fa fa-arrow-right"></i></span> </a>
                         </div>
-                    </div>
 
-                    <div class="row mt-5">
-                        <div class="col-sm-12 col-md-10">
-                            <div class="card text-white">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="card mb-5 shadow rounded-0 border-0">
                                 <div class="card-body">
-                                    <h4 class="card-title ">Installments Calculator</h4>
-
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <label for="" class="form-label font-weight-bold">Car Value</label>
-                                            <input v-model="calculator.carprice" class="calc form-control" @input="calculateInstallments" @change="formatInput" >
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <label for="exampleFormControlInput1" class="form-label font-weight-bold">Deposit Payable</label>
-                                            <input v-model="calculator.deposit" type="text" class="calc form-control">
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <label for="exampleFormControlInput1" class="form-label font-weight-bold">Payment Period</label>
-                                            <select class="calc form-select form-control" v-model="calculator.paymentperiod" @change="calculateInstallments">
-                                                <option v-for="pp in paymentperiod" v-bind:value="pp.value">{{ pp.text }}</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <label for="exampleFormControlTextarea1" class="form-label font-weight-bold">Monthly Payment</label>
-                                            <input v-model="calculator.monthlypayment" type="text" class="calc form-control">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -51,138 +24,200 @@
             </div>
         </div>
 
-        <div id="cars">
+        <div class="okestra-intro">
             <div class="container">
-                <div class="row mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Low rates borrowing using your crypto</h2>
+                        <p>In moments when you are stuck and need quick cash let your cryptocurrency help you access cash quick.
+                            Deposit your crypto as collateral with Okestra and borrow funds against them this guarantees you the best
+                            market rates and you still get to keep your cryptos!
+                        </p>
+                        <a href="" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/images/carfinancing.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="okestra-stats">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>$10m+</h2>
+                        <p>in community assets</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>2k+</h2>
+                        <p>Okestra users</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>$4m+</h2>
+                        <p>paid in last year</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>80k+</h2>
+                        <p>in community crypto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="okestra-calculator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="access-cash-cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1>Access cash in 4 easy steps</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                 Access Okestra Portal
+                                 <span>to apply for instant loan</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user"></i>
+                                 Verify yourself
+                                 <span>get registered with okestra</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                 Transfer your crypto
+                                 <span>as collateral for loan</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-credit-card"></i>
+                                 Get Paid
+                                 <span>get cash into your account</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Visit Portal</li>
+                            <li>Learn more</li>
+                            <li>Learn more</li>
+                            <li>Get Started</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hidden-charges-cta">
+            <div class="container">
+                <div class="row">
                     <div class="col-md-12">
-                        <h3>Browse Our Collection</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-3 col-md-3" v-for="(vehicle, index) in vehicles" v-bind:key="vehicle.id">
-                        <template v-if="index <= 3">
-                            <div class="card mt-5 mb-5 shadow rounded-0 border-0">
-                                <img :src="carImage + (vehicle.make + vehicle.model + vehicle.year).toLowerCase().split(' ').join('').replace(/\W/g, '') + '/' + vehicle.display_image" class="card-img-top" :alt="vehicle.make" height="200">
-
-                                <div class="card-body">
-
-                                    <h6 class="card-title font-weight-bold">{{ vehicle.make + " " + vehicle.model + " " + vehicle.year }}</h6>
-
-                                    <span class="badge bg-light mr-5 mt-1">Mileage {{ Number(vehicle.mileage).toLocaleString() }}</span>
-
-                                    <span class="badge bg-light mr-5 mt-1">Year  {{ " " }}  {{ vehicle.year }} </span>
-                                    <span class="badge bg-light mr-5 mt-1">Location {{ (vehicle.location).toUpperCase() }} </span>
-                                    <h6 class="mt-2  font-weight-bold"><strong>Car Value</strong>: <strong class="text-muted"> KES {{ Number(vehicle.price).toLocaleString() }} </strong></h6>
-
-                                    <h6 class="mt-3 text-muted">Monthly Payment</h6>
-                                    <h5 class="mb-3 font-weight-bold">KES {{ Math.round(((0.0208 * (Number(vehicle.price) * 0.5) * 24 + Number(vehicle.price) * 0.5) / 24)).toLocaleString() }}</h5>
-
-                                </div>
-
-                                <div class="card-footer">
-                                    <a :href="'view-car/' + vehicle.id" class="btn btn-block pt-2 pb-2 pr-5 pl-5">View this car</a>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <a href="/cars" class="btn btn-warning pt-2 pb-2 pr-5 pl-5">View More Cars</a>
-                        <!-- <router-link to="/cars" class="btn btn-warning pt-2 pb-2 pr-5 pl-5">View more cars</router-link> -->
+                        <h1>No hidden charges</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias minima eligendi eum nemo facilis nobis quisquam maiores quasi exercitationem officiis!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- what you get with kommute -->
-        <div id="kommute-why">
-            <div class="container">
-                <div class="row mb-3">
-                    <h3 class="features-heading">Why Kommute</h3>
-                </div>
-                <div class="row mb-5 mt-5">
-                    <div class="col-md-4">
-                        <i class="features-icons fas fa-3x fa-clock "></i>
-                        <h5 class="mt-3">Fast Approvals</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="features-icons fas fa-3x fa-coins "></i>
-                        <h5 class="mt-3">Waivers on Interest</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="features-icons fas fa-3x fa-headset "></i>
-                        <h5 class="mt-3">Customer Support</h5>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <i class="features-icons fas fa-3x fa-credit-card "></i>
-                        <h5 class="mt-3">No hidden Fees</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="features-icons fas fa-3x fa-award "></i>
-                        <h5 class="mt-3">Quality Guranteed</h5>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="features-icons fas fa-3x fa-laptop-house "></i>
-                        <h5 class="mt-3">Hassle-Free</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="kommute-features">
+        <div id="okestra-news">
             <div class="container">
                 <div class="row">
-                    <h3 class="features-heading">What Kommute Excels In</h3>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-sm-12 col-md-3">
-                        <i class="features-icons fas fa-3x fa-calendar-alt "></i>
-                        <h5 class="mt-3">Repayments upto 24 months</h5>
+                    <div class="col-md-6">
+                        <img src="/images/carfinancing.jpeg" alt="">
+                        <h3>Crypto News title one</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci optio laborum hic officia velit distinctio tenetur, perferendis qui in. Blanditiis.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
                     </div>
+                    <div class="col-md-6">
+                        <div id="news2">
+                            <h3>Crypto news title two</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus ad corrupti facere eligendi eveniet.</p>
+                            <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <img src="/images/carfinancing.jpeg" alt="">
+                        </div>
 
-                    <div class="col-sm-12 col-md-3">
-                        <i class="features-icons fas fa-3x fa-tags "></i>
-                        <h5 class="mt-3">Interest rate as low as 2% monthly</h5>
-                    </div>
-
-                    <div class="col-sm-12 col-md-3">
-                        <i class="features-icons fas fa-3x fa-chart-line "></i>
-                        <h5 class="mt-3">All vehicles financing</h5>
-                    </div>
-
-                    <div class="col-sm-12 col-md-3">
-                        <i class="features-icons fas fa-3x fa-wallet "></i>
-                        <h5 class="mt-3">50% of car value financing</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="cta">
-            <div class="jumbotron text-center text-white rounded-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="display-4 font-weight-bold">In need of financing?</h1>
-                            <p class="lead">Discover how much you will pay monthly to get your dream car</p>
-                            <a href="/cars" class="btn btn-primary font-weight-bold">Search for Cars</a>
+                        <div id="news3">
+                            <h3>Crypto news title two</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus ad corrupti facere eligendi eveniet.</p>
+                            <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <img src="/images/carfinancing.jpeg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="partners">
+        <div id="okestra-faq">
             <div class="container">
                 <div class="row">
-                    <h5 class="font-weight-bold ml-4 mb-5">We have partnered with</h5>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h1>Frequently asked questions</h1>
+                        <ul class="nav nav-tabs rounded-0 text-dark" role="tablist">
+                            <li class="nav-item">
+                                <a class="pt-3 pb-3 nav-link active text-uppercase font-weight-bold pl-5 pr-5" data-toggle="tab" href="#home">General</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5" data-toggle="tab" href="#menu1">Security</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="pt-3 pb-3 nav-link text-uppercase font-weight-bold pl-5 pr-5" data-toggle="tab" href="#menu2">Signup</a>
+                            </li>
+                        </ul>
+
+
+                        <div class="tab-content">
+                            <div id="home" class="container tab-pane active mt-5 mb-5"><br>
+                                <div class="row mb-5">
+
+                                </div>
+                            </div>
+
+                            <div id="menu1" class="container tab-pane fade mt-5 mb-5"><br>
+                                <div class="row mb-5">
+
+                                </div>
+                            </div>
+
+                            <div id="menu2" class="container tab-pane fade mt-5 mb-5"><br>
+                                <div class="row mb-5">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
+            </div>
+        </div>
+
+        <div id="newsletter-signup-cta">
+            <div class="container">
                 <div class="row">
-                    <img :src="partners" class="partner pl-2" alt="partner" width="160" height="150">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h1>Use Okestra</h1>
+                        <p>Keep ownership of your crypto and get cash at your convenience.</p>
+                        <div class="row">
+                            <form class="form-inline">
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <label for="inputPassword2" class="sr-only">Password</label>
+                                    <input type="email" class="form-control" id="inputPassword2" placeholder="Email">
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-2">Sign up Today</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
         </div>
@@ -196,7 +231,6 @@
 <script>
 	import Navbar from "../includes/Header.vue";
 	import Footer from "../includes/Footer.vue";
-	import ViewCar from "../frontend/Viewcar.vue";
 	import axios from "axios";
 
 	export default {
@@ -223,77 +257,9 @@
 		components: {
 			Navbar,
 			Footer,
-			ViewCar,
 		},
 
-		computed: {
-			logo() {
-				let logo = "../images/logo.jpg";
-				return logo;
-			},
-
-			hero() {
-				let hero = "../images/hero1.png";
-				return hero;
-			},
-
-			partners() {
-				let partners = "../images/hotcars.jpeg";
-				return partners;
-			},
-
-			carImage() {
-				let carimage = "../uploads/displayimage/";
-				return carimage;
-			},
-
-			//why
-			clock() {
-				let clock = "../images/clock.png";
-				return clock;
-			},
-
-			card() {
-				let card = "../images/card.png";
-				return card;
-			},
-
-			coins() {
-				let coins = "../images/coins1.png";
-				return coins;
-			},
-
-			quality() {
-				let quality = "../images/quality.png";
-				return quality;
-			},
-
-			support() {
-				let support = "../images/support.png";
-				return support;
-			},
-
-			//features
-			repayments() {
-				let repayments = "../images/calendar2.png";
-				return repayments;
-			},
-
-			interest() {
-				let interest = "../images/interestrate.png";
-				return interest;
-			},
-
-			financing() {
-				let financing = "../images/financing2.png";
-				return financing;
-			},
-
-			carfinancing() {
-				let carfinancing = "../images/financing.png";
-				return carfinancing;
-			},
-		},
+		computed: {},
 
 		mounted: function () {
 			axios
