@@ -161,6 +161,8 @@
 
         <Footer />
 
+        <!-- Are commited to git -->
+
     </div>
 </template>
 
