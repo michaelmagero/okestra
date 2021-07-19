@@ -161,8 +161,6 @@
 
         <Footer />
 
-
-
     </div>
 </template>
 
