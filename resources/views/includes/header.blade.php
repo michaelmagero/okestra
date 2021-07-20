@@ -17,6 +17,10 @@
     </head>
     <body>
 
+        <div id="app">
+            <router-view></router-view>
+        </div>
+
 
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

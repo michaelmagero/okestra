@@ -1,7 +1,5 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div id="app">
-        <Products />
-    </div>
+    <product-component></product-component>
 @endsection

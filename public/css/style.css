@@ -1,9 +1,15 @@
-body,html {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    font-family: 'Nunito', sans-serif;
-}
+    body,html {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        font-family: 'Nunito', sans-serif;
+        background-color: #fff !important;
+    }
+
+    .highlighted-text {
+        color: #BD2380;
+    }
+
     .navbar {
         height: 100px;
     }
@@ -76,6 +82,7 @@ body,html {
 
 
     .jumbotron {
+        padding-top: 20px !important;
 		height: 700px;
 		background-size: cover;
 		-moz-background-size: cover;
@@ -110,3 +117,355 @@ body,html {
         height: 450px;
     }
 
+    #okestra-intro {
+        padding: 100px;
+    }
+
+    #okestra-intro h1 {
+        font-size: 45px;
+    }
+
+    #okestra-intro p {
+        font-size: 17px;
+    }
+
+    #okestra-intro .btn {
+        border-radius: 20px;
+        background-color: #BD2380;
+        color: #fff;
+        border: none;
+        padding: 7px 30px 7px 30px;
+    }
+
+    #okestra-intro .btn:hover {
+        border-radius: 20px;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #BD2380;
+        padding: 7px 30px 7px 30px;
+    }
+
+    #okestra-stats {
+        padding: 100px 0 100px 0;
+        background-image: linear-gradient(to right, #BD2380 , #712B8E);
+        color: #fff;
+    }
+
+    #okestra-stats h2 {
+        font-size: 45px;
+    }
+
+    #okestra-calculator {
+        padding: 100px 0 100px 0;
+    }
+
+    #okestra-calculator h2 {
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+
+    #okestra-calculator .card {
+        height: 600px;
+        background-color: #E8E8ED;
+        border-radius: 15px;
+        border: none;
+    }
+
+    #okestra-calculator .card-1 {
+        background-color: inherit;
+    }
+
+    #okestra-calculator .card-2 {
+        background-color: #BD2380;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #access-cash-cta {
+        background-color: #BD2380;
+        padding: 100px 0 100px 0;
+        color: #fff;
+    }
+
+    #access-cash-cta h1 {
+        font-size: 65px;
+    }
+
+    #access-cash-cta .steps-list {
+        list-style: none;
+    }
+
+    #access-cash-cta .steps-list li {
+        padding: 20px 0 20px 0;
+    }
+
+    #access-cash-cta .steps-title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #access-cash-cta .steps-description {
+        font-size: 17px;
+    }
+
+    #access-cash-cta .steps-links {
+        list-style: none;
+    }
+
+    #access-cash-cta .steps-links li {
+        padding: 40px 0 40px 0;
+        color: #dad8d8;
+    }
+
+    #access-cash-cta .steps-links li a {
+        color: #dad8d8;
+        text-decoration: underline;
+    }
+
+    #hidden-charges-cta {
+        padding: 100px 0 100px 0;
+        background-color: #e3e3e3;
+    }
+
+    #hidden-charges-cta h1 {
+        font-size: 50px;
+    }
+
+    #hidden-charges-cta p {
+        font-size: 17px;
+    }
+
+    #hidden-charges-cta .btn {
+        border-radius: 20px;
+        background-color: #fff;
+        color: #000;
+        padding: 7px 30px 7px 30px;
+        border: none;
+        font-weight: bold;
+    }
+
+    #hidden-charges-cta .btn:hover {
+        border-radius: 20px;
+        background-color: #BD2380;
+        color: #fff;
+        padding: 7px 30px 7px 30px;
+        border: none;
+        font-weight: bold;
+    }
+
+    #okestra-news {
+        padding: 100px 0 100px 0;
+    }
+
+    #okestra-news .main-story img {
+        width: 500px;
+        height: 300px;
+    }
+
+    #okestra-news .main-story p {
+        font-size: 16px;
+    }
+
+    #okestra-news .main-story a {
+        color: #BD2380;
+        font-weight: bold;
+    }
+
+    #okestra-news #news2 {
+        padding-bottom: 30px;
+    }
+
+    #okestra-news #news2 img {
+        width: 250px;
+        height: 200px;
+        padding-bottom: 10px;
+    }
+
+    #okestra-news #news2 p {
+        font-size: 16px;
+    }
+
+    #okestra-news #news2 a {
+        color: #BD2380;
+        font-weight: bold;
+    }
+
+    #okestra-news #news3 img {
+        width: 250px;
+        height: 200px;
+        padding-bottom: 10px;
+    }
+
+    #okestra-news #news3 p {
+        font-size: 16px;
+    }
+
+    #okestra-news #news3 a {
+        color: #BD2380;
+        font-weight: bold;
+    }
+
+    #okestra-faq {
+        background-color: #E8E8ED;
+        padding: 100px 0 100px 0;
+    }
+
+    #okestra-faq h1 {
+        padding-bottom: 30px ;
+    }
+
+    #okestra-faq #faq-nav {
+        background-color: #fff;
+        border-radius: 20px !important;
+        width: 50%;
+        padding: 10px 0 10px 0;
+    }
+
+    #okestra-faq .nav-item {
+        background-color: #fff;
+        border-radius: 20px !important;
+    }
+
+    #okestra-faq .nav-item .active {
+        background-color: #E8E8ED;
+        border-radius: 20px !important;
+        color: #BD2380;
+        padding: 5px 60px 5px 60px;
+    }
+
+    #okestra-faq .card {
+        margin: 20px 0 20px 0;
+        width: 800px;
+        border-radius: 20px;
+        border: 1px solid rgb(95, 94, 94);
+    }
+
+    #okestra-faq .card-header {
+        background-color: #fff;
+        height: 70px;
+        padding-top: 0;
+    }
+
+    #okestra-faq h2 {
+        font-size: 17px;
+        color: #000;
+    }
+
+    #okestra-faq .card .fa {
+        color: #BD2380;
+        border: 1px solid #333;
+        border-radius: 100%;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #okestra-faq .faq-titles {
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    #okestra-faq .faq-titles:hover {
+        text-decoration: none;
+        color: #BD2380;
+    }
+
+    #okestra-faq .faq-btn {
+        background-color: #BD2380;
+        color: #fff;
+        border-radius: 20px;
+        border: none;
+        padding: 7px 30px 7px 30px;
+    }
+
+    #okestra-faq .faq-btn:hover {
+        background-color: #712B8E;
+        color: #fff;
+        border-radius: 20px;
+        border: none;
+        padding: 7px 30px 7px 30px;
+    }
+
+    #newsletter-signup-cta {
+        padding: 100px 0 100px 0;
+    }
+
+    #newsletter-signup-cta h1 {
+        font-size: 50px;
+    }
+
+    #newsletter-signup-cta p {
+        font-size: 17px;
+    }
+
+    #newsletter-signup-cta input {
+        width: 400px;
+        height: 50px;
+        border-radius: 20px;
+        padding: 15px 30px 15px 30px;
+    }
+
+    #newsletter-signup-cta .btn {
+        background-color: #BD2380;
+        color: #fff;
+        border-radius: 20px;
+        padding: 10px 30px 10px 30px;
+        border: none;
+    }
+
+    #footer {
+        background-color: #BD2380;
+        padding: 100px 0 100px 0;
+    }
+
+    #footer .disclaimer {
+        padding: 50px 0 0 0;
+    }
+
+    #footer .footer-links li {
+        list-style: none !important;
+        padding-right: 15px;
+    }
+
+    #footer .footer-links i {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    #footer .footer-links i:hover {
+        font-size: 16px;
+        color: #712B8E;
+    }
+
+    #footer hr {
+        border-color: #fff;
+    }
+
+    #footer .site-link {
+        color: #6e6e6e;
+        font-weight: bold;
+    }

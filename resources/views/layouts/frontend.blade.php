@@ -1,3 +1,3 @@
 @extends('includes.header')
 
-    @yield('content')
+@yield('content')

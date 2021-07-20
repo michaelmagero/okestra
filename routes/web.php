@@ -41,3 +41,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/update-vehicle/{id}', 'VehicleController@update');
     Route::get('/delete-vehicle/{id}', 'VehicleController@destroy');
 });
+
+Route::get('/{any}', 'FrontendController@home')->where('any', '.*');
