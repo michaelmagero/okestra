@@ -469,3 +469,70 @@
         color: #6e6e6e;
         font-weight: bold;
     }
+
+
+
+    /* SUPPORT PAGE */
+
+    #support-intro {
+        background-color: #BD2380;
+        padding: 50px 0 20px 0;
+    }
+
+    #support-intro h1 {
+        color: #fff;
+        font-size: 50px;
+        padding-bottom: 0;
+    }
+
+    #support-intro .help-text {
+        color: #fff;
+        font-size: 25px;
+        padding-top: 0;
+    }
+
+    #support-intro .search-bar {
+        margin: 10px 0 0 200px;
+        border-radius: 20px;
+        border: none;
+        width: 500px;
+        font-weight: bold;
+    }
+
+    #support-categories {
+        background-color: #E8E8ED;
+        padding: 100px 0 100px 0;
+    }
+
+    #support-categories a {
+        background-color: #fff;
+        border: 1px solid #999;
+        color: #000;
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+        padding: 20px 45px 20px 45px;
+        border-radius: 20px;
+        width: 350px;
+    }
+
+    #support-categories a:hover {
+        background-color: #BD2380;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+        padding: 20px 45px 20px 45px;
+        border-radius: 20px;
+        width: 350px;
+    }
+
+    #support-categories .active {
+        background-color: #BD2380;
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+        padding: 20px 45px 20px 45px;
+        border-radius: 20px;
+        width: 350px;
+    }

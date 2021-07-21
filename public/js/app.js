@@ -2843,6 +2843,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40183,29 +40185,22 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { attrs: { id: "support-intro" } }, [
-      _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "container text-center" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-1" }),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-10" }, [
-            _c("h3", [_vm._v("welcome to okestra")]),
+            _c("h1", { staticClass: "mb-0 pb-0" }, [
+              _vm._v("Welcome to Okestra")
+            ]),
             _vm._v(" "),
-            _c("p", [_vm._v("help center")]),
+            _c("span", { staticClass: "help-text" }, [_vm._v("help center")]),
             _vm._v(" "),
             _c("span", [
               _c("form", { staticClass: "form-inline" }, [
                 _c("div", { staticClass: "form-group mx-sm-6 mb-5" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "sr-only",
-                      attrs: { for: "inputPassword2" }
-                    },
-                    [_vm._v("Password")]
-                  ),
-                  _vm._v(" "),
                   _c("input", {
-                    staticClass: "form-control",
+                    staticClass: "search-bar form-control",
                     attrs: {
                       type: "text",
                       id: "inputPassword2",
@@ -40230,22 +40225,26 @@ var staticRenderFns = [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
+            _c(
+              "a",
+              { staticClass: "btn btn-primary active", attrs: { href: "#" } },
+              [
+                _vm._v("Transfers   "),
+                _c("i", { staticClass: "fa fa-arrow-right" })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Transfers "),
+              _vm._v("Withdrawals   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Withdrawals "),
-              _c("i", { staticClass: "fa fa-arrow-right" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Loans "),
+              _vm._v("Loans   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ])
@@ -40254,21 +40253,21 @@ var staticRenderFns = [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Account Details "),
+              _vm._v("Account Details   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Security "),
+              _vm._v("Security   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Crypto Purchases "),
+              _vm._v("Crypto Purchases   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ])
@@ -40277,14 +40276,14 @@ var staticRenderFns = [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Ientity Verification "),
+              _vm._v("Identity Verification   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-4" }, [
             _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("General FAQ "),
+              _vm._v("General FAQ   "),
               _c("i", { staticClass: "fa fa-arrow-right" })
             ])
           ])

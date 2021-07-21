@@ -3,17 +3,16 @@
         <Navbar />
 
         <div id="support-intro">
-            <div class="container">
+            <div class="container text-center">
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <h3>welcome to okestra</h3>
-                        <p>help center</p>
+                        <h1 class="mb-0 pb-0">Welcome to Okestra</h1>
+                        <span class="help-text">help center</span>
                         <span>
                             <form class="form-inline">
                                 <div class="form-group mx-sm-6 mb-5">
-                                    <label for="inputPassword2" class="sr-only">Password</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="Search">
+                                    <input type="text" class="search-bar form-control" id="inputPassword2" placeholder="Search">
                                 </div>
                             </form>
                         </span>
@@ -27,35 +26,38 @@
         <div id="support-categories">
             <div class="container">
                 <div class="row">
+
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Transfers <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary active">Transfers  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Withdrawals <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">Withdrawals  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Loans <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">Loans  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div class="row">
+
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Account Details <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">Account Details  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Security <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">Security  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Crypto Purchases <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">Crypto Purchases  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <div class="row">
+
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Ientity Verification <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">Identity Verification  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">General FAQ <i class="fa fa-arrow-right"></i></a>
+                        <a href="#" class="btn btn-primary">General FAQ  &nbsp;<i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
