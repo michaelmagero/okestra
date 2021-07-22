@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <img src="/images/carfinancing.jpeg" alt="">
-                        <h3>who are we?</h3>
+                        <img src="/images/bitcoin4.jpeg" class="intro-img" alt="" width="900" height="600"><br>
+                        <h3 class="mt-3">who are we?</h3>
                         <p>At Okestra, we pride ourselves on the variety and depth of talent our team represents, ranging from
                         financial space to the world of crypto. At Okestra, we pride ourselves on the variety and depth of talent
                         our team represents, ranging from financial space to the world of crypto. At Okestra, we pride ourselves on
@@ -21,7 +21,7 @@
                         the variety and depth of talent our team represents, ranging from financial space to the world of crypto.
                         </p>
 
-                        <a href="#" class="btn btn-primary">Get Started</a>
+                        <a href="#" class="btn btn-primary pt-2 pb-2 pr-5 pl-5">Get Started</a>
 
                     </div>
                     <div class="col-md-1"></div>
@@ -31,9 +31,9 @@
 
         <div id="okestra-team">
             <div class="container">
-                <div id="row">
+                <div id="row" class="text-center">
                     <h1>Leadership team</h1>
-                    <p>At Okestra, we pride ourselves on the variety and depth of talent
+                    <p class="intro-text">At Okestra, we pride ourselves on the variety and depth of talent
                     our team represents, ranging from financial space to the world of crypto</p>
                 </div>
 
@@ -41,27 +41,27 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="/images/carfinancing.jpeg" alt="">
+                                <img src="/images/team1.jpeg" alt="">
                                 <h3>John Doe</h3>
-                                <p>CEO & Founder</p>
+                                <p class="text-muted">CEO & Founder</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="/images/carfinancing.jpeg" alt="">
+                                <img src="/images/team1.jpeg" alt="">
                                 <h3>John Doe</h3>
-                                <p>CEO & Founder</p>
+                                <p class="text-muted">CEO & Founder</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="/images/carfinancing.jpeg" alt="">
+                                <img src="/images/team1.jpeg" alt="">
                                 <h3>John Doe</h3>
-                                <p>CEO & Founder</p>
+                                <p class="text-muted">CEO & Founder</p>
                             </div>
                         </div>
                     </div>
@@ -70,27 +70,27 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="/images/carfinancing.jpeg" alt="">
+                                <img src="/images/team1.jpeg" alt="">
                                 <h3>John Doe</h3>
-                                <p>CEO & Founder</p>
+                                <p class="text-muted">CEO & Founder</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="/images/carfinancing.jpeg" alt="">
+                                <img src="/images/team1.jpeg" alt="">
                                 <h3>John Doe</h3>
-                                <p>CEO & Founder</p>
+                                <p class="text-muted">CEO & Founder</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="/images/carfinancing.jpeg" alt="">
+                                <img src="/images/team1.jpeg" alt="">
                                 <h3>John Doe</h3>
-                                <p>CEO & Founder</p>
+                                <p class="text-muted">CEO & Founder</p>
                             </div>
                         </div>
                     </div>
@@ -101,49 +101,54 @@
         <div id="okestra-contact">
             <div class="container">
                 <div class="row">
-                    <h2>Get in touch with us</h2>
-                    <p>Complete the form below and we will be in touch</p>
-                </div>
+                    <div class="col-md-12 text-center">
+                        <h2>Get in touch with us</h2>
+                        <p class="text-muted">Complete the form below and we will be in touch</p>
+                    </div>
+                </div><br>
 
                 <div class="row">
-                    <form>
-                        <div class="form-row">
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                </div>
                             </div>
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <div class="form-row">
+                                <div class="col">
+                                    <textarea name="" class="form-control" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                                </div>
                             </div>
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <div class="form-row">
+                                <a href="" class="btn btn-primary">Send Message</a>
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="row">
-                    <a href="" class="btn btn-primary">Send Message</a>
+                        </form>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
         </div>
 
-        <div id="newsletter-signup-cta">
-            <div class="container">
+        <div id="newsletter-signup-cta" style="background-color: #E8E8ED;">
+            <div class="container text-center">
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                         <h1>Use Okestra</h1>
-                        <p>Keep ownership of your crypto and get cash at your convenience.</p>
+                        <p>Keep ownership of your crypto and get cash at your convenience.</p><br>
                         <div class="row">
                             <form class="form-inline">
                                 <div class="form-group mx-sm-3 mb-2">

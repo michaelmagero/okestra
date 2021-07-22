@@ -472,6 +472,96 @@
 
 
 
+    /* ABOUT PAGE STYLES */
+    #okestra-team h1 {
+        font-weight: bold;
+    }
+
+    #okestra-team .intro-text {
+        font-size: 16px;
+        width: 60%;
+        margin: 0 0 0 200px;
+    }
+
+    /* #okestra-intro img {
+        height: 200px;
+        padding: 10px 0 50px 0 !important;
+    } */
+
+    #okestra-intro h3 {
+        font-size: 40px;
+    }
+
+    #okestra-team {
+        padding: 100px 0 100px 0;
+        background-color: #E8E8ED;
+    }
+
+    #okestra-team .card {
+        margin: 25px 0 25px 0;
+    }
+
+    #okestra-team img {
+        width: 300px;
+        height: 270px;
+        padding: 0 0 20px 0;
+    }
+
+    #okestra-team h3 {
+        font-weight: bold;
+    }
+
+    #okestra-contact {
+        padding: 100px 100px 100px 100px;
+    }
+
+    #okestra-contact h2 {
+        font-size: 50px;
+    }
+
+    #okestra-contact p {
+        font-size: 16px;
+    }
+
+    #okestra-contact form input {
+        margin: 20px;
+        border-radius: none;
+        border: 2px solid #BD2380;
+        padding: 25px 10px 25px 10px;
+        font-weight: bold;
+    }
+
+    #okestra-contact form textarea {
+        margin: 20px;
+        border-radius: none;
+        border: 2px solid #BD2380;
+        padding: 25px 10px 25px 10px;
+        font-weight: bold;
+    }
+
+    #okestra-contact form .btn {
+        background-color: #BD2380;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        padding: 10px 45px 10px 45px;
+        margin: 20px 0 0 300px;
+        font-weight: bold;
+    }
+
+    #okestra-contact form .btn:hover {
+        background-color: #fff;
+        border: 1px solid #BD2380;
+        border-radius: 20px;
+        color: #000;
+        padding: 10px 45px 10px 45px;
+        margin: 20px 0 0 300px;
+        font-weight: bold;
+    }
+
+
+
+
     /* SUPPORT PAGE */
 
     #support-intro {

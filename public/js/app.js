@@ -2078,6 +2078,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -38684,9 +38689,18 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-1" }),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-10" }, [
-            _c("img", { attrs: { src: "/images/carfinancing.jpeg", alt: "" } }),
+            _c("img", {
+              staticClass: "intro-img",
+              attrs: {
+                src: "/images/bitcoin4.jpeg",
+                alt: "",
+                width: "900",
+                height: "600"
+              }
+            }),
+            _c("br"),
             _vm._v(" "),
-            _c("h3", [_vm._v("who are we?")]),
+            _c("h3", { staticClass: "mt-3" }, [_vm._v("who are we?")]),
             _vm._v(" "),
             _c("p", [
               _vm._v(
@@ -38700,9 +38714,14 @@ var staticRenderFns = [
               )
             ]),
             _vm._v(" "),
-            _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
-              _vm._v("Get Started")
-            ])
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-primary pt-2 pb-2 pr-5 pl-5",
+                attrs: { href: "#" }
+              },
+              [_vm._v("Get Started")]
+            )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-1" })
@@ -38716,10 +38735,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { attrs: { id: "okestra-team" } }, [
       _c("div", { staticClass: "container" }, [
-        _c("div", { attrs: { id: "row" } }, [
+        _c("div", { staticClass: "text-center", attrs: { id: "row" } }, [
           _c("h1", [_vm._v("Leadership team")]),
           _vm._v(" "),
-          _c("p", [
+          _c("p", { staticClass: "intro-text" }, [
             _vm._v(
               "At Okestra, we pride ourselves on the variety and depth of talent\n                our team represents, ranging from financial space to the world of crypto"
             )
@@ -38730,13 +38749,13 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-4" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
-                _c("img", {
-                  attrs: { src: "/images/carfinancing.jpeg", alt: "" }
-                }),
+                _c("img", { attrs: { src: "/images/team1.jpeg", alt: "" } }),
                 _vm._v(" "),
                 _c("h3", [_vm._v("John Doe")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("CEO & Founder")])
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("CEO & Founder")
+                ])
               ])
             ])
           ]),
@@ -38744,13 +38763,13 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-4" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
-                _c("img", {
-                  attrs: { src: "/images/carfinancing.jpeg", alt: "" }
-                }),
+                _c("img", { attrs: { src: "/images/team1.jpeg", alt: "" } }),
                 _vm._v(" "),
                 _c("h3", [_vm._v("John Doe")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("CEO & Founder")])
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("CEO & Founder")
+                ])
               ])
             ])
           ]),
@@ -38758,13 +38777,13 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-4" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
-                _c("img", {
-                  attrs: { src: "/images/carfinancing.jpeg", alt: "" }
-                }),
+                _c("img", { attrs: { src: "/images/team1.jpeg", alt: "" } }),
                 _vm._v(" "),
                 _c("h3", [_vm._v("John Doe")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("CEO & Founder")])
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("CEO & Founder")
+                ])
               ])
             ])
           ])
@@ -38774,13 +38793,13 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-4" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
-                _c("img", {
-                  attrs: { src: "/images/carfinancing.jpeg", alt: "" }
-                }),
+                _c("img", { attrs: { src: "/images/team1.jpeg", alt: "" } }),
                 _vm._v(" "),
                 _c("h3", [_vm._v("John Doe")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("CEO & Founder")])
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("CEO & Founder")
+                ])
               ])
             ])
           ]),
@@ -38788,13 +38807,13 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-4" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
-                _c("img", {
-                  attrs: { src: "/images/carfinancing.jpeg", alt: "" }
-                }),
+                _c("img", { attrs: { src: "/images/team1.jpeg", alt: "" } }),
                 _vm._v(" "),
                 _c("h3", [_vm._v("John Doe")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("CEO & Founder")])
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("CEO & Founder")
+                ])
               ])
             ])
           ]),
@@ -38802,13 +38821,13 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-4" }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
-                _c("img", {
-                  attrs: { src: "/images/carfinancing.jpeg", alt: "" }
-                }),
+                _c("img", { attrs: { src: "/images/team1.jpeg", alt: "" } }),
                 _vm._v(" "),
                 _c("h3", [_vm._v("John Doe")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("CEO & Founder")])
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v("CEO & Founder")
+                ])
               ])
             ])
           ])
@@ -38823,110 +38842,73 @@ var staticRenderFns = [
     return _c("div", { attrs: { id: "okestra-contact" } }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("h2", [_vm._v("Get in touch with us")]),
-          _vm._v(" "),
-          _c("p", [_vm._v("Complete the form below and we will be in touch")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("form", [
-            _c("div", { staticClass: "form-row" }, [
-              _c("div", { staticClass: "col" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "First name" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "Last name" }
-                })
-              ])
-            ]),
+          _c("div", { staticClass: "col-md-12 text-center" }, [
+            _c("h2", [_vm._v("Get in touch with us")]),
             _vm._v(" "),
-            _c("div", { staticClass: "form-row" }, [
-              _c("div", { staticClass: "col" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "Email" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "Subject" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-row" }, [
-              _c("div", { staticClass: "col" }, [
-                _c("textarea", {
-                  attrs: { name: "", id: "", cols: "30", rows: "10" }
-                })
-              ])
+            _c("p", { staticClass: "text-muted" }, [
+              _vm._v("Complete the form below and we will be in touch")
             ])
           ])
         ]),
+        _c("br"),
         _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("a", { staticClass: "btn btn-primary", attrs: { href: "" } }, [
-            _vm._v("Send Message")
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "newsletter-signup-cta" } }, [
-      _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-2" }),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-8" }, [
-            _c("h1", [_vm._v("Use Okestra")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Keep ownership of your crypto and get cash at your convenience."
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("form", { staticClass: "form-inline" }, [
-                _c("div", { staticClass: "form-group mx-sm-3 mb-2" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "sr-only",
-                      attrs: { for: "inputPassword2" }
-                    },
-                    [_vm._v("Password")]
-                  ),
-                  _vm._v(" "),
+            _c("form", [
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col" }, [
                   _c("input", {
                     staticClass: "form-control",
-                    attrs: {
-                      type: "email",
-                      id: "inputPassword2",
-                      placeholder: "Email"
-                    }
+                    attrs: { type: "text", placeholder: "First name" }
                   })
                 ]),
                 _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Last name" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Email" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Subject" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col" }, [
+                  _c("textarea", {
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "",
+                      id: "",
+                      cols: "30",
+                      rows: "10",
+                      placeholder: "Message"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-row" }, [
                 _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary mb-2",
-                    attrs: { type: "submit" }
-                  },
-                  [_vm._v("Sign up Today")]
+                  "a",
+                  { staticClass: "btn btn-primary", attrs: { href: "" } },
+                  [_vm._v("Send Message")]
                 )
               ])
             ])
@@ -38936,6 +38918,71 @@ var staticRenderFns = [
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticStyle: { "background-color": "#E8E8ED" },
+        attrs: { id: "newsletter-signup-cta" }
+      },
+      [
+        _c("div", { staticClass: "container text-center" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-2" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-8" }, [
+              _c("h1", [_vm._v("Use Okestra")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "Keep ownership of your crypto and get cash at your convenience."
+                )
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("form", { staticClass: "form-inline" }, [
+                  _c("div", { staticClass: "form-group mx-sm-3 mb-2" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "sr-only",
+                        attrs: { for: "inputPassword2" }
+                      },
+                      [_vm._v("Password")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "email",
+                        id: "inputPassword2",
+                        placeholder: "Email"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary mb-2",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Sign up Today")]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-2" })
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
