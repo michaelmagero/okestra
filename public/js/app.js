@@ -2732,6 +2732,85 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -39984,30 +40063,38 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("i", { staticClass: "fa fa-check" }),
+              _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+                _c("i", { staticClass: "far fa-2x fa-check-circle pr-2" }),
                 _vm._v(" "),
-                _c("span", [_vm._v("No hidden charges")])
+                _c("span", { staticClass: "intro-text font-weight-bold" }, [
+                  _vm._v("No hidden charges")
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("i", { staticClass: "fa fa-check" }),
+              _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+                _c("i", { staticClass: "far fa-2x fa-check-circle pr-2" }),
                 _vm._v(" "),
-                _c("span", [_vm._v("No credit checks")])
+                _c("span", { staticClass: "intro-text font-weight-bold" }, [
+                  _vm._v("No credit checks")
+                ])
               ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("i", { staticClass: "fa fa-check" }),
+              _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+                _c("i", { staticClass: "far fa-2x fa-check-circle pr-2" }),
                 _vm._v(" "),
-                _c("span", [_vm._v("Low interest rates")])
+                _c("span", { staticClass: "intro-text font-weight-bold" }, [
+                  _vm._v("Low interest rates")
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-6" }, [
-                _c("i", { staticClass: "fa fa-check" }),
+              _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+                _c("i", { staticClass: "far fa-2x fa-check-circle pr-2" }),
                 _vm._v(" "),
-                _c("span", [_vm._v("Short approval time")])
+                _c("span", { staticClass: "intro-text font-weight-bold" }, [
+                  _vm._v("Short approval time")
+                ])
               ])
             ]),
             _vm._v(" "),
@@ -40019,7 +40106,14 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-6" }, [
-            _c("img", { attrs: { src: "/images/carfinancing.jpeg", alt: "" } })
+            _c("img", {
+              attrs: {
+                src: "/images/product-img.jpeg",
+                alt: "",
+                width: "550",
+                height: "400"
+              }
+            })
           ])
         ])
       ])
@@ -40032,24 +40126,32 @@ var staticRenderFns = [
     return _c("div", { attrs: { id: "okestra-assets" } }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("h1", [_vm._v("Okestra supported assets")]),
+          _c("div", { staticClass: "col-md-12 text-center" }, [
+            _c("h1", [_vm._v("Okestra supported assets")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Select from a wide array of assets that okestra accepts as collateral and assets you can pay back with."
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-5" }, [
+          _c("div", { staticClass: "col-md-3" }),
           _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Select from a wide array of assets that okestra accepts as collateral and assets you can pay back with."
-            )
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("span", [
+              _c("i", { staticClass: "fa fa-3x fa-bitcoin" }),
+              _c("span", { staticClass: "asset-name" }, [_vm._v("  Bitcoin ")])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("i", { staticClass: "fa fa-3x fa-bitcoin" }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Bitcoin")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("i", { staticClass: "fa fa-3x fa-bitcoin" }),
-            _vm._v(" "),
-            _c("span", [_vm._v("Etherium")])
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("span", [
+              _c("i", { staticClass: "fa fa-3x fa-bitcoin" }),
+              _c("span", { staticClass: "asset-name" }, [_vm._v("  Etherium ")])
+            ])
           ])
         ])
       ])
@@ -40062,9 +40164,109 @@ var staticRenderFns = [
     return _c("div", { attrs: { id: "okestra-calculator" } }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" })
+          _c("h2", { staticClass: "highlighted-text" }, [
+            _vm._v("Calculate what you can borrow")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-10" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "col-md-8 card-1" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("h5", [_vm._v("Total Loan Amount")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control mt-3",
+                      attrs: { type: "text" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      staticClass: "form-control mt-4",
+                      attrs: { type: "text" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("h5", [_vm._v("Collateral")]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("h5", [_vm._v("Interest rate")]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("h5", [_vm._v("Loan Term")]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text" }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 card-2" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("h5", [_vm._v("Loan Term")]),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text" }
+                  }),
+                  _vm._v(" "),
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text" }
+                  })
+                ])
+              ])
+            ])
+          ])
         ])
       ])
     ])
@@ -40080,51 +40282,115 @@ var staticRenderFns = [
             _c("h1", [_vm._v("Access cash in 4 easy steps")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("ul", [
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("ul", { staticClass: "steps-list" }, [
               _c("li", [
-                _c("i", { staticClass: "fa fa-phone" }),
-                _vm._v(
-                  "\n                             Access Okestra Portal\n                             "
-                ),
-                _c("span", [_vm._v("to apply for instant loan")])
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-2" }, [
+                    _c("i", { staticClass: "fa fa-2x fa-mobile pr-3" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-8" }, [
+                    _c("span", { staticClass: "steps-title" }, [
+                      _vm._v("Access Okestra Portal")
+                    ]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "title-description" }, [
+                      _vm._v("to apply for instant loan")
+                    ])
+                  ])
+                ])
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(
-                  "\n                             Verify yourself\n                             "
-                ),
-                _c("span", [_vm._v("get registered with okestra")])
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-2" }, [
+                    _c("i", { staticClass: "fa fa-2x fa-user-check pr-3" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-8" }, [
+                    _c("span", { staticClass: "steps-title" }, [
+                      _vm._v("Verify yourself")
+                    ]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "title-description" }, [
+                      _vm._v("get registered with okestra")
+                    ])
+                  ])
+                ])
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("i", { staticClass: "fa fa-phone" }),
-                _vm._v(
-                  "\n                             Transfer your crypto\n                             "
-                ),
-                _c("span", [_vm._v("as collateral for loan")])
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-2" }, [
+                    _c("i", { staticClass: "fa fa-2x fa-exchange pr-3" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-8" }, [
+                    _c("span", { staticClass: "steps-title" }, [
+                      _vm._v("Transfer your crypto")
+                    ]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "title-description" }, [
+                      _vm._v("as collateral for loan")
+                    ])
+                  ])
+                ])
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("i", { staticClass: "fa fa-credit-card" }),
-                _vm._v(
-                  "\n                             Get Paid\n                             "
-                ),
-                _c("span", [_vm._v("get cash into your account")])
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-2" }, [
+                    _c("i", { staticClass: "fa fa-2x fa-credit-card pr-3" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-8" }, [
+                    _c("span", { staticClass: "steps-title" }, [
+                      _vm._v("Get Paid")
+                    ]),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "title-description" }, [
+                      _vm._v("get cash into your account")
+                    ])
+                  ])
+                ])
               ])
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-2" }, [
-            _c("ul", [
-              _c("li", [_vm._v("Visit Portal")]),
+            _c("ul", { staticClass: "steps-links" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v(" Visit Portal "),
+                  _c("i", { staticClass: "fa fa-arrow-right" })
+                ])
+              ]),
               _vm._v(" "),
-              _c("li", [_vm._v("Learn more")]),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v(" Learn more "),
+                  _c("i", { staticClass: "fa fa-arrow-right" })
+                ])
+              ]),
               _vm._v(" "),
-              _c("li", [_vm._v("Learn more")]),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v(" Learn more "),
+                  _c("i", { staticClass: "fa fa-arrow-right" })
+                ])
+              ]),
               _vm._v(" "),
-              _c("li", [_vm._v("Get Started")])
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v(" Get Started "),
+                  _c("i", { staticClass: "fa fa-arrow-right" })
+                ])
+              ])
             ])
           ])
         ])

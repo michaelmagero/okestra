@@ -472,6 +472,114 @@
 
 
 
+    /* PRODUCT PAGE STYLES */
+    .products-jumbotron {
+        padding: 100px 0 100px 0;
+    }
+
+    .products-jumbotron h1{
+        color: #BD2380;
+    }
+
+    .products-jumbotron .intro-text{
+        font-size: 16px;
+    }
+
+    .products-jumbotron i {
+        color: #BD2380;
+    }
+
+    .products-jumbotron .btn {
+        margin: 30px 0 0 0;
+        border: none;
+        background-color: #BD2380;
+        color: #fff;
+        border-radius: 20px;
+        padding: 8px 40px 8px 40px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+
+    .products-jumbotron .btn:hover {
+        margin: 30px 0 0 0;
+        background-color: #fff;
+        border: 1px solid #BD2380;
+        color: #000;
+        border-radius: 20px;
+        padding: 8px 40px 8px 40px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+
+
+    #okestra-assets {
+        padding: 100px 0 100px 0;
+        background-color: #F6F6F6;
+    }
+
+    #okestra-assets h1 {
+        font-weight: bold;
+        font-size: 45px;
+    }
+
+    #okestra-assets p {
+        color: #888;
+        font-size: 16px;
+    }
+
+    #okestra-assets i {
+        color: #BD2380;
+    }
+
+    #okestra-assets .asset-name {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ABOUT PAGE STYLES */
     #okestra-team h1 {
         font-weight: bold;
