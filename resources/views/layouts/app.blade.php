@@ -9,23 +9,21 @@
 
     <title>KOMMUTE  - Car Financing</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/10d0e33dd4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <style>
         body,html {
             padding: 0;
             margin: 0;
             overflow-x: hidden;
-            background: #262228
+            background: #f8f8f8 !important;
         }
     </style>
 </head>
@@ -35,8 +33,6 @@
             @yield('content')
         </main>
     </div>
-
-
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -48,6 +44,8 @@
                     $("div.alert").remove();
                 }, 3000 );
             });
-        </script>
+            </script>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

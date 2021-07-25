@@ -3,7 +3,7 @@
         margin: 0;
         overflow-x: hidden;
         font-family: 'Nunito', sans-serif;
-        background-color: #fff !important;
+        background: #fff !important;
     }
 
     .highlighted-text {
@@ -114,7 +114,39 @@
     }
 
     .jumbotron .card {
-        height: 450px;
+        width: 570px;
+        height:600px;
+    }
+
+    .jumbotron .card h6 {
+        color: #000;
+    }
+
+    .jumbotron .card h1 {
+        color: #BD2380;
+    }
+
+    .jumbotron .card h3 {
+        color: #BD2380;
+    }
+
+    .jumbotron .card #faq-nav {
+        background-color: #fff;
+        border-radius: 20px !important;
+        width: 70%;
+        padding: 6px 0 6px 0;
+    }
+
+    .jumbotron .card .nav-item {
+        background-color: #fff;
+        border-radius: 20px !important;
+    }
+
+    .jumbotron .card .nav-item .active {
+        background-color: #E8E8ED;
+        border-radius: 20px !important;
+        color: #BD2380;
+        padding: 5px 60px 5px 60px;
     }
 
     #okestra-intro {
@@ -167,7 +199,6 @@
     #okestra-calculator .card {
         height: 600px;
         background-color: #E8E8ED;
-        border-radius: 15px;
         border: none;
     }
 
@@ -178,6 +209,47 @@
     #okestra-calculator .card-2 {
         background-color: #BD2380;
     }
+
+    #okestra-calculator .collaterals {
+        border-radius: 20px !important;
+        padding: 10px 30px 10px 30px;
+    }
+
+    #okestra-calculator #faq-nav {
+        background-color: #fff;
+        border-radius: 20px !important;
+        width: 70%;
+        padding: 6px 0 6px 0;
+    }
+
+    #okestra-calculator .nav-item {
+        background-color: #fff;
+        border-radius: 20px !important;
+    }
+
+    #okestra-calculator .nav-item .active {
+        background-color: #E8E8ED;
+        border-radius: 20px !important;
+        color: #BD2380;
+        padding: 5px 60px 5px 60px;
+    }
+
+    #okestra-calculator .calculator-btn {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 10px 30px 10px 30px;
+        color: #000;
+        border: none;
+    }
+
+    #okestra-calculator .calculator-btn:hover {
+        background-color: #E8E8ED;
+        border-radius: 20px;
+        padding: 10px 30px 10px 30px;
+        color: #000;
+        border: none;
+    }
+
 
 
 

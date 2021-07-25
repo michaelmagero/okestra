@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
 
-            <div class="row mt-5 mb-5">
+            <div class="row mt-2 mb-2">
                 <div class="col-md-12 text-center">
-                    <img src="../images/logo.jpg" class="img-responsive" alt="" width="150" height="50">
+                    <img src="/images/logo.png" class="img-responsive" alt="" width="150" height="150">
                 </div>
             </div>
 
@@ -22,7 +22,7 @@
             @endif
 
             <div class="card rounded-0 shadow-sm border-0">
-                <div class="card-header text-uppercase font-weight-bold pt-4 pb-4 text-center" style="background-color: #ffce00;">{{ __('Login to dashboard') }}</div>
+                <div class="card-header text-uppercase font-weight-bold pt-4 pb-4 text-center text-white" style="background-color: #BD2380;">{{ __('Login to dashboard') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -60,7 +60,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-2">
-                                <button type="submit" class="btn font-weight-bold pt-2 pb-2 pr-5 pl-5" style="background-color: #ffce00;">
+                                <button type="submit" class="btn font-weight-bold pt-2 pb-2 pr-5 pl-5 text-white" style="background-color: #BD2380;">
                                     {{ __('Login') }}
                                 </button>
 
@@ -75,7 +75,7 @@
                         <div class="form-group row mt-4">
                             <div class="col-md-8 offset-md-2">
                                 Don't have an account yet?
-                                <a class="text-muted" href="{{ url('/applicant-register') }}">
+                                <a class="text-muted" href="{{ url('/register') }}">
                                     Register
                                 </a>
                                 or

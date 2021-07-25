@@ -2504,6 +2504,124 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -39148,7 +39266,176 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "col-sm-12 col-md-6" }, [
             _c("div", { staticClass: "card mb-5 shadow rounded-0 border-0" }, [
-              _c("div", { staticClass: "card-body" })
+              _c(
+                "div",
+                {
+                  staticClass: "card pt-0 pb-0",
+                  staticStyle: {
+                    "background-color": "#E8E8ED",
+                    padding: "0 !important",
+                    margin: "0 !important"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "row mt-4 pl-5" }, [
+                    _c("div", { staticClass: "col-md-6" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Total Loan Amount")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control border-0 pt-4 pb-4",
+                        attrs: { type: "text" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-6" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-3 pl-5" }, [
+                    _c("div", { staticClass: "col-md-5" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Collateral")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control border-0 pt-4 pb-4",
+                        attrs: { type: "text" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-3 mt-4 pt-2" }, [
+                      _c(
+                        "select",
+                        {
+                          staticClass:
+                            "form-control border-0 rounded collaterals",
+                          attrs: { name: "", id: "" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("BTC")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("ETH")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-3 pl-5" }, [
+                    _c("div", { staticClass: "col-md-12" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Interest Rate")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "ul",
+                        {
+                          staticClass: "nav nav-tabs rounded-0 text-dark",
+                          attrs: { role: "tablist", id: "faq-nav" }
+                        },
+                        [
+                          _c("li", { staticClass: "nav-item" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  " nav-link active text-uppercase font-weight-bold ",
+                                attrs: { "data-toggle": "tab", href: "#home" }
+                              },
+                              [_vm._v("1%")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "nav-item" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  " nav-link text-uppercase font-weight-bold ",
+                                attrs: { "data-toggle": "tab", href: "#menu1" }
+                              },
+                              [_vm._v("6%")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "nav-item" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  " nav-link text-uppercase font-weight-bold ",
+                                attrs: { "data-toggle": "tab", href: "#menu2" }
+                              },
+                              [_vm._v("8%")]
+                            )
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-1 pl-5" }, [
+                    _c("div", { staticClass: "col-md-4 mt-2 pt-2" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Loan Term")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          staticClass: "form-control border-0",
+                          attrs: { name: "", id: "" }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("1 year")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("2 year")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("3 year")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-2 pl-5" }, [
+                    _c("div", { staticClass: "col-md-4 mt-2 pt-2" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Total Loan")
+                      ]),
+                      _vm._v(" "),
+                      _c("h1", [_vm._v("$ "), _c("span", [_vm._v("1000")])])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "row mt-2 pl-5" }, [
+                    _c("div", { staticClass: "col-md-4 mt-2 pt-2" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Monthly Interest")
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", [_vm._v("$ "), _c("span", [_vm._v("1000")])])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4 mt-2 pt-2" }, [
+                      _c("h6", { staticClass: "font-weight-bold" }, [
+                        _vm._v("Total Interest")
+                      ]),
+                      _vm._v(" "),
+                      _c("h3", [_vm._v("$ "), _c("span", [_vm._v("1000")])])
+                    ])
+                  ])
+                ]
+              )
             ])
           ])
         ])
@@ -39244,103 +39531,225 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-10" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "col-md-8 card-1" }, [
-                _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6" }, [
+            _c(
+              "div",
+              {
+                staticClass: "card pt-0 pb-0",
+                staticStyle: {
+                  "background-color": "#E8E8ED",
+                  padding: "0 !important",
+                  margin: "0 !important",
+                  width: "570px"
+                }
+              },
+              [
+                _c("div", { staticClass: "row mt-5 pl-5" }, [
                   _c("div", { staticClass: "col-md-6" }, [
-                    _c("h5", [_vm._v("Total Loan Amount")]),
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Total Loan Amount")
+                    ]),
                     _vm._v(" "),
                     _c("input", {
-                      staticClass: "form-control mt-3",
+                      staticClass: "form-control border-0 pt-4 pb-4",
                       attrs: { type: "text" }
                     })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "col-md-6" })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mt-5 pl-5" }, [
+                  _c("div", { staticClass: "col-md-5" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Collateral")
+                    ]),
+                    _vm._v(" "),
                     _c("input", {
-                      staticClass: "form-control mt-4",
+                      staticClass: "form-control border-0 pt-4 pb-4",
                       attrs: { type: "text" }
                     })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3 mt-4 pt-2" }, [
+                    _c(
+                      "select",
+                      {
+                        staticClass:
+                          "form-control border-0 rounded collaterals",
+                        attrs: { name: "", id: "" }
+                      },
+                      [
+                        _c(
+                          "option",
+                          {
+                            staticClass: "font-weight-bold",
+                            attrs: { value: "" }
+                          },
+                          [_vm._v("BTC")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "option",
+                          {
+                            staticClass: "font-weight-bold",
+                            attrs: { value: "" }
+                          },
+                          [_vm._v("ETH")]
+                        )
+                      ]
+                    )
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("h5", [_vm._v("Collateral")]),
-                    _c("br"),
+                _c("div", { staticClass: "row mt-5 pl-5" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Interest Rate")
+                    ]),
                     _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text" }
-                    })
+                    _c(
+                      "ul",
+                      {
+                        staticClass: "nav nav-tabs rounded-0 text-dark",
+                        attrs: { role: "tablist", id: "faq-nav" }
+                      },
+                      [
+                        _c("li", { staticClass: "nav-item" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                " nav-link active text-uppercase font-weight-bold ",
+                              attrs: { "data-toggle": "tab", href: "#home" }
+                            },
+                            [_vm._v("1%")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "nav-item" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                " nav-link text-uppercase font-weight-bold ",
+                              attrs: { "data-toggle": "tab", href: "#menu1" }
+                            },
+                            [_vm._v("6%")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "nav-item" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                " nav-link text-uppercase font-weight-bold ",
+                              attrs: { "data-toggle": "tab", href: "#menu2" }
+                            },
+                            [_vm._v("8%")]
+                          )
+                        ])
+                      ]
+                    )
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("h5", [_vm._v("Interest rate")]),
-                    _c("br"),
+                _c("div", { staticClass: "row mt-2 pl-5" }, [
+                  _c("div", { staticClass: "col-md-4 mt-4 pt-2" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Loan Term")
+                    ]),
                     _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text" }
-                    })
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("h5", [_vm._v("Loan Term")]),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: { type: "text" }
-                    })
+                    _c(
+                      "select",
+                      {
+                        staticClass: "form-control border-0",
+                        attrs: { name: "", id: "" }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("1 year")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("2 year")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("3 year")
+                        ])
+                      ]
+                    )
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-4 card-2" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("h5", [_vm._v("Loan Term")]),
-                  _c("br"),
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-3" }, [
+            _c(
+              "div",
+              {
+                staticClass: "card pt-0 pb-0 text-white",
+                staticStyle: {
+                  "background-color": "#BD2380",
+                  padding: "0 !important",
+                  margin: "0 !important",
+                  width: "350px"
+                }
+              },
+              [
+                _c("div", { staticClass: "row mt-2 pl-5" }, [
+                  _c("div", { staticClass: "col-md-6 mt-4 pt-2" }, [
+                    _c("h5", [_vm._v("Total Loan")]),
+                    _vm._v(" "),
+                    _c("h1", [_vm._v("$ "), _c("span", [_vm._v("1000")])])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mt-2 pl-5" }, [
+                  _c("div", { staticClass: "col-md-6 mt-4 pt-2" }, [
+                    _c("h6", [_vm._v("Monthly Interest")]),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v("$ "), _c("span", [_vm._v("0.8")])])
+                  ]),
                   _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text" }
-                  }),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text" }
-                  })
+                  _c("div", { staticClass: "col-md-6 mt-4 pt-2" }, [
+                    _c("h6", [_vm._v("Total Interest")]),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v("$  "), _c("span", [_vm._v("8.0")])])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mt-2 pl-5" }, [
+                  _c("div", { staticClass: "col-md-12 mt-4 pt-2" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-primary calculator-btn font-weight-bold",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Apply Today")]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mt-2 pl-5" }, [
+                  _c("div", { staticClass: "col-md-10 mt-4 pt-2" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Interest payments are made on a monthly basis, principal amount returned at the end of  the loan term. Interest rates very depending on your choice of LTV (Loan to Value). Minimum loan term is 6 months. If you repay your loan prior to the lapse of 6 months, you will be charged with the interest payable for the first full 6 months. Okestra Terms of Use Apply."
+                      )
+                    ])
+                  ])
                 ])
-              ])
-            ])
-          ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" })
         ])
       ])
     ])

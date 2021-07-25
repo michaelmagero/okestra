@@ -15,7 +15,81 @@
 
                         <div class="col-sm-12 col-md-6">
                             <div class="card mb-5 shadow rounded-0 border-0">
-                                <div class="card-body">
+                                <div class="card pt-0 pb-0" style="background-color: #E8E8ED; padding: 0 !important; margin: 0 !important;">
+                                    <div class="row mt-4 pl-5">
+                                        <div class="col-md-6">
+                                            <h6 class="font-weight-bold">Total Loan Amount</h6>
+                                            <input type="text" class="form-control border-0 pt-4 pb-4">
+                                        </div>
+                                        <div class="col-md-6"></div>
+                                        <!-- <div class="col-md-6">
+                                            <select name="" id="">
+                                                <option value="">USDC</option>
+                                                <option value="">USDC</option>
+                                            </select>
+                                        </div> -->
+                                    </div>
+
+                                    <div class="row mt-3 pl-5">
+                                        <div class="col-md-5">
+                                            <h6 class="font-weight-bold">Collateral</h6>
+                                            <input type="text" class="form-control border-0 pt-4 pb-4">
+                                        </div>
+                                        <div class="col-md-3 mt-4 pt-2">
+                                            <select name="" id="" class="form-control border-0 rounded collaterals">
+                                                <option value="">BTC</option>
+                                                <option value="">ETH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3 pl-5">
+                                        <div class="col-md-12">
+                                            <h6 class="font-weight-bold">Interest Rate</h6>
+                                            <ul class="nav nav-tabs rounded-0 text-dark" role="tablist" id="faq-nav">
+                                                <li class="nav-item">
+                                                    <a class=" nav-link active text-uppercase font-weight-bold " data-toggle="tab" href="#home">1%</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class=" nav-link text-uppercase font-weight-bold " data-toggle="tab" href="#menu1">6%</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class=" nav-link text-uppercase font-weight-bold " data-toggle="tab" href="#menu2">8%</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-1 pl-5">
+                                        <div class="col-md-4 mt-2 pt-2">
+                                            <h6 class="font-weight-bold">Loan Term</h6>
+                                            <select name="" id="" class="form-control border-0">
+                                                <option value="">1 year</option>
+                                                <option value="">2 year</option>
+                                                <option value="">3 year</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mt-2 pl-5">
+                                        <div class="col-md-4 mt-2 pt-2">
+                                            <h6 class="font-weight-bold">Total Loan</h6>
+                                            <h1>$ <span>1000</span></h1>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mt-2 pl-5">
+                                        <div class="col-md-4 mt-2 pt-2">
+                                            <h6 class="font-weight-bold">Monthly Interest</h6>
+                                            <h3>$ <span>1000</span></h3>
+                                        </div>
+                                        <div class="col-md-4 mt-2 pt-2">
+                                            <h6 class="font-weight-bold">Total Interest</h6>
+                                            <h3>$ <span>1000</span></h3>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -71,56 +145,100 @@
                     <h2 class="highlighted-text">Calculate what you can borrow</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-10">
-                        <div class="card">
-                            <div class="col-md-8 card-1">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Total Loan Amount</h5>
-                                        <input type="text" class="form-control mt-3">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control mt-4">
-                                    </div>
+                    <div class="col-md-6">
+                        <div class="card pt-0 pb-0" style="background-color: #E8E8ED; padding: 0 !important; margin: 0 !important; width: 570px;">
+                            <div class="row mt-5 pl-5">
+                                <div class="col-md-6">
+                                    <h6 class="font-weight-bold">Total Loan Amount</h6>
+                                    <input type="text" class="form-control border-0 pt-4 pb-4">
                                 </div>
+                                <div class="col-md-6"></div>
+                                <!-- <div class="col-md-6">
+                                    <select name="" id="">
+                                        <option value="">USDC</option>
+                                        <option value="">USDC</option>
+                                    </select>
+                                </div> -->
+                            </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Collateral</h5><br>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control">
-                                    </div>
+                            <div class="row mt-5 pl-5">
+                                <div class="col-md-5">
+                                    <h6 class="font-weight-bold">Collateral</h6>
+                                    <input type="text" class="form-control border-0 pt-4 pb-4">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Interest rate</h5><br>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Loan Term</h5><br>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control">
-                                    </div>
+                                <div class="col-md-3 mt-4 pt-2">
+                                    <select name="" id="" class="form-control border-0 rounded collaterals">
+                                        <option value="" class="font-weight-bold">BTC</option>
+                                        <option value="" class="font-weight-bold">ETH</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 card-2">
-                                <div class="row">
-                                    <h5>Loan Term</h5><br>
-                                    <input type="text" class="form-control">
-                                    <input type="text" class="form-control">
+
+                            <div class="row mt-5 pl-5">
+                                <div class="col-md-12">
+                                    <h6 class="font-weight-bold">Interest Rate</h6>
+                                    <ul class="nav nav-tabs rounded-0 text-dark" role="tablist" id="faq-nav">
+                                        <li class="nav-item">
+                                            <a class=" nav-link active text-uppercase font-weight-bold " data-toggle="tab" href="#home">1%</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class=" nav-link text-uppercase font-weight-bold " data-toggle="tab" href="#menu1">6%</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class=" nav-link text-uppercase font-weight-bold " data-toggle="tab" href="#menu2">8%</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2 pl-5">
+                                <div class="col-md-4 mt-4 pt-2">
+                                    <h6 class="font-weight-bold">Loan Term</h6>
+                                    <select name="" id="" class="form-control border-0">
+                                        <option value="">1 year</option>
+                                        <option value="">2 year</option>
+                                        <option value="">3 year</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="card pt-0 pb-0 text-white" style="background-color: #BD2380; padding: 0 !important; margin: 0 !important; width: 350px;">
+                            <div class="row mt-2 pl-5">
+                                <div class="col-md-6 mt-4 pt-2">
+                                    <h5>Total Loan</h5>
+                                    <h1>$ <span>1000</span></h1>
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-2 pl-5">
+                                <div class="col-md-6 mt-4 pt-2">
+                                    <h6>Monthly Interest</h6>
+                                    <h3>$ <span>0.8</span></h3>
+                                </div>
+                                <div class="col-md-6 mt-4 pt-2">
+                                    <h6>Total Interest</h6>
+                                    <h3>$  <span>8.0</span></h3>
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-2 pl-5">
+                                <div class="col-md-12 mt-4 pt-2">
+                                    <button type="submit" class="btn btn-primary calculator-btn font-weight-bold">Apply Today</button>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2 pl-5">
+                                <div class="col-md-10 mt-4 pt-2">
+                                    <p>Interest payments are made on a monthly basis, principal amount returned at the end of  the loan term. Interest rates very depending on your choice of LTV (Loan to Value). Minimum loan term is 6 months. If you repay your loan prior to the lapse of 6 months, you will be charged with the interest payable for the first full 6 months. Okestra Terms of Use Apply.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
             </div>
         </div>
